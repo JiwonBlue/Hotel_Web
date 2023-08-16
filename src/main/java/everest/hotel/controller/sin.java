@@ -1,5 +1,5 @@
 package everest.hotel.controller;
 
 public class sin {
-    // 1231신신
+    // 1231신용빈
 }
