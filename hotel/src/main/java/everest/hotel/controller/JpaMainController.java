@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class JpaMainController {
 
     // @Autowired
-    // private
+    // privateggege
 
     @GetMapping("main/form.do")
     public String main() {
