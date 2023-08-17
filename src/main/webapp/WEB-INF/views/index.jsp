@@ -1,6 +1,16 @@
+<<<<<<< HEAD
 <%@ page contentType="text/html;charset=utf-8"%> <%@ taglib
 uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
+=======
+<<<<<<< HEAD
+<%@ page contentType="text/html;charset=utf-8"%> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+=======
+<%@ page contentType="text/html;charset=utf-8"%> <%@ taglib
+uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+>>>>>>> aa0881f43fa7798f304f1c733f3a8c83fb55c804
+>>>>>>> ccd1d54c2eaffbb1edb5afbcf1b6bda0d7dfb914
 <!DOCTYPE html>
 <html>
   <meta charset="UTF-8" />
@@ -17,5 +27,8 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
     <a href="everest/main.do">EVEREST HOTEL 메인</a><br />
     <a href="everest/footer.do">EVEREST HOTEL 푸터</a><br />
     <a href="everest/header.do">EVEREST HOTEL 헤더</a><br />
+
+    <a href="project/main.do">프로젝트</a><br/> 
+    
   </body>
 </html>
