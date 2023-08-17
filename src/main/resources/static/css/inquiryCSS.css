@@ -39,47 +39,34 @@ footer{
 }
 
 /* inquiryList.jsp */
-.inquiryInfo{
-	width:70%;
-	margin-top:70px;
-	margin-bottom:220px;
+.inquiryInfo {
+	width: 70%;
+	margin-top: 70px;
+	margin-bottom: 220px;
 	border-top: 3px solid #623f30;
 	border-collapse: collapse;
 }
 
-.inquiryInfo tr{
-	border-bottom:2px solid #e6e6e6;
-	padding:10px;
+.inquiryTable tr,
+.inquiryTable tr td {
+	border-bottom: 2px solid #e6e6e6;
+	padding: 10px;
+	height: 35px;
 }
 
-.inquiryInfo tr td{
-	border-bottom:2px solid #e6e6e6;
-	padding:10px;
-	height:35px;
-
+#list > td {
+	height: 40px;
+	color: #967e5d;
+    font-weight: 900;
+    background-color: #e6dfc6;
 }
 
-#list > td{
-	height:40px;
-	color:#967e5d;
-    font-weight:900;
-    background-color:#e6dfc6;
-}
-
-.inquiryInfo a:link {					/* a 태그 클릭 안한 상태 */
-	text-align:center; 
+.inquiryInfo a:link,
+.inquiryInfo a:visited,
+.inquiryInfo a:hover {
+	text-align: center;
 	color: black;
-	text-decoration : none;	/*밑줄 제거*/
-}
-
-.inquiryInfo a:visited { 				/* a 태그 1회 이상 클릭 했을 때 상태 */
- 	color: black; 
- 	text-decoration: none;
-}
-
-.inquiryInfo a:hover { 					/* a 태그에 마우스 올렸을 때 상태 */
- 	color: black; 
- 	text-decoration: none;	
+	text-decoration: none;
 }
 
 #listcomment{
@@ -175,6 +162,7 @@ footer{
 	margin-top:20px;
 	margin-left:25px;
 }
+
 /*inquiryWrite.jsp*/
 #writeTitle{
 	width:100%;
