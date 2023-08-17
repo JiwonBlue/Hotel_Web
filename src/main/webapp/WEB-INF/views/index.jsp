@@ -32,11 +32,8 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                 <a href="rest_addr/read">Rest</a><br/>
                 <a href="rest_board/read">Rest board</a><br/>
 
-                <a href="project/standardroom.do">Project-Standard Room</a><br/>
-                <a href="project/deluxeroom.do">Project-Deluxe Room</a><br/>
-                <a href="project/sweetroom.do">Project-Sweet Room</a><br/>
-                <a href="project/header.do">Project-Header</a><br/>
-                <a href="project/footer.do">Project-Footer</a><br/>   
+                <a href="project/standardroom.do">PROJECT HOTEL<룸페이지></a><br/>
+
             </body>
         </html>
 =======
