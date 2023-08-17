@@ -17,7 +17,7 @@ public class JpaMainController {
 
     @GetMapping("main.do")
     public String main() {
-        return "main/form";
+        return "main/main";
     }
 
     @GetMapping("footer.do")
