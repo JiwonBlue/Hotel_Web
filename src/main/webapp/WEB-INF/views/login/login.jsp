@@ -14,11 +14,11 @@
 		<form action="loginUser" method="post" name="regForm">
 			<table align="center" class="log">
 				<tr align="center">
-					<th align="center" colspan="2">HOTEL OVERTON LOGIN</th>
+					<th align="center" colspan="2">HOTEL EVEREST LOGIN</th>
 				</tr>
 				<tr align="center">
 					<td colspan="2">
-						호텔 오버톤에 오신 것을 진심으로 환영합니다.<br />
+						호텔 Everest에 오신 것을 진심으로 환영합니다.<br />
 						아이디와 비밀번호를 입력해 주시기 바랍니다.
 					</td>
 				</tr>

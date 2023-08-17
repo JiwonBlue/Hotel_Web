@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <footer>
-	<table width="100%" height="20%" bgcolor="#112d42">
+	<table width="100%" height="100px" bgcolor="#f1e3c4">
 		<tr>
 			<td><img src="../data/logo.png" width="200" height="180" alt="HOME"></a></td>
 			
@@ -47,7 +47,8 @@
 				</table>
 				
 			</td>
-	
+			
+		
 		</tr>
 	</table>
 </footer>

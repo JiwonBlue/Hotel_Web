@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3ac76fc796acaa4a6812d78479b4830838937b6f
 html,body{
 	margin:0;
 	width:100%;
@@ -273,6 +276,9 @@ html,body{
 
 #writeTitle:focus{
 	outline:none;
+<<<<<<< HEAD
+}
+=======
 }
 =======
 html,
@@ -554,3 +560,4 @@ body {
   outline: none;
 }
 >>>>>>> 17e66b564ced92f25791fc0b30a68d17bc83129f
+>>>>>>> 3ac76fc796acaa4a6812d78479b4830838937b6f
