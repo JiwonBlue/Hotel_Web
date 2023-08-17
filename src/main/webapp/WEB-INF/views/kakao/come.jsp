@@ -25,7 +25,7 @@
 	
 		<div class="kakaoMap">
 			<div id="Map">
-				<%@ include file= "kakaoMap.jsp" %>
+				<%@ include file= "kakaoMapRoad.jsp" %>
 
 			</div>
 		</div >
