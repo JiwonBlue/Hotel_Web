@@ -63,9 +63,7 @@
                   <a href="reserveinfo.do" class="sfont">예약내역</a>
                 </c:otherwise>
               </c:choose>
-
             </td>
-
           </tr>
         </table>
       </td>

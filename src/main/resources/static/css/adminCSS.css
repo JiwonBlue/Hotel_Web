@@ -1,0 +1,275 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+
+html,body{
+	margin:0;
+	width:100%;
+	height:100%;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+/*모든 폴더의 header에 적용*/
+.header{
+	text-align:center; 
+	font-size: 22px;
+}
+.header tr th{
+	width:13%;
+}
+.header a:link {					/* a 태그 클릭 안한 상태 */
+	text-align:center; 
+	color: black;
+	text-decoration : none;	/*밑줄 제거*/
+}
+
+.header a:visited { 				/* a 태그 1회 이상 클릭 했을 때 상태 */
+ 	color: black; 
+ 	text-decoration: none;
+}
+
+.header a:hover { 					/* a 태그에 마우스 올렸을 때 상태 */
+ 	color: black; 
+ 	text-decoration: none;	
+}
+
+/*login.jsp*/
+#loginComment{
+	width:630px;
+	margin-top:5%;
+	margin-bottom:4%;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	font-size:x-large;
+	border-bottom:2px solid #623f30;
+}
+
+.log{
+	background:#f1ebd5;
+	margin:auto;
+	width:430px;
+	height:360px;
+	text-align:center;
+	border-radius: 1em;
+}
+
+.log tr td {
+	height:40px;
+	font-size:larger;
+}
+
+.log th{
+	height:100px;
+	font-size:xx-large;
+	
+}
+
+#input{
+	 height:26px;
+     float:left;
+	 border-right: 0px;
+     border-left: 0px;
+     border-top: 0px;
+     border-bottom: #9f8a7b 1px solid;
+     font-size:larger;
+}
+
+#text{
+   text-align:right;
+   width:23%;
+}
+
+#btn{
+	margin-bottom:20px;
+	background-color: #382f24;
+    width:100px;
+    height:45px;
+    border: none;
+    border-radius: 1em;
+    font-size:medium;
+    color:#f1ebd5;
+}
+
+/*checkReserve.jsp */
+#reserveTitle{
+	width:20%;
+	height:7%;
+	margin:3% auto;
+	text-align:center;
+}
+
+.reserveInfo{
+	width:70%;
+	margin-top:60px;
+	margin-bottom:80px;
+	border-top: 3px solid #623f30;
+	border-collapse: collapse;
+}
+
+.reserveInfo tr{
+	border-bottom:2px solid #e6e6e6;
+	padding:10px;
+}
+
+.reserveInfo tr td{
+	border-bottom:2px solid #e6e6e6;
+	padding:10px;
+	height:45px;
+}
+
+#list > td{
+	color:#967e5d;
+    font-weight:900;
+    background-color:#e6dfc6;
+    height:50px;
+}
+
+/*InquiryList.jsp*/
+.reserveInfo a:link {					/* a 태그 클릭 안한 상태 */
+	text-align:center; 
+	color: black;
+	text-decoration : none;	/*밑줄 제거*/
+}
+
+.reserveInfo a:visited { 				/* a 태그 1회 이상 클릭 했을 때 상태 */
+ 	color: black; 
+ 	text-decoration: none;
+}
+
+.reserveInfo a:hover { 					/* a 태그에 마우스 올렸을 때 상태 */
+ 	color: black; 
+ 	text-decoration: none;	
+}
+
+/*InquiryDetail.jsp*/
+.inquiryDetail{
+	width:300px;
+	height:70px;
+	margin-bottom:80px;
+	border-top: 3px solid #623f30;
+	border-collapse: collapse;
+}
+
+.inquiryDetail tr{
+	border-bottom:2px solid #e6e6e6;
+	padding:10px;
+}
+
+.inquiryDetail tr td{
+	border-bottom:2px solid #e6e6e6;
+	padding:10px;
+	height:30px;
+}
+
+#detail{
+	text-align:center;
+	width:130px;
+	height:40px;
+	color:#967e5d;
+    font-weight:900;
+    background-color:#e6dfc6;
+}
+
+#detailcontent{
+	text-align:center;
+	width:130px;
+	height:440px;
+	color:#967e5d;
+    font-weight:900;
+    background-color:#e6dfc6;
+}
+
+#detailtextarea{
+	width:100%;
+	height:440px;
+	font-size:18px;
+	border:none
+}
+
+#comment{
+	padding-left: 150px;
+}
+
+#commentWrite{
+	width:300px;
+	height:120px;
+	padding-left: 150px;
+}
+
+#commentBtn{
+	width:75px;
+	height:25px;
+	border: none;
+	background-color: #876f55;
+	color:#f1ebd5;
+}
+
+#commentWriteBtn{
+	position:absolute;
+	width:120px; 
+	height:50px; 
+	background-color: #876f55; 
+	color:#f1ebd5;
+	border: none;
+	margin-top:20px;
+	margin-left:25px;
+}
+
+/*updateRoomInfo.jsp*/
+#inquiryTitle{
+	width:20%;
+	height:7%;
+	margin-top:3%;
+	margin-bottom:2%;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+}
+
+.inquiryDetail{
+	width:65%;
+	margin-top:30px;
+	margin-bottom:80px;
+	border-top: 3px solid #623f30;
+	border-collapse: collapse;
+}
+
+.inquiryDetail tr{
+	border-bottom:2px solid #e6e6e6;
+	padding:10px;
+}
+
+.inquiryDetail tr td{
+	border-bottom:2px solid #e6e6e6;
+	padding:10px;
+	height:30px;
+}
+
+#detail{
+	text-align:center;
+	width:130px;
+	height:40px;
+	color:#967e5d;
+    font-weight:900;
+    background-color:#e6dfc6;
+}
+
+#writeTitle{
+	text-align:center;
+	width:100%;
+	height:35px;
+	font-size:20px;
+	border:none;
+}
+
+#room_price{
+	text-align:center;
+	width:100%;
+	height:35px;
+	font-size:20px;
+	border:none;
+}
+
+#writeTitle:focus{
+	outline:none;
+}
