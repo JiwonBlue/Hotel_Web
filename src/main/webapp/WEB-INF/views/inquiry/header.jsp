@@ -8,7 +8,7 @@
     <title>호텔 헤더</title>
 </head>
 <body>
-    <table width="100%" height="8%" bgcolor="#f1e3c4" class="header">
+    <table width="100%" height="8%" bgcolor="#112d42" class="header">
         <tr>
             <th>
                 <c:choose>
@@ -34,6 +34,7 @@
                     </c:otherwise>
                 </c:choose>
             </th>
+
             <th>
                 <c:choose>
                     <c:when test="${empty u_idKey}">
@@ -44,6 +45,7 @@
                     </c:otherwise>
                 </c:choose>
             </th>
+            
         </tr>
     </table>
 	

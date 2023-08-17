@@ -4,9 +4,10 @@
 <html>
 <head>
 		<meta charset="UTF-8">
-		<title>호텔 에베레스트 - 고객의 소리</title>
+		<title>호텔 에베레스트 - 게시판</title>
 		<link rel="stylesheet" href="../css/inquiryCSS.css">
 		<style>
+
 		#btn{
 			margin-top:15px;
 			margin-bottom:15px;
@@ -17,6 +18,7 @@
 		    font-size:medium;
 		    color:#f1ebd5;
 			}
+			
 	</style>
 </head>
 

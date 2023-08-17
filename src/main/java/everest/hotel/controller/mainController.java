@@ -65,10 +65,22 @@ public class mainController {
         return "reservation/reservation3";
     }
 
-    // 회원정보 //게시판
+    // 회원정보
     @GetMapping("inquiryList.do")
     public String inquiryList() {
         return "inquiry/inquiryList";
+    }
+
+    // 카카오지도
+    @GetMapping("kakaoMap.do")
+    public String kakaoMap() {
+        return "kakao/kakaoMap";
+    }
+
+    // 카카오 오시는길
+    @GetMapping("kakaoCome.do")
+    public String kakaoCome() {
+        return "kakao/come";
     }
 
 }

@@ -1,14 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>호텔 헤더</title>
+    
 </head>
 <body>
-    <table width="100%" height="8%" bgcolor="#f1e3c4" class="header">
+    <table width="100%" height="8%" bgcolor="#112d42" class="header">
         <tr>
             <th>
                 <c:choose>
@@ -37,11 +39,11 @@
             </th>
 
             <th>
-                <a href="main.do"><img src="/data/logo.png" width="175" height="140" alt="HOME"></a>
+                <a href="main.do"><img src="/data/EVlogo2.png" width="175" height="140" alt="HOME"></a>
             </th>
 
             <th>
-                <a href="inquiryList.do">고객의 소리</a>
+                <a href="inquiryList.do">게시판</a>
             </th>
 
             <th>
@@ -65,7 +67,7 @@
                     </c:otherwise>
                 </c:choose>
             </th>
-
+            
         </tr>
     </table>
 	

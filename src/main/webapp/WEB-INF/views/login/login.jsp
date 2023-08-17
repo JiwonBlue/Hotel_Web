@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+
+
 <!DOCTYPE>
 <html>
 <head>
@@ -11,7 +14,7 @@
 <body>
 	<%@ include file="header.jsp" %>
 		<!--LoginServlet으로 이동-->
-		<form action="loginUser" method="post" name="regForm">
+		<form action="main.do" method="post" name="regForm">
 			<table align="center" class="log">
 				<tr align="center">
 					<th align="center" colspan="2">HOTEL EVEREST LOGIN</th>
