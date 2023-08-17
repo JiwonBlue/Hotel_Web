@@ -1,0 +1,200 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+
+html,body{
+	margin:0;
+	width:100%;
+	height:100%;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+/*모든 폴더의 header에 적용*/
+.header{
+	height:8%;
+	text-align:center; 
+	font-size: 22px;
+}
+.header tr th{
+	width:13%;
+}
+.header a:link {					/* a 태그 클릭 안한 상태 */
+	text-align:center; 
+	color: black;
+	text-decoration : none;	/*밑줄 제거*/
+}
+
+.header a:visited { 				/* a 태그 1회 이상 클릭 했을 때 상태 */
+ 	color: black; 
+ 	text-decoration: none;
+}
+
+.header a:hover { 					/* a 태그에 마우스 올렸을 때 상태 */
+ 	color: black; 
+ 	text-decoration: none;	
+}
+
+footer{
+	bottom: 0;
+	width: 100%;
+}
+
+/* inquiryList.jsp */
+.inquiryInfo{
+	width:70%;
+	margin-top:70px;
+	margin-bottom:220px;
+	border-top: 3px solid #623f30;
+	border-collapse: collapse;
+}
+
+.inquiryInfo tr{
+	border-bottom:2px solid #e6e6e6;
+	padding:10px;
+}
+
+.inquiryInfo tr td{
+	border-bottom:2px solid #e6e6e6;
+	padding:10px;
+	height:35px;
+
+}
+
+#list > td{
+	height:40px;
+	color:#967e5d;
+    font-weight:900;
+    background-color:#e6dfc6;
+}
+
+.inquiryInfo a:link {					/* a 태그 클릭 안한 상태 */
+	text-align:center; 
+	color: black;
+	text-decoration : none;	/*밑줄 제거*/
+}
+
+.inquiryInfo a:visited { 				/* a 태그 1회 이상 클릭 했을 때 상태 */
+ 	color: black; 
+ 	text-decoration: none;
+}
+
+.inquiryInfo a:hover { 					/* a 태그에 마우스 올렸을 때 상태 */
+ 	color: black; 
+ 	text-decoration: none;	
+}
+
+#listcomment{
+	width:50%;
+	height:100px;
+	text-align:center;
+	margin: 10px auto;
+	font-size:x-large;
+}
+
+/*inquiryDetail.jsp*/
+#detailcomment{
+	width:50%;
+	height:100px;
+	text-align:center;
+	margin:40px auto;
+	font-size:x-large;
+}
+
+.inquiryDetail{
+	width:70%;
+	margin-top:30px;
+	margin-bottom:80px;
+	border-top: 3px solid #623f30;
+	border-collapse: collapse;
+}
+
+.inquiryDetail tr{
+	border-bottom:2px solid #e6e6e6;
+	padding:10px;
+}
+
+.inquiryDetail tr td{
+	border-bottom:2px solid #e6e6e6;
+	padding:10px;
+	height:30px;
+}
+
+#detail{
+	text-align:center;
+	width:130px;
+	height:40px;
+	color:#967e5d;
+    font-weight:900;
+    background-color:#e6dfc6;
+}
+
+#detailcontent{
+	text-align:center;
+	width:130px;
+	height:440px;
+	color:#967e5d;
+    font-weight:900;
+    background-color:#e6dfc6;
+}
+
+#detailtextarea{
+	width:100%;
+	height:440px;
+	font-size:18px;
+	border:none
+}
+
+#detailtextarea:focus{
+	outline:none;
+}
+
+#comment{
+	padding-left: 150px;
+}
+
+#commentWrite{
+	width:300px;
+	height:120px;
+	padding-left: 150px;
+}
+
+#commentBtn{
+	width:70px;
+	height:25px;
+	border: none;
+	background-color: #876f55;
+	color:#f1ebd5;
+}
+
+#commentWriteBtn{
+	position:absolute;
+	width:120px; 
+	height:50px; 
+	background-color: #876f55; 
+	color:#f1ebd5;
+	border: none;
+	margin-top:20px;
+	margin-left:25px;
+}
+/*inquiryWrite.jsp*/
+#writeTitle{
+	width:100%;
+	height:35px;
+	font-size:20px;
+	border:none;
+	
+}
+
+#writeTitle:focus{
+	outline:none;
+}
+
+#writeContent{
+	width:100%;
+	height:300px;
+	font-size:20px;
+	border:none
+}
+
+#writeContent:focus{
+	outline:none;
+}
