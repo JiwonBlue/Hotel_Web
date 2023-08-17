@@ -15,6 +15,7 @@
           </c:otherwise>
         </c:choose>
       </th>
+<<<<<<< HEAD
 
       <th>
         <a href="standardroom.do" class="hfont">객실 정보</a>
@@ -39,6 +40,18 @@
         <a href="inquiryList.do" class="hfont">게시판</a>
       </th>
 
+=======
+      <th><a href="room/Standard.do" class="hfont">객실 정보</a></th>
+      <th>
+        <a href="../reservation/reservation1.jsp" class="hfont">예약</a>
+      </th>
+      <th>
+        <a href="main.do"
+          ><img src="/data/EVlogo2.png" width="175" height="140" alt="HOME"
+        /></a>
+      </th>
+      <th><a href="inquirylist.do" class="hfont">고객의 소리</a></th>
+>>>>>>> be8ec41d7ba41ff92d38010b5dac2a89e5500ffc
       <th>
         <c:choose>
           <c:when test="${empty u_idKey}">
@@ -49,7 +62,10 @@
           </c:otherwise>
         </c:choose>
       </th>
+<<<<<<< HEAD
 
+=======
+>>>>>>> be8ec41d7ba41ff92d38010b5dac2a89e5500ffc
       <th>
         <c:choose>
           <c:when test="${empty u_idKey}">
@@ -60,8 +76,14 @@
           </c:otherwise>
         </c:choose>
       </th>
+<<<<<<< HEAD
 
     </tr>
     
   </table>
 </header>
+=======
+    </tr>
+  </table>
+</header>
+>>>>>>> be8ec41d7ba41ff92d38010b5dac2a89e5500ffc
