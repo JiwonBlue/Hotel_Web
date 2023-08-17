@@ -1,6 +1,3 @@
-@charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
-
 html,body{
 	margin:0;
 	width:100%;
@@ -160,7 +157,7 @@ footer input{
 
 /*login.jsp*/
 .log{
-	background:#13448d;
+	background:#f10e06;
 	margin:5% auto;
 	width:470px;
 	height:400px;
@@ -179,7 +176,7 @@ footer input{
 	 border-right: 0px;
      border-left: 0px;
      border-top: 0px;
-     border-bottom: #9f8a7b 1px solid;
+     border-bottom: white 1px solid;
      font-size:larger;
 }
 

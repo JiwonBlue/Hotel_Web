@@ -5,10 +5,11 @@
 
 <!DOCTYPE>
 <html>
+	
 <head>
 	<meta charset="UTF-8">
 	<title>Hotel Everest : 로그인</title>
-	<link rel="stylesheet" href="../css/loginCSS.css">
+	<link rel="stylesheet" href="../css/login1CSS.css">
 </head>
 
 <body>

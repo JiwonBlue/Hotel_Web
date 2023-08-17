@@ -43,7 +43,7 @@ footer{
 	width: 70%;
 	margin-top: 70px;
 	margin-bottom: 220px;
-	border-top: 3px solid #623f30;
+	border-top: 3px solid #e4560f;
 	border-collapse: collapse;
 }
 
@@ -58,7 +58,7 @@ footer{
 	height: 40px;
 	color: #967e5d;
     font-weight: 900;
-    background-color: #e6dfc6;
+    background-color: #cea40e;
 }
 
 .inquiryInfo a:link,
