@@ -1,16 +1,6 @@
 <%@ page contentType="text/html;charset=utf-8"%> <%@ taglib
 uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<<<<<<< HEAD
-<!-- <style>
-  a {
-    color: #f9f5f0;
-    text-decoration: none;
-  }
-</style> -->
-=======
->>>>>>> b6ffba238ec6b85c109d3a21fe4b4fab041fe4e5
-
 <!DOCTYPE html>
 
 <link rel="stylesheet" href="/css/headerCSS.css" />
@@ -34,25 +24,16 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
             </c:otherwise>
           </c:choose>
         </th>
-<<<<<<< HEAD
         <th><a href="room/Standard.do" class="cl-white">객실 정보</a></th>
         <th>
           <a href="../reservation/reservation1.jsp" class="cl-white">예약</a>
         </th>
-=======
-        <th><a href="standardroom.do">객실 정보</a></th>
-        <th><a href="../reservation/reservation1.jsp">예약</a></th>
->>>>>>> b6ffba238ec6b85c109d3a21fe4b4fab041fe4e5
         <th>
           <a href="main.do"
             ><img src="/data/EVlogo2.png" width="175" height="140" alt="HOME"
           /></a>
         </th>
-<<<<<<< HEAD
         <th><a href="inquirylist.do" class="cl-white">고객의 소리</a></th>
-=======
-        <th><a href="inquiryList.do">고객의 소리</a></th>
->>>>>>> b6ffba238ec6b85c109d3a21fe4b4fab041fe4e5
         <th>
           <c:choose>
             <c:when test="${empty u_idKey}">

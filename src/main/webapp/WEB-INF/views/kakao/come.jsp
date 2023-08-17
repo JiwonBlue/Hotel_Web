@@ -15,7 +15,7 @@
 				<th>호텔 소개</th>
 			</tr>
 			<tr>
-				<td><a href="standardroom.do">개요</a></td>
+				<td><a href="kakaoCome.do">개요</a></td>
 			</tr>
 			<tr>
 				<td id="select"><a href="kakaoCome.do">오시는 길<button id="next">&#10095;</button></a></td>
@@ -26,7 +26,6 @@
 		<div class="kakaoMap">
 			<div id="Map">
 				<%@ include file= "kakaoMapRoad.jsp" %>
-
 			</div>
 		</div >
 		
