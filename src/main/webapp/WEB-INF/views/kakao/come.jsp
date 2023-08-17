@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>호텔 에베레스트 - 호텔 소개</title>
-	<link rel="stylesheet" href="../css/roomCSS.css">
+	<link rel="stylesheet" href="../css/room1CSS.css">
 </head>
 
 <body>
@@ -15,7 +15,7 @@
 				<th>호텔 소개</th>
 			</tr>
 			<tr>
-				<td><a href="standardroom.do">개요</a></td>
+				<td><a href="kakaoCome.do">개요</a></td>
 			</tr>
 			<tr>
 				<td id="select"><a href="kakaoCome.do">오시는 길<button id="next">&#10095;</button></a></td>
@@ -26,7 +26,6 @@
 		<div class="kakaoMap">
 			<div id="Map">
 				<%@ include file= "kakaoMapRoad.jsp" %>
-
 			</div>
 		</div >
 		
