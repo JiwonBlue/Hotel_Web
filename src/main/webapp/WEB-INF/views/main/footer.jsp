@@ -2,7 +2,7 @@
 uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <footer>
-  <link rel="stylesheet" href="/css/footerCSS.css" />
+  <link rel="stylesheet" href="../css/footerCSS.css" />
 
   <!-- <table width="100%" height="5%" bgcolor="#112d4e"> -->
   <table class="table-top1">

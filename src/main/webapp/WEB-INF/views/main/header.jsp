@@ -2,7 +2,7 @@
 uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <header>
-  <link rel="stylesheet" href="/css/headerCSS.css" />
+  <link rel="stylesheet" href="../css/headerCSS.css" />
 
   <table class="table-1">
     <tr>
@@ -74,7 +74,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
         <table class="table-3">
           <tr>
             <td class="td40"></td>
-            <td><a href="room/Standard.do" class="hfont">객실 정보</a></td>
+            <td><a href="standardroom.do" class="hfont">객실 정보</a></td>
 
             <td>
               <a href="../reservation/reservation1.jsp" class="hfont">예약</a>
