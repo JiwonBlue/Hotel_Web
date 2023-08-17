@@ -1,18 +1,13 @@
 <%@ page contentType="text/html;charset=utf-8"%> <%@ taglib
 uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<style>
-  a {
-    color: #f9f5f0;
-    text-decoration: none;
-  }
-</style>
 
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
     <title>메뉴</title>
+    <link rel="stylesheet" href="../css/headerCSS.css">
   </head>
   <body>
     <table width="100%" height="8%" bgcolor="#112d4e" class="header">

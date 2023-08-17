@@ -9,13 +9,21 @@ html,body{
 }
 
 /*모든 폴더의 header에 적용*/
+
 .header{
 	text-align:center; 
 	font-size: 22px;
 }
+
 .header tr th{
 	width:13%;
 }
+
+.header a {
+    color: white;
+    text-decoration: none;
+}
+
 .header a:link {					/* a 태그 클릭 안한 상태 */
 	text-align:center; 
 	color: black;
