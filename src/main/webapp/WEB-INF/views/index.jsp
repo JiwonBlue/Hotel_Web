@@ -12,7 +12,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
     <h3>index.jsp</h3>
 
     <a href="everest/main.do">EVEREST HOTEL 메인</a><br />
-    <a href="everest/footer.do">EVEREST HOTEL 헤더</a><br />
-    <a href="everest/header.do">EVEREST HOTEL 푸터</a><br />
+    <a href="everest/footer.do">EVEREST HOTEL 푸터</a><br />
+    <a href="everest/header.do">EVEREST HOTEL 헤더</a><br />
   </body>
 </html>
