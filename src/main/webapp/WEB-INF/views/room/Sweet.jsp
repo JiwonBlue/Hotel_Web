@@ -12,16 +12,16 @@
 	<div class="roomList">
 		<table class="table">
 			<tr>
-				<th>객실</th>
+				<th>ROOM</th>
 			</tr>
 			<tr>
-				<td><a href="standardroom.do">스탠다드</a></td>
+				<td><a href="standardroom.do">Standard</a></td>
 			</tr>
 			<tr>
-				<td><a href="deluxeroom.do">디럭스</a></td>
+				<td><a href="deluxeroom.do">Deluxe</a></td>
 			</tr>
 			<tr>
-				<td id="select"><a href="sweetroom.do">스위트 <button id="next">&#10095;</button></a></td>
+				<td id="select"><a href="sweetroom.do">Sweet <button id="next">&#10095;</button></a></td>
 			</tr>
 	
 		</table>

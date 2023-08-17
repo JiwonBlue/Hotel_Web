@@ -6,32 +6,32 @@
 	if(u_idKey== null){
 		log = "<a href=login.do>로그인</a>";
 	}else{
-		log = "<a href=logout.do>로그아웃</a>";
+		log = "<a href=../login/logout.jsp>로그아웃</a>";
 	}
 	
 	String reg = "";
 	if(u_idKey == null){
-		reg = "<a href=join.do>회원가입</a>";
+		reg = "<a href=../join/joinForm.jsp>회원가입</a>";
 	}else{
-		reg = "<a href=userinfo.do>회원정보</a>";
+		reg = "<a href=userinfo>회원정보</a>";
 	}
 	
 	String url = "";
 	if(u_idKey == null){
-		url = "<a href=login.do>예약내역</a>";
+		url = "<a href=../login/login.jsp>예약내역</a>";
 	}else{
-		url = "<a href=reserveinfo.do>예약내역</a>";
+		url = "<a href=reserveinfo>예약내역</a>";
 	}
 
 
 %>
-<table width="100%" bgcolor="#f1e3c4" class="header">
+<table width="100%" bgcolor="#112d42" class="header">
 	<tr>
 		<th><%=log %></th>
 		<th><a href="standardroom.do">객실 정보</a></th>
 		<th><a href="../reservation/reservation1.jsp">예약</a></th>
 		<th><a href="../login/main.jsp"><img src="../data/logo.png" width="175" height="140" alt="HOME"></a></th>
-		<th><a href="inquiryList.do">고객의 소리</a></th>
+		<th><a href="inquirylist">고객의 소리</a></th>
 		<th><%=url %></th>
 		<th><%=reg %></th>
 	</tr>

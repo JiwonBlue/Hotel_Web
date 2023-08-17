@@ -3,8 +3,10 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Hotel OverTon 메인화면</title>
+	<title>Hotel Everest 메인화면</title>
 	<link rel="stylesheet" href="../css/loginCSS.css">
+	
+	
 </head>
 
 <body>
@@ -21,8 +23,8 @@
 	</div>
 	
 	<div class="roominfo">
-			<font size="10">호텔 오버튼만의 모던한 객실</font><br />
-			<font size="5">호텔 오버튼의 객실은 모던하면서도 품격 있는 라이프 스타일 공간으로<br />
+			<font size="10">호텔 에베레스트만의 모던한 객실</font><br />
+			<font size="5">호텔 에베레스트의 객실은 모던하면서도 품격 있는 라이프 스타일 공간으로<br />
 							고객님들께 집과 같이 보다 쾌적한 환경에서 지내실 수 있는 객실을 제공합니다.
 			</font>
 	</div>

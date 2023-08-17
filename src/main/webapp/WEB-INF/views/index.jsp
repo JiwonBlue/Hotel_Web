@@ -1,22 +1,6 @@
-<<<<<<< HEAD
 <%@ page contentType="text/html;charset=utf-8"%> 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-=======
-<<<<<<< HEAD
-<%@ page contentType="text/html;charset=utf-8"%> <%@ taglib
-uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
-=======
-<<<<<<< HEAD
-<%@ page contentType="text/html;charset=utf-8"%> 
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-=======
-<%@ page contentType="text/html;charset=utf-8"%> <%@ taglib
-uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
->>>>>>> aa0881f43fa7798f304f1c733f3a8c83fb55c804
->>>>>>> ccd1d54c2eaffbb1edb5afbcf1b6bda0d7dfb914
->>>>>>> 623e4f10f7d152c54e475e6f6e71a21aa2500f29
 <!DOCTYPE html>
 <html>
   <meta charset="UTF-8" />
@@ -35,6 +19,9 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 
     <a href="project/main.do">프로젝트</a><br/> 
+    <a href="project/kakaoMap.do">카카오지도</a><br/> 
+    <a href="project/kakaoCome.do">카카오오시는길</a><br/> 
+    <a href="project/kakaoMapRoad.do">카카오오시는길로드뷰</a><br/> 
     
   </body>
 <<<<<<< HEAD

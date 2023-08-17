@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>호텔 에베레스트 - 객실 정보</title>
+	<title>호텔 에베레스트 - 호텔 소개</title>
 	<link rel="stylesheet" href="../css/roomCSS.css">
 </head>
 
@@ -12,29 +12,21 @@
 	<div class="roomList">
 		<table class="table">
 			<tr>
-				<th>ROOM</th>
+				<th>호텔 소개</th>
 			</tr>
 			<tr>
-				<td><a href="standardroom.do">Standard</a></td>
+				<td><a href="standardroom.do">개요</a></td>
 			</tr>
 			<tr>
-				<td id="select"><a href="deluxeroom.do">Deluxe <button id="next">&#10095;</button></a></td>
+				<td id="select"><a href="kakaoCome.do">오시는 길<button id="next">&#10095;</button></a></td>
 			</tr>
-			<tr>
-				<td><a href="sweetroom.do">Sweet</a></td>
-			</tr>
-
 		</table>
 	</div>
 	
-		<div class="roomImg">
-			<div id="Img">
-				<img src="../data/dlx1.jpg">
-				<img src="../data/dlx2.jpg">
-				<img src="../data/dlx3.jpg">
-				<img src="../data/dlx4.jpg">
-				<button id="imgPrev">&#10094;</button>
-				<button id="imgNext">&#10095;</button>
+		<div class="kakaoMap">
+			<div id="Map">
+				<%@ include file= "kakaoMapRoad.jsp" %>
+
 			</div>
 		</div >
 		
