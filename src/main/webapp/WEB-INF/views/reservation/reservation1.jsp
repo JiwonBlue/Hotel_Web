@@ -3,9 +3,9 @@
 <%@ page import="java.text.SimpleDateFormat" %>
 <%
 
-	// 로그인 하지 않았을 시 로그인 페이지로 이동
+	로그인 하지 않았을 시 로그인 페이지로 이동
 	if(session.getAttribute("u_idKey")==null){
-		response.sendRedirect("../login/login.jsp");
+		response.sendRedirect("../login/login.do");
 	}
 
 	// 오늘 날짜를 나타내는 변수 생성

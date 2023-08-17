@@ -7,14 +7,15 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Hotel Overton : 로그인</title>
+	<title>Hotel Everest : 로그인</title>
 	<link rel="stylesheet" href="../css/loginCSS.css">
 </head>
 
 <body>
 	<%@ include file="header.jsp" %>
+
 		<!--LoginServlet으로 이동-->
-		<form action="main.do" method="post" name="regForm">
+		<form action="main.do" method="get" name="regForm">
 			<table align="center" class="log">
 				<tr align="center">
 					<th align="center" colspan="2">HOTEL EVEREST LOGIN</th>
@@ -36,13 +37,14 @@
 				<tr align="center">
 					<td colspan="2">
 						<input type="submit" value="로그인" id="btn" />
-						<input type="button" value="회원가입" onclick="location.href='../join/joinForm.jsp'" id="btn"/>
+						<input type="button" value="회원가입" onclick="location.href='join.do'" id="btn"/>
 					</td>
 				</tr>
 			</table>
 			
 		</form>
 		<br />
+
 	<%@ include file="footer.jsp" %>
 	<c:choose>
 		<c:when test="${mode==0 }">
