@@ -34,9 +34,10 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
 	
 		<div class="roomImg">
 			<div id="Img">
-				<img src="../data/deluxe.jpg">
-				<img src="../data/deluxe2.jpg">
-				<img src="../data/deluxebathroom.jpg">
+				<img src="../data/dlx1.jpg">
+				<img src="../data/dlx2.jpg">
+				<img src="../data/dlx3.jpg">
+				<img src="../data/dlx4.jpg">
 				<button id="imgPrev">&#10094;</button>
 				<button id="imgNext">&#10095;</button>
 			</div>
