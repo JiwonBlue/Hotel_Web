@@ -83,4 +83,10 @@ public class mainController {
         return "kakao/come";
     }
 
+    // 카카오 오시는길 로드뷰
+    @GetMapping("kakaoMapRoad.do")
+    public String kakaoMapRoad() {
+        return "kakao/kakaoMapRoad";
+    }
+
 }

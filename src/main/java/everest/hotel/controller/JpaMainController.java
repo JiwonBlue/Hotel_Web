@@ -17,7 +17,7 @@ public class JpaMainController {
 
     @GetMapping("main.do")
     public String main() {
-        return "main/form";
+        return "main/main";
     }
 
     @GetMapping("footer.do")
@@ -28,6 +28,11 @@ public class JpaMainController {
     @GetMapping("header.do")
     public String header() {
         return "main/header";
+    }
+
+    @GetMapping("testfooter.do")
+    public String header1() {
+        return "main/testfooter";
     }
 
     // @GetMapping("login.do")

@@ -15,8 +15,17 @@
     <a href="everest/main.do">EVEREST HOTEL 메인</a><br />
     <a href="everest/footer.do">EVEREST HOTEL 푸터</a><br />
     <a href="everest/header.do">EVEREST HOTEL 헤더</a><br />
+    <a href="everest/testfooter.do">EVEREST HOTEL 테스트푸터</a><br />
+
 
     <a href="project/main.do">프로젝트</a><br/> 
+    <a href="project/kakaoMap.do">카카오지도</a><br/> 
+    <a href="project/kakaoCome.do">카카오오시는길</a><br/> 
+    <a href="project/kakaoMapRoad.do">카카오오시는길로드뷰</a><br/> 
     
   </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> b72708dbf5df94c45d71c423214f84db7d816e85
