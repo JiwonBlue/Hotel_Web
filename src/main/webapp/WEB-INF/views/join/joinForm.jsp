@@ -1,12 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
+
 <!DOCTYPE html>
 <html>
+	
 <head>
 	<meta charset="UTF-8">
 	<title>호텔 에베레스트 - 회원가입</title>
 	<script type="text/javascript" src="../script/script.js?ver=3"></script>
-	<link rel="stylesheet" href="../css/joinCSS.css">
+	<link rel="stylesheet" href="/css/join1CSS.css">
 </head>
 
 <body>

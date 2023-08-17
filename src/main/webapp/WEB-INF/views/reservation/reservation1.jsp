@@ -20,7 +20,7 @@
 	<meta charset="UTF-8">
 	<title>객실 예약 : 날짜, 인원 선택</title>
 	<script type="text/javascript" src="../script/script.js?ver=1"></script>
-	<link rel="stylesheet" href="../css/reserveCSS.css">
+	<link rel="stylesheet" href="../css/reserve1CSS.css">
 	<style>
 		#btn{
 			margin-top:15px;
