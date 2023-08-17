@@ -30,9 +30,9 @@ public class JpaMainController {
         return "main/header";
     }
 
-    @GetMapping("testfooter.do")
+    @GetMapping("testheader.do")
     public String header1() {
-        return "main/testfooter";
+        return "main/testheader";
     }
 
     // @GetMapping("login.do")
