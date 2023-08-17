@@ -1,0 +1,131 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+
+html,body{
+	margin:0;
+	width:100%;
+	height:100%;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+/*모든 폴더의 header에 적용*/
+.header{
+	height:8%;
+	text-align:center; 
+	font-size: 22px;
+}
+.header tr th{
+	width:13%;
+}
+.header a:link {					/* a 태그 클릭 안한 상태 */
+	text-align:center; 
+	color: black;
+	text-decoration : none;	/*밑줄 제거*/
+}
+
+.header a:visited { 				/* a 태그 1회 이상 클릭 했을 때 상태 */
+ 	color: black; 
+ 	text-decoration: none;
+}
+
+.header a:hover { 					/* a 태그에 마우스 올렸을 때 상태 */
+ 	color: black; 
+ 	text-decoration: none;	
+}
+
+footer{
+	bottom: 0;
+	width: 100%;
+}
+
+/*날짜/객실/옵션 선택 안내 table */
+.reservelist1{
+	margin:1% auto;
+	width:50%;
+	height:8%;
+	text-align:center;
+	border: 1px solid #e3e3e3;
+	background-color:  #e3e3e3;
+	font-size:larger;
+}
+
+
+/*해당단계*/
+#step1{
+	width:33%;
+	border:  1px solid #e3e3e3;
+	background-color:#876f55;
+	color:#ffffff;
+	font-weight:900;
+}
+/*해당하지 않는 단계*/
+#step2{
+	width:33%;
+	border: 1px solid #e3e3e3;
+	background-color:#ffffff;
+	font-weight:900;
+	color:#876f55;
+}
+/*날짜*/
+#step3{
+	border: 1px solid #e3e3e3;
+	background-color:#ffffff;
+	font-weight:900;
+	color:#876f55;
+}
+
+/*예약 날짜,인원 선택 table*/
+.reserve1{
+	border-top:2px solid #876f55;
+	box-shadow: 0 3px 6px -6px #666;
+	height:20%;
+	margin-top:5%;
+	margin-bottom:5%;
+	padding:30px;
+}
+
+/*예약 날짜,인원 선택 table 내의 input 태그 */
+input{
+    height:20px;
+    width:60%;
+    border:none;
+    text-align:center;
+    font-size:large;
+    font-weight:bold;
+}
+
+
+/*reservation2.jsp 사용 */
+.reserveResult{
+	border-top:1px solid #e3e3e3;
+	border-collapse:collapse;
+	padding:1%;
+	margin-bottom:80px;
+}
+
+#line{
+    border-bottom:1px solid #e3e3e3;
+    padding:20px;
+}
+
+#btn2{
+	margin-top:30px;
+	margin-bottom:30px;
+	background-color: #876f55;
+    width:110px;
+    height:45px;
+    border: none;
+    font-size:medium;
+    color:#f1ebd5;
+}
+
+/*reservation3.jsp*/
+.reserveOption{
+	border-top:1px solid #e3e3e3;
+	border-collapse:collapse;
+	margin-top:5%;
+	margin-bottom:5%;
+	width:80%;
+	height:600px;
+
+}
