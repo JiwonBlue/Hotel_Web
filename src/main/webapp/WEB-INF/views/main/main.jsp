@@ -4,7 +4,7 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <!DOCTYPE >
 <html>
-  <link rel="stylesheet" href="../css/login1CSS.css" />
+  <link rel="stylesheet" href="../css/loginCSS.css" />
 
   <head>
     <meta charset="UTF-8" />

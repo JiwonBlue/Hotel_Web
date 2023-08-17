@@ -1,18 +1,23 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE>
+<%@ page contentType="text/html;charset=utf-8"%> <%@ taglib
+uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> <%@ taglib prefix="fmt"
+uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+<!DOCTYPE >
 <html>
+	<link rel="stylesheet" href="/css/roomCSS.css">
 <head>
 	<meta charset="UTF-8">
+	
 	<title>호텔 에베레스트 - 객실 정보</title>
-	<link rel="stylesheet" href="../css/roomCSS.css">
-</head>
+	
+</head>  
 
 <body>
 	<%@ include file="header.jsp" %>
-	<div class="roomList">
+	<div class="roomList" >
 		<table class="table">
 			<tr>
-				<th>ROOM</th>
+				</td><th>ROOM</th>
 			</tr>
 			<tr>
 				<td><a href="standardroom.do">Standard</a></td>
@@ -21,9 +26,9 @@
 				<td><a href="deluxeroom.do">Deluxe</a></td>
 			</tr>
 			<tr>
-				<td id="select"><a href="sweetroom.do">Sweet <button id="next">&#10095;</button></a></td>
+				<td id="select"><a href="sweetroom.do">Sweet<button id="next">&#10095;</button></a></td>
 			</tr>
-	
+			
 		</table>
 	</div>
 	
@@ -42,8 +47,8 @@
 		<div class="roomInfo">
 			<div id="roomContent">
 				<h1 style="color:#6e583e;">스위트 룸</h1><br />
-				넓은 거실과 세련된 공간이 준비된 스위트룸에서 <br />
-				고객여러분께 품격있는 휴식을 제공해 드립니다.
+				스위트 룸은 편안한 침실과 <br />
+				안락한 거실이 있어 품격 있는 휴식을 제공합니다.
 			</div>
 	
 
@@ -51,8 +56,8 @@
 					<h4>객실정보</h4>
 					<ul>
 					<li>크기&nbsp;${dto.getRoom_size()}&nbsp;&nbsp;|&nbsp;&nbsp;수용인원&nbsp;${dto.getRoom_capacity() }</li>
-					<li>구성&nbsp;&nbsp;침실1, 욕실1, 화장실1, 응접실1</li>
-					<li>전망 &nbsp;시티뷰 또는 리버뷰</li>
+					<li>구성&nbsp;&nbsp;침실1, 욕실1, 화장실2, 응접실 1</li>
+					<li>전망 &nbsp;시티뷰 또는 빌리지뷰</li>
 					<li>침대&nbsp;&nbsp;더블(킹 사이즈), 트윈</li>
 					</ul>
 				</div>
@@ -81,7 +86,7 @@
 					<td>
 						<h4>조식 이용 안내</h4>
 						<ul>
-							<li>다이닝 존(뷔페) : 07:30 ~ 10:00</li>
+							<li>다이닝 존(뷔페) : 07:30 ~ 10:30</li>
 						</ul>
 					</td>
 				</tr>
@@ -90,8 +95,8 @@
 					<td>
 						<h4>체크인 / 체크아웃 시간</h4>
 						<ul>
-							<li>체크인 : 오후 3시 이후</li>
-							<li>체크아웃 : 12시</li>
+							<li>체크인 : 오후 2시 이후</li>
+							<li>체크아웃 : 11시</li>
 						</ul>
 					</td>
 				</tr>

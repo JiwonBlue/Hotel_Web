@@ -29,7 +29,7 @@ html,body{
 }
 
 .header a:hover { 					/* a 태그에 마우스 올렸을 때 상태 */
- 	color: black; 
+ 	color: rgb(255, 255, 255); 
  	text-decoration: none;	
 }
 
@@ -46,7 +46,7 @@ footer{
 	top:10%;
 	left:18%;
 	float:left;
-	background: #f1e3c4;
+	background: #dbdadb;
 }
 
 .table{
@@ -61,7 +61,7 @@ footer{
 .table th{
 	height:10%;
 	font-size:xx-large;
-	border-bottom: 4px solid #432c10;
+	border-bottom: 4px solid #ffffff;
 	border-width:60%;
 	font-weight:bolder;
 }
@@ -75,12 +75,12 @@ footer{
 }
 
 .table a:link {					/* a 태그 클릭 안한 상태 */
-	color:#876234;
+	color:#000000;
 	text-decoration : none;	/*밑줄 제거*/
 }
 
 .table a:visited { 				/* a 태그 1회 이상 클릭 했을 때 상태 */
- 	color:#876234;
+ 	color:#060481;
  	text-decoration: none;
 }
 
@@ -90,14 +90,14 @@ footer{
 }
 
 #select{
-	background-color:#d3c09a;
+	background-color:#8db3e4;
 }
 
 #next{
 	right:30px; position:absolute;
 	border:none;
-	background-color:#d3c09a;
-	color:#876234;
+	background-color:#8db3e4;
+	color:#060481;
 	font-weight:900;
 	font-size:14px;
 	right:30;
@@ -214,7 +214,7 @@ footer{
 	position: relative;
     top:15%;
     left:65%;
-    background-color: #faf7ed;
+    background-color: #f8f8f8;
 }
 
 #hotelTable{

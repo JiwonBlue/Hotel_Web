@@ -1,12 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE>
+<%@ page contentType="text/html;charset=utf-8"%> <%@ taglib
+uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> <%@ taglib prefix="fmt"
+uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+<!DOCTYPE >
 <html>
+	<link rel="stylesheet" href="/css/roomCSS.css">
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="../css/roomCSS.css">
+	
 	<title>호텔 에베레스트 - 객실 정보</title>
 	
-</head>
+</head>  
 
 <body>
 	<%@ include file="header.jsp" %>
@@ -110,6 +114,6 @@
 	
 	
 	<%@ include file="footer.jsp" %>
-	<script type="text/javascript" src="../script/script.js"></script>
+	<script type="text/javascript" src="../script/script.js"></script> 
 </body>
 </html>
