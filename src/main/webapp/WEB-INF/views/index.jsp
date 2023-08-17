@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 <%@ page contentType="text/html;charset=utf-8"%> 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+=======
+<%@ page contentType="text/html;charset=utf-8"%> <%@ taglib
+uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+>>>>>>> aa0881f43fa7798f304f1c733f3a8c83fb55c804
 <!DOCTYPE html>
 <html>
   <meta charset="UTF-8" />
