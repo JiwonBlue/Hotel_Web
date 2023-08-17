@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>호텔 에베레스트 - 호텔 소개</title>
-	<link rel="stylesheet" href="../css/roomCSS.css">
+	<link rel="stylesheet" href="../css/room1CSS.css">
 </head>
 
 <body>

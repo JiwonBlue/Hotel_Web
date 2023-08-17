@@ -1,38 +1,60 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%
-	String u_idKey = (String)session.getAttribute("u_idKey");
+<%@ page contentType="text/html;charset=utf-8"%> <%@ taglib
+uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-	String log = "";
-	if(u_idKey== null){
-		log = "<a href=login.do>로그인</a>";
-	}else{
-		log = "<a href=../login/logout.jsp>로그아웃</a>";
-	}
-	
-	String reg = "";
-	if(u_idKey == null){
-		reg = "<a href=../join/joinForm.jsp>회원가입</a>";
-	}else{
-		reg = "<a href=userinfo>회원정보</a>";
-	}
-	
-	String url = "";
-	if(u_idKey == null){
-		url = "<a href=../login/login.jsp>예약내역</a>";
-	}else{
-		url = "<a href=reserveinfo>예약내역</a>";
-	}
+<!DOCTYPE html>
 
+<link rel="stylesheet" href="/css/headerCSS.css" />
 
-%>
-<table width="100%" bgcolor="#112d42" class="header">
-	<tr>
-		<th><%=log %></th>
-		<th><a href="standardroom.do">객실 정보</a></th>
-		<th><a href="../reservation/reservation1.jsp">예약</a></th>
-		<th><a href="../login/main.jsp"><img src="../data/logo.png" width="175" height="140" alt="HOME"></a></th>
-		<th><a href="inquirylist">고객의 소리</a></th>
-		<th><%=url %></th>
-		<th><%=reg %></th>
-	</tr>
-</table>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>메뉴</title>
+    <link rel="stylesheet" href="../css/headerCSS.css" />
+  </head>
+  <body>
+    <table width="100%" height="8%" bgcolor="#112d4e" class="header">
+      <tr>
+        <th>
+          <c:choose>
+            <c:when test="${empty u_idKey}">
+              <a href="login.do" class="cl-white">로그인</a>
+            </c:when>
+            <c:otherwise>
+              <a href="logout.do">로그아웃</a>
+            </c:otherwise>
+          </c:choose>
+        </th>
+        <th><a href="room/Standard.do" class="cl-white">객실 정보</a></th>
+        <th>
+          <a href="../reservation/reservation1.jsp" class="cl-white">예약</a>
+        </th>
+        <th>
+          <a href="main.do"
+            ><img src="/data/EVlogo2.png" width="175" height="140" alt="HOME"
+          /></a>
+        </th>
+        <th><a href="inquirylist.do" class="cl-white">고객의 소리</a></th>
+        <th>
+          <c:choose>
+            <c:when test="${empty u_idKey}">
+              <a href="join.do" class="cl-white">회원가입</a>
+            </c:when>
+            <c:otherwise>
+              <a href="userinfo.do" class="cl-white">회원정보</a>
+            </c:otherwise>
+          </c:choose>
+        </th>
+        <th>
+          <c:choose>
+            <c:when test="${empty u_idKey}">
+              <a href="login.do" class="cl-white">예약내역</a>
+            </c:when>
+            <c:otherwise>
+              <a href="reserveinfo.do" class="cl-white">예약내역</a>
+            </c:otherwise>
+          </c:choose>
+        </th>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -24,8 +24,4 @@
     <a href="project/kakaoMapRoad.do">카카오오시는길로드뷰</a><br/> 
     
   </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> b72708dbf5df94c45d71c423214f84db7d816e85
