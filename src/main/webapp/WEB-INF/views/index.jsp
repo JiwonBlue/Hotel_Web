@@ -1,7 +1,26 @@
+<<<<<<< HEAD
 <%@ page contentType="text/html;charset=utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!DOCTYPE html>
+=======
+<%@ page contentType="text/html;charset=utf-8"%> <%@ taglib
+uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8" />
+  <style>
+    a {
+      text-decoration: none;
+    }
+  </style>
+  <body style="text-align: center">
+    <h3>index.jsp</h3>
+
+<<<<<<< HEAD
+                <a href="address_page/list.do">주소록(페이징)</a></br>
+                <a href="board_page/list.do">게시판(페이징)</a></br>
+>>>>>>> 3ac76fc796acaa4a6812d78479b4830838937b6f
 
 <html>
     <meta charset="UTF-8">
@@ -18,6 +37,7 @@
         <a href="board_page/list.do">게시판(페이징)</a><br/>
 
 
+<<<<<<< HEAD
         <a href="file/upload.do">파일폼</a><br/>
         <a href="file/list.do">파일리스트</a>(회원서비스)<br/><br/>
 
@@ -57,3 +77,22 @@
         </br>
     </body>
 </html>
+=======
+                <a href="rest_addr/read">Rest</a><br/>
+                <a href="rest_board/read">Rest board</a><br/>
+
+                <a href="project/standardroom.do">Project-Standard Room</a><br/>
+                <a href="project/deluxeroom.do">Project-Deluxe Room</a><br/>
+                <a href="project/sweetroom.do">Project-Sweet Room</a><br/>
+                <a href="project/header.do">Project-Header</a><br/>
+                <a href="project/footer.do">Project-Footer</a><br/>   
+            </body>
+        </html>
+=======
+    <a href="everest/main.do">EVEREST HOTEL 메인</a><br />
+    <a href="everest/footer.do">EVEREST HOTEL 푸터</a><br />
+    <a href="everest/header.do">EVEREST HOTEL 헤더</a><br />
+  </body>
+</html>
+>>>>>>> 17e66b564ced92f25791fc0b30a68d17bc83129f
+>>>>>>> 3ac76fc796acaa4a6812d78479b4830838937b6f
