@@ -4,13 +4,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import lombok.AllArgsConstructor;
+
 @RequestMapping("project")
 @Controller
+@AllArgsConstructor
 public class mainController {
     // main, 로그인창, 회원가입창
     @GetMapping("main.do")
     public String main() {
-        return "login/main";
+        return "main/main";
     }
 
     @GetMapping("login.do")
@@ -37,16 +40,6 @@ public class mainController {
     @GetMapping("sweetroom.do")
     public String sweet() {
         return "room/Sweet";
-    }
-
-    @GetMapping("header.do")
-    public String header() {
-        return "room/header";
-    }
-
-    @GetMapping("footer.do")
-    public String footer() {
-        return "room/footer";
     }
 
     // reservation
@@ -87,6 +80,30 @@ public class mainController {
     @GetMapping("kakaoMapRoad.do")
     public String kakaoMapRoad() {
         return "kakao/kakaoMapRoad";
+    }
+
+    // header, footer
+
+    /*
+     * @GetMapping("main.do")
+     * public String main() {
+     * return "main/main";
+     * }
+     */
+
+    @GetMapping("footer.do")
+    public String footer() {
+        return "main/footer";
+    }
+
+    @GetMapping("header.do")
+    public String header() {
+        return "main/header";
+    }
+
+    @GetMapping("testfooter.do")
+    public String header1() {
+        return "main/testfooter";
     }
 
 }

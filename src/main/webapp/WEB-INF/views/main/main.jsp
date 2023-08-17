@@ -4,10 +4,11 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <!DOCTYPE >
 <html>
+  <link rel="stylesheet" href="../css/login1CSS.css" />
+
   <head>
     <meta charset="UTF-8" />
-    <title>Hotel OverTon 메인화면</title>
-    <link rel="stylesheet" href="../css/loginCSS.css" />
+    <title>EVEREST HOTEL 메인화면</title>
   </head>
 
   <body>

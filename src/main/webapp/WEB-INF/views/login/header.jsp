@@ -30,10 +30,10 @@
             <th>
                 <c:choose>
                 <c:when test="${empty u_idKey}">
-                    <a href="login.do">예약</a>
+                    <a href="login.do" class="hfont">예약</a>
                 </c:when>
                 <c:otherwise>
-                    <a href="reservation1.do">예약</a>
+                    <a href="reservation1.do" class="hfont">예약</a>
                 </c:otherwise>
                 </c:choose>
             </th>
