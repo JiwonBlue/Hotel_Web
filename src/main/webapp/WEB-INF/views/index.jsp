@@ -35,6 +35,6 @@
                 <a href="project/deluxeroom.do">Project-Deluxe Room</a><br/>
                 <a href="project/sweetroom.do">Project-Sweet Room</a><br/>
                 <a href="project/header.do">Project-Header</a><br/>
-                <a href="project/footer.do">Project-Footer</a><br/>
+                <a href="project/footer.do">Project-Footer</a><br/>   
             </body>
         </html>
