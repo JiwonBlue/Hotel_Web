@@ -30,6 +30,11 @@ public class JpaMainController {
         return "main/header";
     }
 
+    @GetMapping("testfooter.do")
+    public String header1() {
+        return "main/testfooter";
+    }
+
     // @GetMapping("login.do")
     // public String login(){
     // return "/project/login";

@@ -3,7 +3,79 @@
   color: #f9f5f0;
   text-decoration: none;
 } */
+
+.table-top1 {
+  width: 100%;
+  height: 5%;
+  text-align: center;
+  background-color: #112d4e;
+  text-decoration: none;
+}
+.tdtr-top1 td.tr {
+  padding: 0 10px;
+}
+.table-top2 {
+  background-color: #112d4e;
+  /* text-decoration: none; */
+}
+.table-mid1 {
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  color: #f9f5f0;
+  background: #112d4e;
+  /* text-decoration: none; */
+}
+.table-mid2 {
+  text-align: center;
+  background: #112d4e;
+  /* text-decoration: none; */
+}
+.table-bottom1 {
+  width: 100%;
+  height: 5%;
+  text-align: center;
+  color: #f9f5f0;
+  background-color: #7d9cc0;
+  /* text-decoration: none; */
+}
+
 .cl-white {
   color: #f9f5f0;
   text-decoration: none;
+  text-align: center;
+}
+.sfont {
+  font-size: 8px;
+  color: #f9f5f0;
+  margin-right: 5%;
+}
+.mfont {
+  font-size: 15px;
+  color: #f9f5f0;
+  margin-right: 5%;
+}
+.pd {
+  padding: 15px;
+}
+.td {
+  width: 32%;
+}
+.td1 {
+  width: 30%;
+}
+.td2 {
+  width: 10%;
+}
+.td3 {
+  width: 5%;
+}
+.td4 {
+  width: 80%;
+}
+.td5 {
+  width: 20%;
+}
+.tr {
+  height: 10px;
 }
