@@ -71,4 +71,16 @@ public class mainController {
         return "inquiry/inquiryList";
     }
 
+    // 카카오지도
+    @GetMapping("kakaoMap.do")
+    public String kakaoMap() {
+        return "kakao/kakaoMap";
+    }
+
+    // 카카오 오시는길
+    @GetMapping("kakaoCome.do")
+    public String kakaoCome() {
+        return "kakao/come";
+    }
+
 }
