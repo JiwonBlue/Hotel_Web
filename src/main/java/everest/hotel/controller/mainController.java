@@ -65,7 +65,7 @@ public class mainController {
         return "reservation/reservation3";
     }
 
-    // 회원정보
+    // 회원정보 //게시판
     @GetMapping("inquiryList.do")
     public String inquiryList() {
         return "inquiry/inquiryList";

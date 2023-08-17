@@ -31,7 +31,7 @@
 		<th><a href="standardroom.do">객실 정보</a></th>
 		<th><a href="../reservation/reservation1.jsp">예약</a></th>
 		<th><a href="../login/main.jsp"><img src="../data/logo.png" width="175" height="140" alt="HOME"></a></th>
-		<th><a href="inquirylist">고객의 소리</a></th>
+		<th><a href="inquiryList.do">고객의 소리</a></th>
 		<th><%=url %></th>
 		<th><%=reg %></th>
 	</tr>

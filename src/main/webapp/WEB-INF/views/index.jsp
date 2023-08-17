@@ -16,7 +16,8 @@
     <a href="everest/footer.do">EVEREST HOTEL 푸터</a><br />
     <a href="everest/header.do">EVEREST HOTEL 헤더</a><br />
 
-    <a href="project/main.do">프로젝트</a><br/> 
+    <a href="project/main.do">프로젝트</a><br/>
+    <a href="project/inquiryList.do">프로젝트</a><br/>
     
   </body>
 </html>
