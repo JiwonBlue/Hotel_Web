@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>호텔 오버튼 - 객실 정보</title>
+	<title>호텔 에베레스트 - 객실 정보</title>
 	<link rel="stylesheet" href="../css/roomCSS.css">
 </head>
 
@@ -15,25 +15,24 @@
 				<th>객실</th>
 			</tr>
 			<tr>
-				<td><a href="roomInfo?room_type=Standard">스탠다드</a></td>
+				<td><a href="standardroom.do">스탠다드</a></td>
 			</tr>
 			<tr>
-				<td id="select"><a href="roomInfo?room_type=Deluxe">디럭스 <button id="next">&#10095;</button></a></td>
+				<td id="select"><a href="deluxeroom.do">디럭스 <button id="next">&#10095;</button></a></td>
 			</tr>
 			<tr>
-				<td><a href="roomInfo?room_type=Sweet">스위트</a></td>
+				<td><a href="sweetroom.do">스위트</a></td>
 			</tr>
-			<tr>
-				<td><a href="roomInfo?room_type=Royal">로열</a></td>
-			</tr>
+
 		</table>
 	</div>
 	
 		<div class="roomImg">
 			<div id="Img">
-				<img src="../data/deluxe.jpg">
-				<img src="../data/deluxe2.jpg">
-				<img src="../data/deluxebathroom.jpg">
+				<img src="../data/dlx1.jpg">
+				<img src="../data/dlx2.jpg">
+				<img src="../data/dlx3.jpg">
+				<img src="../data/dlx4.jpg">
 				<button id="imgPrev">&#10094;</button>
 				<button id="imgNext">&#10095;</button>
 			</div>
@@ -42,8 +41,8 @@
 		<div class="roomInfo">
 			<div id="roomContent">
 				<h1 style="color:#6e583e;">디럭스 룸</h1><br />
-				디럭스 룸에서 최고급 침구류와 <br />
-				함께 생애 최고의 휴식을 경험해보시기 바랍니다.
+				최고급 침구류와 모던한 공간인 디럭스룸에서<br />
+				생애 최고의 휴식을 경험해보시기 바랍니다.
 			</div>
 	
 
@@ -52,7 +51,7 @@
 					<ul>
 					<li>크기&nbsp;${dto.getRoom_size()}&nbsp;&nbsp;|&nbsp;&nbsp;수용인원&nbsp;${dto.getRoom_capacity() }</li>
 					<li>구성&nbsp;&nbsp;침실1, 욕실1, 화장실1</li>
-					<li>전망 &nbsp;시티뷰 또는 빌리지뷰</li>
+					<li>전망 &nbsp;시티뷰 또는 리버뷰</li>
 					<li>침대&nbsp;&nbsp;더블(킹 사이즈), 트윈</li>
 					</ul>
 				</div>
@@ -81,7 +80,7 @@
 					<td>
 						<h4>조식 이용 안내</h4>
 						<ul>
-							<li>다이닝 존(뷔페) : 07:30 ~ 10:30</li>
+							<li>다이닝 존(뷔페) : 07:30 ~ 10:00</li>
 						</ul>
 					</td>
 				</tr>
@@ -90,8 +89,8 @@
 					<td>
 						<h4>체크인 / 체크아웃 시간</h4>
 						<ul>
-							<li>체크인 : 오후 2시 이후</li>
-							<li>체크아웃 : 11시</li>
+							<li>체크인 : 오후 3시 이후</li>
+							<li>체크아웃 : 12시</li>
 						</ul>
 					</td>
 				</tr>

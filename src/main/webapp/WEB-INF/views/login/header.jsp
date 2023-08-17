@@ -20,7 +20,7 @@
                     </c:otherwise>
                 </c:choose>
             </th>
-            <th><a href="room/Standard.do">객실 정보</a></th>
+            <th><a href="standardroom.do">객실 정보</a></th>
             <th><a href="../reservation/reservation1.jsp">예약</a></th>
             <th><a href="main.do"><img src="/data/logo.png" width="175" height="140" alt="HOME"></a></th>
             <th><a href="inquirylist.do">고객의 소리</a></th>

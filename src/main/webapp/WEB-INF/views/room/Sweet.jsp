@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>호텔 오버튼 - 객실 정보</title>
+	<title>호텔 에베레스트 - 객실 정보</title>
 	<link rel="stylesheet" href="../css/roomCSS.css">
 </head>
 
@@ -15,25 +15,25 @@
 				<th>객실</th>
 			</tr>
 			<tr>
-				<td><a href="roomInfo?room_type=Standard">스탠다드</a></td>
+				<td><a href="standardroom.do">스탠다드</a></td>
 			</tr>
 			<tr>
-				<td><a href="roomInfo?room_type=Deluxe">디럭스</a></td>
+				<td><a href="deluxeroom.do">디럭스</a></td>
 			</tr>
 			<tr>
-				<td id="select"><a href="roomInfo?room_type=Sweet">스위트 <button id="next">&#10095;</button></a></td>
+				<td id="select"><a href="sweetroom.do">스위트 <button id="next">&#10095;</button></a></td>
 			</tr>
-			<tr>
-				<td><a href="roomInfo?room_type=Royal">로열</a></td>
-			</tr>
+	
 		</table>
 	</div>
 	
 		<div class="roomImg">
 			<div id="Img">
-				<img src="../data/sweet.jpg">
-				<img src="../data/sweet2.jpg">
-				<img src="../data/sweetbathroom.jpg">
+				<img src="../data/swt1.jpg">
+				<img src="../data/swt2.jpg">
+				<img src="../data/swt3.jpg">
+				<img src="../data/swt4.jpg">
+				<img src="../data/swt5.jpg">
 				<button id="imgPrev">&#10094;</button>
 				<button id="imgNext">&#10095;</button>
 			</div>
@@ -42,8 +42,8 @@
 		<div class="roomInfo">
 			<div id="roomContent">
 				<h1 style="color:#6e583e;">스위트 룸</h1><br />
-				스위트 룸은 편안한 침실과 <br />
-				안락한 거실이 있어 품격 있는 휴식을 제공합니다.
+				넓은 거실과 세련된 공간이 준비된 스위트룸에서 <br />
+				고객여러분께 품격있는 휴식을 제공해 드립니다.
 			</div>
 	
 
@@ -51,8 +51,8 @@
 					<h4>객실정보</h4>
 					<ul>
 					<li>크기&nbsp;${dto.getRoom_size()}&nbsp;&nbsp;|&nbsp;&nbsp;수용인원&nbsp;${dto.getRoom_capacity() }</li>
-					<li>구성&nbsp;&nbsp;침실1, 욕실1, 화장실2, 응접실 1</li>
-					<li>전망 &nbsp;시티뷰 또는 빌리지뷰</li>
+					<li>구성&nbsp;&nbsp;침실1, 욕실1, 화장실1, 응접실1</li>
+					<li>전망 &nbsp;시티뷰 또는 리버뷰</li>
 					<li>침대&nbsp;&nbsp;더블(킹 사이즈), 트윈</li>
 					</ul>
 				</div>
@@ -81,7 +81,7 @@
 					<td>
 						<h4>조식 이용 안내</h4>
 						<ul>
-							<li>다이닝 존(뷔페) : 07:30 ~ 10:30</li>
+							<li>다이닝 존(뷔페) : 07:30 ~ 10:00</li>
 						</ul>
 					</td>
 				</tr>
@@ -90,8 +90,8 @@
 					<td>
 						<h4>체크인 / 체크아웃 시간</h4>
 						<ul>
-							<li>체크인 : 오후 2시 이후</li>
-							<li>체크아웃 : 11시</li>
+							<li>체크인 : 오후 3시 이후</li>
+							<li>체크아웃 : 12시</li>
 						</ul>
 					</td>
 				</tr>

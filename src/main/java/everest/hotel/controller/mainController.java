@@ -14,7 +14,7 @@ public class mainController {
     }
 
     @GetMapping("login.do")
-    public String login1() {
+    public String login() {
         return "login/login";
     }
 
@@ -25,32 +25,27 @@ public class mainController {
 
     @GetMapping("standardroom.do")
     public String standard() {
-        return "project/Standard";
+        return "room/Standard";
     }
 
     @GetMapping("deluxeroom.do")
     public String deluxe() {
-        return "project/Deluxe";
+        return "room/Deluxe";
     }
 
     @GetMapping("sweetroom.do")
     public String sweet() {
-        return "project/Sweet";
+        return "room/Sweet";
     }
 
     @GetMapping("header.do")
     public String header() {
-        return "project/header";
+        return "room/header";
     }
 
     @GetMapping("footer.do")
     public String footer() {
-        return "project/footer";
-    }
-
-    @GetMapping("login.do")
-    public String login() {
-        return "project/login";
+        return "room/footer";
     }
 
 }
