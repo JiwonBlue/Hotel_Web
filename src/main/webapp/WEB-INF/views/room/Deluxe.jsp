@@ -8,7 +8,7 @@
 </head>
 
 <body>
-	<%@ include file="header.jsp" %>
+	<%@ include file="header.jsp" %>/
 	<div class="roomList">
 		<table class="table">
 			<tr>
