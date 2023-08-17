@@ -17,6 +17,7 @@
     <a href="everest/header.do">EVEREST HOTEL 헤더</a><br />
 
     <a href="project/main.do">프로젝트</a><br/> 
+    <a href="project/kakaoMap.do">카카오지도</a><br/> 
     
   </body>
 </html>
