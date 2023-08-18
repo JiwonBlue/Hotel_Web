@@ -1,13 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="com.bjy.dao.ReservationDAO" %>
-<%@ page import="com.bjy.dto.RoomDTO" %>
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="java.util.Date" %>
-<%@ page import="java.text.SimpleDateFormat" %>
+<%@ page contentType="text/html;charset=utf-8"%> 
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
+
 <%
+/*
 	if(session.getAttribute("u_idKey")==null){
 		response.sendRedirect("../login/login.jsp");
 	}
@@ -15,8 +13,11 @@
 	Date today = new Date();
 	SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
 	String now = simpleDateFormat.format(today);
+*/
+%> 
 
-%>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -70,7 +71,7 @@
 					<td width="10%">어린이</td>
 				</tr>
 				<tr align="center">
-					<td><input type="date" name="r_checkin" min='<%=now %>' value="${r_checkin}" /></td>
+					<td><input type="date" name="r_checkin" min="<%=java.time.LocalDate.now()%>" value="${r_checkin}"/></td>
 					<td><input type="date" name="r_checkout" value="${r_checkout }"/></td>
 					<td><input type="number" name="diffday" size="10" value="${diffday }" readonly="readonly"/></td>
 					<td><input type="number" name="r_adults" size="10" min="1" value="${r_adults }"/></td>

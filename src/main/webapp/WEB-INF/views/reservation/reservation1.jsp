@@ -1,8 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=utf-8"%> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <%@ page import="java.util.Date" %>
 <%@ page import="java.text.SimpleDateFormat" %>
-<%
 
+<%
+/*
 	// 로그인 하지 않았을 시 로그인 페이지로 이동
 	if(session.getAttribute("u_idKey")==null){
 		response.sendRedirect("../login/login.jsp");
@@ -12,8 +15,10 @@
 	Date today = new Date();
 	SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
 	String now = simpleDateFormat.format(today);
+*/
+%> 
 
-%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -57,7 +62,7 @@
 					<td width="10%">어린이</td>
 				</tr>
 				<tr align="center">
-					<td><input type="date" name="r_checkin" min='<%=now %>' /></td>
+					<td><input type="date" name="r_checkin" min="<%=java.time.LocalDate.now()%>" /></td>
 					<td><input type="date" name="r_checkout" /></td>
 					<td><input type="number" name="r_adults" min="1" value="1"/></td>
 					<td><input type="number" name="r_kids" value="0" min="0" /></td>

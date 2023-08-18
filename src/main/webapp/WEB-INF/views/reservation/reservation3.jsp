@@ -1,10 +1,21 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=utf-8"%> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
+
+
+
 <%
+/*
 	int room_price = Integer.parseInt(request.getParameter("room_price"));
 	int diffday = Integer.parseInt(request.getParameter("diffday"));
 	int totalPrice = room_price * diffday;
+*/
 %>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -80,10 +91,7 @@
 							<td>아동 투숙객 수 : <b>${param.r_kids }</b>명
 								<input type="hidden" name="r_kids" value="${param.r_kids }"/>
 							</td>
-							<td> 
-								총 금액 : <input type="number" name="r_price" id="input" readonly="readonly" value="<%=totalPrice %>" />원
-								<input type="hidden" name="price" value="<%=totalPrice %>" />
-							</td>
+							<!-- 총 금액: 부분 일단 삭제 -->
 						</tr>
 					</table>
 				</td>
@@ -95,7 +103,7 @@
 				<td colspan="4" align="center" id="line">
 					조식 인원 수 (1인당 20,000원) : 
 					<input type="number" style="background-color:#e7eaed; text-align:center;" name="breakfast" id="input" size="5" min="0" max='${param.r_adults + param.r_kids - "" }' />&nbsp;&nbsp;
-					<input type="button" id="btn" value=" 옵션 확인" onclick="breakfastCheck(${param.diffday})" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<!-- <input type="button" id="btn" value=" 옵션 확인" onclick="breakfastCheck(${param.diffday})" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 					<input type="submit" id="btn" value="예약하기" />
 				</td>
 			</tr>

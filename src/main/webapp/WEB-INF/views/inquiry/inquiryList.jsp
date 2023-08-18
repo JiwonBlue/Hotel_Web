@@ -34,6 +34,21 @@
 		호텔 에베레스트는 언제나 고객님들의 목소리에 귀기울이고 있습니다.<br/>
 		이용에 불편 사항을 말씀해주시면 신속한 답변으로 최선을 다하겠습니다.<br/>
 	</div>
+
+	<div class="roomList" >
+		<table class="table">
+			<tr>
+				</td><th>게시판/QnA</th>
+			</tr>
+			<tr>
+				<td id="select"><a href="inquiryList.do">게시판</a></td>
+			</tr>
+			<tr>
+				<td><a href="deluxeroom.do">QnA</a></td>
+			</tr>
+			
+		</table>
+	</div>
 				
 	<table align="center" width="80%" class="inquiryInfo">
 		<tr align="center" id="list">

@@ -38,11 +38,13 @@ footer{
 
 /* inquiryList.jsp */
 .inquiryInfo{
-	width:70%;
-	margin-top:70px;
+	width: 70%;
+	margin-top:50px;
 	margin-bottom:220px;
+	margin-right: 100px;
 	border-top: 3px solid #623f30;
 	border-collapse: collapse;
+	float: right; 
 }
 
 .inquiryInfo tr{
@@ -198,4 +200,55 @@ footer{
 	outline:none;
 }
 
+
+/* inquiry 사이드바 */
+.roomList {
+	width: 210px;
+	height: 200px;
+	position: relative;
+	top: 5%; /* 수정된 부분: 위쪽으로 올림 */
+	float: left;
+	margin-left: 5%;
+	background: #dbdadb;
+  }
+
+.table{
+	margin:1% auto;
+	width:90%;
+	height:100%;
+	text-align: left;
+	padding-left: 1%;
+	border-collapse: separate;
+    border-spacing: 0 20px;
+}
+.table th{
+	height:10%;
+	font-size:xx-large;
+	border-bottom: 4px solid #ffffff;
+	border-width:60%;
+	font-weight:bolder;
+}
+
+.table td{
+	margin:2% auto;
+	height:2%;
+	font-size:large;
+	font-weight:900;
+	color:#876234;
+}
+
+.table a:link {					/* a 태그 클릭 안한 상태 */
+	color:#000000;
+	text-decoration : none;	/*밑줄 제거*/
+}
+
+.table a:visited { 				/* a 태그 1회 이상 클릭 했을 때 상태 */
+ 	color:#060481;
+ 	text-decoration: none;
+}
+
+.table a:hover { 					/* a 태그에 마우스 올렸을 때 상태 */
+ 	color:#fff; 
+ 	text-decoration: none;	
+}
 
