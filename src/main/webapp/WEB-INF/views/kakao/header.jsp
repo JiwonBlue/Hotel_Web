@@ -1,5 +1,5 @@
-<%@ page contentType="text/html;charset=utf-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page contentType="text/html;charset=utf-8"%> <%@ taglib
+uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <header>
   <link rel="stylesheet" href="../css/headerCSS.css" />
@@ -14,9 +14,7 @@
       <td rowspan="2" align="center">
         <table class="table-4">
           <tr>
-            <td class="td50"></td>
-            <td class="td20"></td>
-            <td class="td20"></td>
+            <td class="td10"></td>
 
             <td class="center-cell">
               <a href="main.do">
@@ -63,9 +61,7 @@
                   <a href="reserveinfo.do" class="sfont">예약내역</a>
                 </c:otherwise>
               </c:choose>
-
             </td>
-
           </tr>
         </table>
       </td>
@@ -95,12 +91,12 @@
       <td>
         <table class="table-6">
           <tr>
-            <td class="td30"></td>
+            <td class="td20"></td>
 
             <td>
               <a href="inquiryList.do" class="hfont">게시판</a>
 
-              <a href="kakao/kakaoCome.do" class="hfont">오시는길</a>
+              <a href="kakaoCome.do" class="hfont">오시는길</a>
             </td>
           </tr>
         </table>
