@@ -63,7 +63,9 @@
                   <a href="reserveinfo.do" class="sfont">예약내역</a>
                 </c:otherwise>
               </c:choose>
+
             </td>
+
           </tr>
         </table>
       </td>
@@ -88,7 +90,7 @@
             <td class="td30"></td>
 
             <td>
-              <a href="inquirylist.do" class="hfont">고객의 소리</a>
+              <a href="inquiryList.do" class="hfont">게시판</a>
 
               <a href="room/Standard.do" class="hfont">오시는길</a>
             </td>
