@@ -100,7 +100,7 @@
             <td>
               <a href="inquiryList.do" class="hfont">게시판</a>
 
-              <a href="room/Standard.do" class="hfont">오시는길</a>
+              <a href="kakao/kakaoCome.do" class="hfont">오시는길</a>
             </td>
           </tr>
         </table>
