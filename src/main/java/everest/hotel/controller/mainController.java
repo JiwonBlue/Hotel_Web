@@ -42,7 +42,7 @@ public class mainController {
         return "room/Sweet";
     }
 
-    // 예약
+    // 예약, 예약내역
     @GetMapping("reservation1.do")
     public String reservation1() {
         return "reservation/reservation1";
@@ -61,6 +61,16 @@ public class mainController {
     @GetMapping("reservationProc.do")
     public String reservationProc() {
         return "reservation/reservationProc";
+    }
+
+    @GetMapping("reserveInfo.do")
+    public String reserveInfo() {
+        return "user/reserveInfo";
+    }
+
+    @GetMapping("reserveCancel.do")
+    public String reserveCancel() {
+        return "user/reserveCancel";
     }
 
     // 회원정보

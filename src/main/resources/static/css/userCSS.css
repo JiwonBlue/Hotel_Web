@@ -70,7 +70,7 @@ input{
 	width:70%;
 	margin-top:100px;
 	margin-bottom:175px;
-	border-top: 3px solid #623f30;
+	border-top: 3px solid #5a5b5e;
 	border-collapse: collapse;
 }
 
@@ -86,9 +86,9 @@ input{
 }
 
 #list > td{
-	color:#967e5d;
+	color:rgb(33, 41, 80);
     font-weight:900;
-    background-color:#e6dfc6;
+    background-color:#dbdadb;
     height:60px;
 }
 

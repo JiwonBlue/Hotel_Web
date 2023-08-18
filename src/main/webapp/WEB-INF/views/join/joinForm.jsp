@@ -15,9 +15,7 @@
 	<br/><br />
 	&nbsp;&nbsp;&nbsp;
 
-	<div class="container">
-        <h1 align="center" class="title">회원가입</h1> 
-    </div>
+    <center><font size="20" >회원가입</font></center><br />
 	
 	<table align="center" class="joinlist">
 		<tr id="list">

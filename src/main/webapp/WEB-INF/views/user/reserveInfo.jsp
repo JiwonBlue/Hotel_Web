@@ -1,7 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page contentType="text/html;charset=utf-8"%><%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <% int index=1; %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,12 +12,12 @@
 		#btn{
 			margin-top:15px;
 			margin-bottom:15px;
-			background-color: #382f24;
+			background-color: #5a5b5e;
 		    width:120px;
 		    height:50px;
 		    border: none;
 		    font-size:medium;
-		    color:#f1ebd5;
+		    color:rgb(231, 233, 241);
 			}
 		#reserveComment{
 			width:100%;
@@ -33,7 +33,7 @@
 <body>
 	<%@ include file="header.jsp" %>
 	<br/><br />
-	&nbsp;&nbsp;&nbsp; <font size="20">예약 내역<br /></font>
+	&nbsp;&nbsp;&nbsp; <center><font size="20">예약 내역<br /></font></center>
 
 	<c:if test="${dto.size() ==0 }">
 					<div id="reserveComment">예약 내역이 존재하지 않습니다</div>
@@ -67,7 +67,7 @@
 						
 						<tr align="center">
 							<td colspan="8">
-								<form action="reserveinfo" method="post">
+								<form action="reserveCancel.do" method="post">
 									<input type="submit" id="btn" value="예약 취소" />
 								</form>
 							</td>

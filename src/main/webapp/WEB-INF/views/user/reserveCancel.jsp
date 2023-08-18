@@ -1,7 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=utf-8"%>
+
 <%@ page import="java.text.SimpleDateFormat, java.util.Date, java.util.ArrayList, com.bjy.dto.ReservationDTO" %>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
 <% 
 	int index=1; /** 고객의 예약 내역의 번호 지정, 1번부터 시작 **/
 	int i=0; /** 고객의 예약 내역의 정보가 담긴 배열의 index**/
