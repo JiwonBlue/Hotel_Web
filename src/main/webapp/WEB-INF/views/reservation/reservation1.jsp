@@ -1,8 +1,8 @@
 <%@ page contentType="text/html;charset=utf-8"%> 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<%@ page import="java.util.Date" %>
-<%@ page import="java.text.SimpleDateFormat" %>
+<!-- <%@ page import="java.util.Date" %>
+<%@ page import="java.text.SimpleDateFormat" %> -->
 
 <%
 /*
@@ -53,7 +53,7 @@
 			</tr>
 		</table>
 		
-		<form action="reserveroom" method="get" name="regForm">
+		<form action="reservation2.do" method="get" name="regForm">
 			<table width="80%" align="center" class="reserve1">
 				<tr align="center" style="color:#a0a0a0; font-weight:bold;">
 					<td>체크인</td>
