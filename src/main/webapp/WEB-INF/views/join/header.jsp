@@ -19,12 +19,12 @@
             <td class="td20"></td>
 
             <td class="center-cell">
-              <a>
+              <a href="main.do">
                 <img
                   src="/data/EVlogo2.png"
                   width="180"
                   height="140"
-                  alt="HOME"
+                  alt="HOME" 
                 />
               </a>
             </td>
@@ -77,10 +77,18 @@
           <tr>
             <td class="td40"></td>
             <td><a href="standardroom.do" class="hfont">객실 정보</a></td>
-
+            
             <td>
-              <a href="../reservation/reservation1.jsp" class="hfont">예약</a>
+              <c:choose>
+              <c:when test="${empty u_idKey}">
+                  <a href="login.do" class="hfont">예약</a>
+              </c:when>
+              <c:otherwise>
+                  <a href="reservation1.do" class="hfont">예약</a>
+              </c:otherwise>
+              </c:choose>
             </td>
+
           </tr>
         </table>
       </td>
