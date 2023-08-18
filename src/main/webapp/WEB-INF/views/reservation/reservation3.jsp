@@ -59,7 +59,7 @@
 			</tr>
 		</table>
 	
-	<form action="reserveroom" method="post" name="regForm">
+	<form action="reservationProc.do" method="get" name="regForm">
 		<table width="80%" align="center" class="reserveOption">
 			<tr height="15%">
 				<th colspan="4" align="center"><font size="5">예약정보</font></th>
