@@ -28,10 +28,10 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
 				</td><th>호텔 소개</th>
 			</tr>
 			<tr>
-				<td id="select"><a href="introduction.do">개요<button id="next">&#10095;</button></a></td>
+				<td id="select"><a href="introduction1.do">개요<button id="next">&#10095;</button></a></td>
 			</tr>
 			<tr>
-				<td><a href="kakaoCome.do">오시는길</a></td>
+				<td><a href="introduction2.do">오시는길</a></td>
 			</tr>
 		</table>
 	</div>

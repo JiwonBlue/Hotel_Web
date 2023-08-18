@@ -86,28 +86,16 @@ public class mainController {
         return "inquiry/inquiryWrite";
     }
 
-    // 카카오지도
-    @GetMapping("kakaoMap.do")
-    public String kakaoMap() {
-        return "kakao/kakaoMap";
-    }
-
-    // 카카오 오시는길
-    @GetMapping("kakaoCome.do")
-    public String kakaoCome() {
-        return "kakao/come";
-    }
-
-    // 카카오 오시는길 로드뷰
-    @GetMapping("kakaoMapRoad.do")
-    public String kakaoMapRoad() {
-        return "kakao/kakaoMapRoad";
-    }
-
     // 호텔 소개
-    @GetMapping("introduction.do")
+    @GetMapping("introduction1.do")
     public String introduction() {
-        return "kakao/introduction";
+        return "introduction/introduction1";
+    }
+
+    // 오시는길
+    @GetMapping("introduction2.do")
+    public String kakaoCome() {
+        return "introduction/introduction2";
     }
 
     // header, footer
