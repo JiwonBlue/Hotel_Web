@@ -59,7 +59,7 @@
 			</tr>
 		</table>
 	
-	<form action="reserveroom" method="post" name="regForm">
+	<form action="reservationProc.do" method="get" name="regForm">
 		<table width="80%" align="center" class="reserveOption">
 			<tr height="15%">
 				<th colspan="4" align="center"><font size="5">예약정보</font></th>
@@ -101,7 +101,7 @@
 			</tr>
 			<tr id="line">
 				<td colspan="4" align="center" id="line">
-					조식 인원 수 (1인당 20,000원) : 
+					총 금액 : 
 					<input type="number" style="background-color:#e7eaed; text-align:center;" name="breakfast" id="input" size="5" min="0" max='${param.r_adults + param.r_kids - "" }' />&nbsp;&nbsp;
 					<!-- <input type="button" id="btn" value=" 옵션 확인" onclick="breakfastCheck(${param.diffday})" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 					<input type="submit" id="btn" value="예약하기" />

@@ -61,7 +61,7 @@
 			</tr>
 		</table>
 		
-	<form action="reserveroom" method="get" name="regForm">
+	<form action="reservation3.do" method="get" name="regForm">
 			<table width="80%" align="center" class="reserve1">
 				<tr align="center" id="list1" style="color:#a0a0a0; font-weight:bold;">
 					<td>체크인</td>
