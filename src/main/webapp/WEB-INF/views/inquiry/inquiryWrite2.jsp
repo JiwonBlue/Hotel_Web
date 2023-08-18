@@ -12,7 +12,7 @@
 		#btn{
 			margin-top:15px;
 			margin-bottom:15px;
-			background-color: #5a5b5e;
+			background-color: #382f24;
 		    width:120px;
 		    height:50px;
 		    border: none;
@@ -34,19 +34,19 @@
 	  <body>
 	  
 	  <div class="centered-text">
-		<p><font size="6">Review 작성</font></p>
+		<p><font size="6">Q & A 작성</font></p>
 	  </div>
 	
 	<div id="detailcomment">
 		호텔 오버톤은 언제나 고객님의 목소리에 귀기울이고 있습니다.<br />
-		고객님들의 소중한 충고와 격려, 또는 제안의 말씀을 주시면 더 나은 서비스로 보답하겠습니다.
+		궁금하신 사항들을 작성해주시면 신속히 답변해 드리겠습니다.
 	</div>
 		
-		<form action="inquiryList.do" name="regForm" method="post">
+		<form action="inquiryList2.do" name="regForm" method="post">
 		<table align="center" class="inquiryDetail">
 			<tr>
 				<td id="detail">TITLE</td>
-				<td><input type="text" name="b_title" maxlength="30" id="writeTitle" placeholder="내용을 상세히 기재해 주시면 정확한 답변에 도움이 됩니다"/></td>
+				<td><input type="text" name="b_title" maxlength="30" id="writeTitle" placeholder="문의 내용을 상세히 기재해 주시면 정확한 답변에 도움이 됩니다"/></td>
 			</tr>
 			<tr>
 				<td id="detail">CONTENT</td>
@@ -55,7 +55,7 @@
 			<tr align="center">
 				<td colspan="2">
 					<input type="submit" id="btn" value="확인" onclick="return boardCheck()" />
-					<input type="reset" id="btn" value="취소" onclick="location.href='inquiryList.do'" />
+					<input type="reset" id="btn" value="취소" />
 				</td>
 			</tr>
 		</table>

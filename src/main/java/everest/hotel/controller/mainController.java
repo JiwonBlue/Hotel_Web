@@ -63,21 +63,15 @@ public class mainController {
         return "reservation/reservationProc";
     }
 
-    @GetMapping("reserveInfo.do")
-    public String reserveInfo() {
-        return "user/reserveInfo";
-    }
-
-    @GetMapping("reserveCancel.do")
-    public String reserveCancel() {
-        return "user/reserveCancel";
-    }
-
-    // 회원정보
     // 게시판
     @GetMapping("inquiryList.do")
     public String inquiryList() {
         return "inquiry/inquiryList";
+    }
+
+    @GetMapping("inquiryList2.do")
+    public String inquiryList2() {
+        return "inquiry/inquiryList2";
     }
 
     // 현주 추가함
@@ -96,10 +90,15 @@ public class mainController {
         return "inquiry/inquiryWrite";
     }
 
-    // 호텔 소개
-    @GetMapping("introduction1.do")
-    public String introduction() {
-        return "introduction/introduction1";
+    @GetMapping("inquiryWrite2.do")
+    public String inquiryWrite2() {
+        return "inquiry/inquiryWrite2";
+    }
+
+    // 카카오지도
+    @GetMapping("kakaoMap.do")
+    public String kakaoMap() {
+        return "kakao/kakaoMap";
     }
 
     // 오시는길
