@@ -98,6 +98,12 @@ public class mainController {
         return "kakao/kakaoMapRoad";
     }
 
+    // 호텔 소개
+    @GetMapping("introduction.do")
+    public String introduction() {
+        return "kakao/introduction";
+    }
+
     // header, footer
 
     /*

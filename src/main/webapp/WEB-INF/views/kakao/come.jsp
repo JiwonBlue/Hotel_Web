@@ -4,7 +4,7 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <!DOCTYPE >
 <html>
-	<link rel="stylesheet" href="/css/roomCSS.css">
+	<link rel="stylesheet" href="/css/introductionCSS.css">
 <head>
 	<meta charset="UTF-8">
 	
@@ -28,7 +28,7 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
 				</td><th>호텔 소개</th>
 			</tr>
 			<tr>
-				<td><a href="standardroom.do">개요</a></td>
+				<td><a href="introduction.do">개요</a></td>
 			</tr>
 			<tr>
 				<td id="select"><a href="kakaoCome.do">오시는길<button id="next">&#10095;</button></a></td>
