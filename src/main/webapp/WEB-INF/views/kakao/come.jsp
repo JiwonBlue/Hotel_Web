@@ -52,15 +52,13 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
 				<h1 style="color:#6e583e;">오시는길</h1><br />
         대중교통 및 자가용 이용
 			</div>
-	
-
 				<div id="infoContent">
 					<h4>대중교통 이용</h4>
 					<ul>
-					<li>크기&nbsp;${dto.getRoom_size()}&nbsp;&nbsp;|&nbsp;&nbsp;수용인원&nbsp;${dto.getRoom_capacity() }</li>
-					<li>구성&nbsp;&nbsp;침실1, 욕실1, 화장실1</li>
-					<li>전망 &nbsp;시티뷰 또는 빌리지뷰</li>
-					<li>침대&nbsp;&nbsp;더블(킹 사이즈), 트윈</li>
+					<li>지하철(1,7호선 가산디지털단지역)</li>
+					8번 출구 안양천 방향으로 100m 직진 후 횡단보도 건너 </br> 좌측으로 200m 오시면 호텔에베레스트 입니다.
+					<li>버스(디지털 3단지 월드벤쳐센터 정류장)</li>
+					▷21, 571, 652, 금천 05번 버스 이용◁ </br>
 					</ul>
 				</div>
 				
@@ -68,11 +66,9 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
 				<div id="amenityContent">
 					<h4>자가용 이용</h4>
 					<ul>
-					<li>피트니스 센터 무료 이용</li>
-					<li>피트니스 센터는 매월 세 번쨰 수요일 정기 휴일입니다.</li>
-					<li>실내 수영장 무료 이용(만 13세 이상 입장 가능)</li>
-					<li>사우나 이용 시 유료</li>
-					<li>투숙 기간 내 무료 주차 가능</li>
+					<li>서부간선도로를 타고 오다가 광명교를 타고 좌회전 후 첫 사거리에서 우회전</li>
+					<li>가리봉5거리에서 철산방향 수출의 다리를 넘어 첫 사거리(한진사거리)에서 우회전</li>
+					<li>남부순환도로 구로IC로 나와 좌회전</li>
 					</ul>
 				</div>
 				
