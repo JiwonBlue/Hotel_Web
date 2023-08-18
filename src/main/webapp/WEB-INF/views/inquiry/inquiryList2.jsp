@@ -12,7 +12,7 @@
 		#btn{
 			margin-top:15px;
 			margin-bottom:15px;
-			background-color: #5a5b5e;
+			background-color: #382f24;
 		    width:120px;
 		    height:50px;
 		    border: none;
@@ -28,11 +28,11 @@
 	<%@ include file="header.jsp"%>
 
 	<br/><br />
-	&nbsp;&nbsp;&nbsp;<font id="title" font size="10" >Review</font><br /><br />
+	&nbsp;&nbsp;&nbsp;<font id="title" font size="10" >Q & A</font><br /><br />
 	
 	<div id="listcomment">
 		호텔 에베레스트는 언제나 고객님들의 목소리에 귀기울이고 있습니다.<br/>
-		고객님들의 정성스러운 리뷰를 통해 발전해 나아가겠습니다.<br/>
+		이용에 궁금하신 점이 신속한 답변으로 최선을 다하겠습니다.<br/>
 	</div>
 
 	<div class="roomList" >
@@ -41,18 +41,15 @@
 				</td><th>게시판</th>
 			</tr>
 			<tr>
-				<td id="select"><a href="inquiryList.do">Review</a></td>
+				<td><a href="inquiryList.do">Review</a></td>
 			</tr>
 			<tr>
-				<td><a href="inquiryList2.do">QnA</a></td>
+				<td id="select"><a href="inquiryList2.do">QnA</a></td>
 			</tr>
 			
 		</table>
 	</div>
-		
-	<div style="text-align: right; margin-right: 100px;">
-		<input type="button" id="btn" value="글쓰기" onclick="location.href='inquiryWrite.do'" />
-	</div>
+
 
 	<table align="center" width="80%" class="inquiryInfo">
 		<tr align="center" id="list">

@@ -32,13 +32,8 @@
     <a href="project/reservation3.do">예약 3</a><br />
     <a href="project/reservationProc.do">예약 4</a><br />
 
-
-    <a href="project/kakaoMapRoad.do">카카오오시는길로드뷰</a><br />
-
-    <a href="project/inquiryDetail.do">현주게시판테스트-디테일</a><br />
-    <a href="project/inquiryList.do">현주게시판테스트-리스트</a><br />
     <a href="project/inquiryUpdate.do">현주게시판테스트-업데이트</a><br />
-    <a href="project/inquiryWrite.do">현주게시판테스트-라이트</a><br />
+    
 
   </body>
 </html>
