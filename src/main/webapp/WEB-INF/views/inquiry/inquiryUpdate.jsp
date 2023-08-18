@@ -1,4 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=utf-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <jsp:useBean id="b" class="com.bjy.dto.BoardDTO"></jsp:useBean>
 <jsp:setProperty property="*" name="b"/>
 <!DOCTYPE html>
@@ -31,7 +33,7 @@
 		고객님들의 소중한 충고와 격려, 또는 제안의 말씀을 주시면 더 나은 서비스로 보답하겠습니다.
 	</div>
 	
-	<form action="inquiryupdate?b_number=<%=b.getB_number() %>" method="post">
+	<form action="inquiryUpdate?b_number=<%=b.getB_number() %>" method="post">
 		<table align="center" class="inquiryDetail">
 			<tr>
 				<td id="detail">TITLE</td>
@@ -45,7 +47,7 @@
 				<td colspan="2">
 				<input type="submit" id="btn" value="수정완료" />
 				<input type="reset" id="btn" value="취소" />
-				<input type="button" id="btn" value="목록" onclick="location.href='inquirylist'" />
+				<input type="button" id="btn" value="목록" onclick="location.href='inquiryList.do'" />
 				</td>
 			</tr>
 		</table>

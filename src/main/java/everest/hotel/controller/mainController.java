@@ -58,15 +58,35 @@ public class mainController {
         return "reservation/reservation3";
     }
 
+<<<<<<< HEAD
     @GetMapping("reservationProc.do")
     public String reservationProc() {
         return "reservation/reservationProc";
     }
 
     // 회원정보
+=======
+    // 게시판
+>>>>>>> 90b8d90019c766d1433a0097d5b2289bcb0af470
     @GetMapping("inquiryList.do")
     public String inquiryList() {
         return "inquiry/inquiryList";
+    }
+
+    // 현주 추가함
+    @GetMapping("inquiryDetail.do")
+    public String inquiryDetail() {
+        return "inquiry/inquiryDetail";
+    }
+
+    @GetMapping("inquiryUpdate.do")
+    public String inquiryUpdate() {
+        return "inquiry/inquiryUpdate";
+    }
+
+    @GetMapping("inquiryWrite.do")
+    public String inquiryWrite() {
+        return "inquiry/inquiryWrite";
     }
 
     // 카카오지도

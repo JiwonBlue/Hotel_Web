@@ -25,6 +25,7 @@
 
     <a href="project/kakaoMap.do">카카오지도</a><br />
     <a href="project/kakaoCome.do">카카오오시는길</a><br />
+<<<<<<< HEAD
     <a href="project/kakaoMapRoad.do">카카오오시는길로드뷰</a><br /><br /><br />
 
     <a href="project/reservation1.do">예약 1</a><br />
@@ -33,6 +34,14 @@
     <a href="project/reservationProc.do">예약 4</a><br />
 
 
+=======
+    <a href="project/kakaoMapRoad.do">카카오오시는길로드뷰</a><br />
+
+    <a href="project/inquiryDetail.do">현주게시판테스트-디테일</a><br />
+    <a href="project/inquiryList.do">현주게시판테스트-리스트</a><br />
+    <a href="project/inquiryUpdate.do">현주게시판테스트-업데이트</a><br />
+    <a href="project/inquiryWrite.do">현주게시판테스트-라이트</a><br />
+>>>>>>> 90b8d90019c766d1433a0097d5b2289bcb0af470
 
   </body>
 </html>

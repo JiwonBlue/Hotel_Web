@@ -1,4 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=utf-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,14 +25,24 @@
 <body>
 	<%@ include file="header.jsp" %>
 	<br/><br />
-	&nbsp;&nbsp;&nbsp; <font size="20">고객의 소리 작성</font><br />
+	<style>
+		.centered-text {
+		  text-align: center;
+		}
+	  </style>
+	  </head>
+	  <body>
+	  
+	  <div class="centered-text">
+		<p><font size="6">고객의 소리 작성</font></p>
+	  </div>
 	
 	<div id="detailcomment">
 		호텔 오버톤은 언제나 고객님의 목소리에 귀기울이고 있습니다.<br />
 		고객님들의 소중한 충고와 격려, 또는 제안의 말씀을 주시면 더 나은 서비스로 보답하겠습니다.
 	</div>
 		
-		<form action="inquirylist" name="regForm" method="post">
+		<form action="inquiryList.do" name="regForm" method="post">
 		<table align="center" class="inquiryDetail">
 			<tr>
 				<td id="detail">TITLE</td>

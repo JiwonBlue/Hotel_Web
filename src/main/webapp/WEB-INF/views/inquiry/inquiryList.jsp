@@ -28,7 +28,7 @@
 	<%@ include file="header.jsp"%>
 
 	<br/><br />
-	&nbsp;&nbsp;&nbsp; <font size="20">게시판!!</font><br /><br />
+	&nbsp;&nbsp;&nbsp;<font size="6"> 게 시 판 </font><br /><br />
 	
 	<div id="listcomment">
 		호텔 에베레스트는 언제나 고객님들의 목소리에 귀기울이고 있습니다.<br/>
