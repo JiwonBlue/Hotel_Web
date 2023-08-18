@@ -30,7 +30,7 @@
 		#btn{
 			margin-top:15px;
 			margin-bottom:15px;
-			background-color: #382f24;
+			background-color: #060481;
 		    width:120px;
 		    height:50px;
 		    border: none;
@@ -43,7 +43,7 @@
 <body>
 	<%@ include file="header.jsp" %>
 	<br/><br />
-	&nbsp;&nbsp;&nbsp; <font size="20">객실예약</font><br />
+	&nbsp;&nbsp;&nbsp; <center><font size="20" >객실예약</font></center><br />	
 	
 		<table align="center" class="reservelist1">
 			<tr id="list1">
@@ -55,7 +55,7 @@
 		
 		<form action="reservation2.do" method="get" name="regForm">
 			<table width="80%" align="center" class="reserve1">
-				<tr align="center" style="color:#a0a0a0; font-weight:bold;">
+				<tr align="center" style="color:#060481; font-weight:bold;">
 					<td>체크인</td>
 					<td>체크아웃</td>
 					<td width="10%">성인</td>

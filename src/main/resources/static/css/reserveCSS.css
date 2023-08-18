@@ -45,16 +45,16 @@ footer{
 	height:8%;
 	text-align:center;
 	border: 1px solid #e3e3e3;
-	background-color:  #e3e3e3;
+	background-color:  #c6ceeb;
 	font-size:larger;
-}
+}				
 
 
 /*해당단계*/
 #step1{
 	width:33%;
 	border:  1px solid #e3e3e3;
-	background-color:#876f55;
+	background-color:#8db3e4;
 	color:#ffffff;
 	font-weight:900;
 }
@@ -62,21 +62,21 @@ footer{
 #step2{
 	width:33%;
 	border: 1px solid #e3e3e3;
-	background-color:#ffffff;
+	background-color:#faf1f1;
 	font-weight:900;
-	color:#876f55;
+	color:#41618b;
 }
 /*날짜*/
 #step3{
 	border: 1px solid #e3e3e3;
-	background-color:#ffffff;
+	background-color:#faf1f1;
 	font-weight:900;
-	color:#876f55;
+	color:#41618b;
 }
 
 /*예약 날짜,인원 선택 table*/
 .reserve1{
-	border-top:2px solid #876f55;
+	border-top:2px solid #060481;
 	box-shadow: 0 3px 6px -6px #666;
 	height:20%;
 	margin-top:5%;

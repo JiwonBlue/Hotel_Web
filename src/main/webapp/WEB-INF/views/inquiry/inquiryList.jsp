@@ -51,8 +51,36 @@
 	</div>
 		
 	<div style="text-align: right; margin-right: 100px;">
-		<input type="button" id="btn" value="글쓰기" onclick="location.href='inquiryWrite.do'" />
+		<c:choose>
+			<c:when test="${login}">
+				<input type="button" id="btn" value="글쓰기" onclick="location.href='inquiryWrite.do'" />
+			</c:when>
+			<c:otherwise>
+				<input type="button" id="btn" value="글쓰기" onclick="location.href='login.do'" />
+			</c:otherwise>
+		</c:choose>
 	</div>
+
+	
+	<!-- 위에가 html tag로 설정한 방법, 아래 주석처리가 js로 설정한 방법 -->
+
+
+	<!-- <div style="text-align: right; margin-right: 100px;">
+		<input type="button" id="btn" value="글쓰기" onclick="redirectToWritePage()" />
+	</div>
+	<script>
+		// 테스트를 위해 로그인 상태 설정
+		var login = flase; // true일 경우 로그인 상태(inquiryWrite.do), false일 경우 비로그인 상태(login.do)
+		
+		function redirectToWritePage() {
+			if (login) {
+				location.href = 'inquiryWrite.do';
+			} else {
+				location.href = 'login.do';
+			}
+		}
+	</script> -->
+
 
 	<table align="center" width="80%" class="inquiryInfo">
 		<tr align="center" id="list">

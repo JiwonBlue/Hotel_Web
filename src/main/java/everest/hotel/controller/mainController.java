@@ -42,7 +42,7 @@ public class mainController {
         return "room/Sweet";
     }
 
-    // 예약
+    // 예약, 예약내역
     @GetMapping("reservation1.do")
     public String reservation1() {
         return "reservation/reservation1";
@@ -101,16 +101,10 @@ public class mainController {
         return "kakao/kakaoMap";
     }
 
-    // 카카오 오시는길
-    @GetMapping("kakaoCome.do")
+    // 오시는길
+    @GetMapping("introduction2.do")
     public String kakaoCome() {
-        return "kakao/come";
-    }
-
-    // 카카오 오시는길 로드뷰
-    @GetMapping("kakaoMapRoad.do")
-    public String kakaoMapRoad() {
-        return "kakao/kakaoMapRoad";
+        return "introduction/introduction2";
     }
 
     // header, footer
