@@ -37,11 +37,11 @@
   padding-right: 20px; /* 원하는 간격 값으로 수정하세요 */
 }
 .hfont {
-  font-size: 100%;
+  font-size: 20px;
   text-align: right;
   color: #f9f5f0;
   text-decoration: none;
-  padding-right: 150px; /* 원하는 간격 값으로 수정하세요 */
+  padding-right: 130px; /* 원하는 간격 값으로 수정하세요 */
 }
 .hfont1 {
   font-size: 110%;
