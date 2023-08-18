@@ -49,7 +49,11 @@
 			
 		</table>
 	</div>
-				
+		
+	<div style="text-align: right; margin-right: 100px;">
+		<input type="button" id="btn" value="글쓰기" onclick="location.href='inquiryWrite.do'" />
+	</div>
+
 	<table align="center" width="80%" class="inquiryInfo">
 		<tr align="center" id="list">
 			<td align="center">no</td>
