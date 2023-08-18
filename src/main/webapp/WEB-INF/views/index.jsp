@@ -29,6 +29,7 @@
     <a href="project/reservation2.do">예약 2</a><br />
     <a href="project/reservation3.do">예약 3</a><br />
     <a href="project/reservationProc.do">예약 4</a><br />
+    <a href="project/reserveInfo.do">예약 확인</a><br />
     <a href="project/inquiryUpdate.do">현주게시판테스트-업데이트</a><br />
     
 
