@@ -3,7 +3,9 @@ package everest.hotel.service;
 import java.sql.Date;
 import java.util.List;
 
-public class PayService {
+import everest.hotel.domain.Pay;
+
+public interface PayService {
 
     // 결제 정보를 생성하는 메서드
     List<Pay> PayInformation();
