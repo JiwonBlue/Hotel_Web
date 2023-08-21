@@ -1,11 +1,13 @@
 package everest.hotel.repository;
 
-import everest.hotel.domain.Board;
+import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import java.util.List;
+import everest.hotel.domain.Board;
+
+// import everest.hotel.domain.Board;
 
 public interface BoardRepository extends JpaRepository<Board, String> {
 

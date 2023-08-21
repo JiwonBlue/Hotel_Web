@@ -10,7 +10,9 @@
 </head>
 
 <body>
-	<%@ include file="header.jsp" %>
+	<header class="header"><%@ include file="header.jsp" %></header>
+
+
 	<br/><br />
 	&nbsp;&nbsp;&nbsp; <font size="20">회원가입</font><br />
 	

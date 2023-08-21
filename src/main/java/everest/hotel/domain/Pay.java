@@ -18,19 +18,26 @@ import java.sql.Date;
 public class Pay {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "PAY_CODE_GENERATOR")
-    private String pay_code;
+    @Column(name = "pay_code")
+    private String payCode;
 
     // @reserve_code ManyToOne으로 걸어줘야함 (OneToOne 될지도?)
     @ManyToOne
     @JoinColumn
     private Reserve reserve;
 
-    private int pay_money;
-    private String pay_what;
-    private String pay_bank;
+    @Column(name = "pay_money")
+    private int payMoney;
+
+    @Column(name = "pay_what")
+    private String payWhat;
+
+    @Column(name = "pay_bank")
+    private String payBank;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm:ss", timezone = "Asia/Seoul")
     @CreationTimestamp
-    private Date pay_day;
+    @Column(name = "pay_day")
+    private Date payDay;
 
 }

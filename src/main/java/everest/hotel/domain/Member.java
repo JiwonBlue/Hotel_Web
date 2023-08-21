@@ -19,17 +19,25 @@ import java.util.List;
 public class Member {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "MEMBER_ID_GENERATOR")
-    private String member_id;
+    @Column(name = "member_id")
+    private String memberId;
 
-    private String member_pwd;
-    private String member_name;
-    private String member_phone;
+    @Column(name = "member_pwd")
+    private String memberPwd;
+
+    @Column(name = "member_name")
+    private String memberName;
+
+    @Column(name = "member_phone")
+    private String memberPhone;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm:ss", timezone = "Asia/Seoul")
     @CreationTimestamp
-    private Date member_birthday;
+    @Column(name = "member_birthday")
+    private Date memberBirthday;
 
-    private String member_in_out;
+    @Column(name = "member_in_out")
+    private String memberInOut;
 
     // OneToMany로 예약, 게시판, 코멘트 걸어야함
     @OneToMany

@@ -11,9 +11,15 @@ import lombok.NoArgsConstructor;
 @Data
 @Table(name = "admin_table")
 public class Admin {
+
     @Id
-    private String admin_id;
-    private String admin_name;
-    private String admin_pwd;
+    @Column(name = "admin_id")
+    private String adminId;
+
+    @Column(name = "admin_name")
+    private String adminName;
+
+    @Column(name = "admin_pwd")
+    private String adminPwd;
 
 }

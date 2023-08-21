@@ -1,80 +1,112 @@
-/* .cl-white {
-  text-align: center;
-  color: #f9f5f0;
-  text-decoration: none;
-} */
 .table-1 {
   width: 100%;
-  height: 7%;
-  text-align: center;
-  background-color: #112d4e;
-  text-decoration: none;
-  display: table;
+  height: auto;
+  display: flex;
+  position: fixed;
+  z-index: 100;
+
+  justify-content: space-between;
 }
-.table-2,
-.table-3,
-.table-4,
-.table-5,
-.table-6 {
-  background-color: #112d4e;
-  display: table;
+.table-2 {
+  flex: 1;
+  text-align: left;
   width: 100%;
+
+  background-color: rgba(218, 229, 245, 0.6);
 }
-.center-cell {
+
+.table-3 {
+  flex: 1;
+  text-align: right;
+  width: 100%;
+  background-color: rgba(218, 229, 245, 0.6);
+}
+.table-0 {
+  position: fixed;
+
+  width: 100%;
+  height: 10%;
+  display: table;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  vertical-align: middle;
+  margin-bottom: 7%;
+  z-index: 100;
+}
+
+.table-4 {
+  table-layout: 1;
+  background-color: rgba(189, 206, 233, 0.8);
+  width: 100%;
+  height: 100%;
+
+  justify-content: center;
+  align-items: center;
 }
 .sfont {
   font-size: 9px;
-  color: #f9f5f0;
+  color: #0f5cb4;
+  font-weight: 600;
+
   text-align: center;
   text-decoration: none;
-  padding-right: 25px; /* 원하는 간격 값으로 수정하세요 */
+  padding-right: 20px; /* 원하는 간격 값으로 수정하세요 */
 }
+
 .mfont {
   font-size: 15px;
-  color: #f9f5f0;
+  color: #0f5cb4;
+  font-weight: 600;
+
   padding-right: 20px; /* 원하는 간격 값으로 수정하세요 */
 }
 .hfont {
-  font-size: 20px;
+  font-size: 17px;
   text-align: right;
-  color: #f9f5f0;
+  color: #0f5cb4;
+  font-weight: 600;
+
   text-decoration: none;
-  padding-right: 130px; /* 원하는 간격 값으로 수정하세요 */
+  padding-right: 30px; /* 원하는 간격 값으로 수정하세요 */
 }
+
 .hfont1 {
   font-size: 110%;
-  color: #f9f5f0;
+  color: #0f5cb4;
+
   text-align: right;
 
   text-decoration: none;
   padding-right: 20px; /* 원하는 간격 값으로 수정하세요 */
 }
-.pd {
+
+.row-center {
+  display: flex;
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  height: 100%; /* 내부 요소를 수직으로 가운데 정렬 */
+}
+.row-left {
+  display: flex;
+  justify-content: left; /* 가로 중앙 정렬 */
+}
+.row-right {
+  display: flex;
+  justify-content: right; /* 가로 중앙 정렬 */
+}
+
+.cell {
   padding: 15px;
 }
-.td10 {
-  width: 10%;
-}
-.td20 {
-  width: 20%;
-}
-.td30 {
-  width: 30%;
-}
-.td40 {
-  width: 40%;
-}
-.td50 {
-  width: 50%;
-}
-.td5 {
-  width: 20%;
-}
-.td6 {
-  width: 40%;
-}
-.tr {
+.tr10 {
   height: 10px;
+}
+.tr20 {
+  height: 20px;
+}
+.tr30 {
+  height: 30px;
+}
+.tr40 {
+  height: 40px;
 }

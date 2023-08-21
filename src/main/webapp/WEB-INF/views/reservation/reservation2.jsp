@@ -49,7 +49,10 @@
 </head>
 
 <body>
-	<%@ include file="header.jsp" %>
+	<header class="header"><%@ include file="header.jsp" %></header>
+
+
+
 	<br/><br />
 	&nbsp;&nbsp;&nbsp; <font size="20">객실예약</font><br />
 	

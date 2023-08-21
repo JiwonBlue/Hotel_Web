@@ -19,7 +19,8 @@ import java.util.List;
 public class Reserve {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "RESERVE_CODE_GENERATOR")
-    private String reserve_code;
+    @Column(name = "reserve_code")
+    private String reserveCode;
 
     // @member_id ManyToOne으로 걸어줘야함
     @ManyToOne
@@ -31,14 +32,18 @@ public class Reserve {
     @JoinColumn
     private Room room;
 
-    private int board_view;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm:ss", timezone = "Asia/Seoul")
     @CreationTimestamp
-    private Date reserve_start_day;
+    @Column(name = "reserve_start_day")
+    private Date reserveStartDay;
+
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm:ss", timezone = "Asia/Seoul")
     @CreationTimestamp
-    private Date reserve_end_day;
-    private int reserve_count;
+    @Column(name = "reserve_end_day")
+    private Date reserveEndDay;
+
+    @Column(name = "reserve_count")
+    private int reserveCount;
 
     // @OneToMany로 결제 걸어줘야함 (OneToOne 될지도?)
     @OneToMany

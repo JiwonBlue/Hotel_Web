@@ -14,12 +14,20 @@ import lombok.NoArgsConstructor;
 public class File {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "FILE_CODE_GENERATOR")
-    private String file_code;
+    @Column(name = "file_code")
+    private String fileCode;
 
-    private String file_ogname;
-    private String file_savename;
-    private String file_savepath;
-    private String file_size;
+    @Column(name = "file_ogname")
+    private String fileOgname;
+
+    @Column(name = "file_savename")
+    private String fileSavename;
+
+    @Column(name = "file_savepath")
+    private String fileSavepath;
+
+    @Column(name = "file_size")
+    private String fileSize;
 
     // ManyToOne으로 게시판 걸어야함
     @ManyToOne
