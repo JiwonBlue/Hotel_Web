@@ -49,7 +49,7 @@ CREATE TABLE MEMBER_TABLE(
 );
 
 CREATE TABLE RESERVE_TABLE(
-	RESERVE_CODE VARCHAR2(10) NOT NULL constraint RESERVE_CODE_pk primary key, --예약code(PK)
+	RESERVE_CODE VARCHAR2(10) NOT NULL constraint RESERVE_CODE_PK primary key, --예약code(PK)
 	MEMBER_ID VARCHAR2(30) NOT NULL constraint RESERVE_MEMBER_ID_FK references MEMBER_TABLE(MEMBER_ID), --회원정보code(FK)
 	ROOM_CODE VARCHAR2(10) NOT NULL constraint RESERVE_ROOM_CODE_FK references ROOM_TABLE(ROOM_CODE), --객실code(FK)
 	RESERVE_START_DAY DATE NOT NULL, --이용시작일
@@ -102,31 +102,31 @@ create sequence PAY_TABLE_SEQ start with 1 increment by 1 nocache;
 
 
 --insert
-insert into ADMIN_TABLE values('admin'||ADMIN_TABLE_SEQ.nextval, '김지원', 'kim123');
-insert into ADMIN_TABLE values('admin'||ADMIN_TABLE_SEQ.nextval, '조영태', 'jo123');
-insert into ADMIN_TABLE values('admin'||ADMIN_TABLE_SEQ.nextval, '양현주', 'y123');
-insert into ADMIN_TABLE values('admin'||ADMIN_TABLE_SEQ.nextval, '신용빈', 'sin123');
+insert into ADMIN_TABLE values(ADMIN_TABLE_SEQ.nextval, '김지원', 'kim123');
+insert into ADMIN_TABLE values(ADMIN_TABLE_SEQ.nextval, '조영태', 'jo123');
+insert into ADMIN_TABLE values(ADMIN_TABLE_SEQ.nextval, '양현주', 'y123');
+insert into ADMIN_TABLE values(ADMIN_TABLE_SEQ.nextval, '신용빈', 'sin123');
 
-insert into ROOM_TABLE values('room101', 'standard', '20평', 4, '55인치TV', 200000);
-insert into ROOM_TABLE values('room102', 'standard', '20평', 4, '55인치TV', 200000);
-insert into ROOM_TABLE values('room103', 'standard', '20평', 4, '55인치TV', 200000);
-insert into ROOM_TABLE values('room201', 'deluxe', '30평', 6, '70인치TV, 욕조', 300000);
-insert into ROOM_TABLE values('room202', 'deluxe', '30평', 6, '70인치TV, 욕조', 300000);
-insert into ROOM_TABLE values('room203', 'deluxe', '30평', 6, '70인치TV, 욕조', 300000);
-insert into ROOM_TABLE values('room301', 'suite', '40평', 8, '79인치TV, 욕조', 400000);
-insert into ROOM_TABLE values('room302', 'suite', '40평', 8, '79인치TV, 욕조', 400000);
-insert into ROOM_TABLE values('room303', 'suite', '40평', 8, '79인치TV, 욕조', 400000);
+insert into ROOM_TABLE values(101, 'standard', '20평', 4, '55인치TV', 200000);
+insert into ROOM_TABLE values(102, 'standard', '20평', 4, '55인치TV', 200000);
+insert into ROOM_TABLE values(103, 'standard', '20평', 4, '55인치TV', 200000);
+insert into ROOM_TABLE values(201, 'deluxe', '30평', 6, '70인치TV, 욕조', 300000);
+insert into ROOM_TABLE values(202, 'deluxe', '30평', 6, '70인치TV, 욕조', 300000);
+insert into ROOM_TABLE values(203, 'deluxe', '30평', 6, '70인치TV, 욕조', 300000);
+insert into ROOM_TABLE values(301, 'suite', '40평', 8, '79인치TV, 욕조', 400000);
+insert into ROOM_TABLE values(302, 'suite', '40평', 8, '79인치TV, 욕조', 400000);
+insert into ROOM_TABLE values(303, 'suite', '40평', 8, '79인치TV, 욕조', 400000);
 
 insert into MEMBER_TABLE values('p123@naver.com', 'u12345', '엄용민', '010-9999-9888', '1999-06-28', '내국인');
 insert into MEMBER_TABLE values('t123@naver.com', 'j12345', '조영태', '010-7799-8787', '1966-09-28', '내국인');
 insert into MEMBER_TABLE values('y123@naver.com', 's12345', '강찬성', '010-6663-8558', '1970-05-22', '내국인');
 
-insert into RESERVE_TABLE values('reserve'||RESERVE_TABLE_SEQ.nextval, 'p123@naver.com', 'room101', '2023-07-15', '2023-07-17', 3);
-insert into RESERVE_TABLE values('reserve'||RESERVE_TABLE_SEQ.nextval, 'p123@naver.com', 'room102', '2023-07-15', '2023-07-17', 3);
-insert into RESERVE_TABLE values('reserve'||RESERVE_TABLE_SEQ.nextval, 't123@naver.com', 'room202', '2023-07-15', '2023-07-17', 3);
-insert into RESERVE_TABLE values('reserve'||RESERVE_TABLE_SEQ.nextval, 't123@naver.com', 'room203', '2023-07-15', '2023-07-17', 3);
-insert into RESERVE_TABLE values('reserve'||RESERVE_TABLE_SEQ.nextval, 'y123@naver.com', 'room302', '2023-07-15', '2023-07-17', 3);
-insert into RESERVE_TABLE values('reserve'||RESERVE_TABLE_SEQ.nextval, 'y123@naver.com', 'room303', '2023-07-15', '2023-07-17', 3);
+insert into RESERVE_TABLE values(RESERVE_TABLE_SEQ.nextval, 'p123@naver.com', 101, '2023-07-15', '2023-07-17', 3);
+insert into RESERVE_TABLE values(RESERVE_TABLE_SEQ.nextval, 'p123@naver.com', 102, '2023-07-15', '2023-07-17', 3);
+insert into RESERVE_TABLE values(RESERVE_TABLE_SEQ.nextval, 't123@naver.com', 103, '2023-07-15', '2023-07-17', 3);
+insert into RESERVE_TABLE values(RESERVE_TABLE_SEQ.nextval, 't123@naver.com', 201, '2023-07-15', '2023-07-17', 3);
+insert into RESERVE_TABLE values(RESERVE_TABLE_SEQ.nextval, 'y123@naver.com', 202, '2023-07-15', '2023-07-17', 3);
+insert into RESERVE_TABLE values(RESERVE_TABLE_SEQ.nextval, 'y123@naver.com', 203, '2023-07-15', '2023-07-17', 3);
 
 insert into BOARD_TABLE values(BOARD_TABLE_SEQ.nextval, '제목이다', '내용이다', 'p123@naver.com', 0, SYSDATE, SYSDATE);
 insert into BOARD_TABLE values(BOARD_TABLE_SEQ.nextval, '이런제목', '이런내용', 't123@naver.com', 0, SYSDATE, SYSDATE);
@@ -139,12 +139,12 @@ insert into COMMENT_TABLE values(COMMENT_TABLE_SEQ.nextval, 2, '이것도대댓�
 
 --파일생략(파일 필요)
 
-insert into PAY_TABLE values('pay'||PAY_TABLE_SEQ.nextval, 'reserve1', 200000, '카드', '농협', '2023-07-11');
-insert into PAY_TABLE values('pay'||PAY_TABLE_SEQ.nextval, 'reserve2', 200000, '카드', '농협', '2023-07-12');
-insert into PAY_TABLE values('pay'||PAY_TABLE_SEQ.nextval, 'reserve3', 200000, '카드', '농협', '2023-06-26');
-insert into PAY_TABLE values('pay'||PAY_TABLE_SEQ.nextval, 'reserve4', 200000, '카드', '농협', '2023-06-26');
-insert into PAY_TABLE values('pay'||PAY_TABLE_SEQ.nextval, 'reserve5', 200000, '카드', '농협', '2023-06-26');
-insert into PAY_TABLE values('pay'||PAY_TABLE_SEQ.nextval, 'reserve6', 200000, '카드', '농협', '2023-06-26');
+insert into PAY_TABLE values(PAY_TABLE_SEQ.nextval, 1, 200000, '카드', '농협', '2023-07-11');
+insert into PAY_TABLE values(PAY_TABLE_SEQ.nextval, 2, 200000, '카드', '농협', '2023-07-12');
+insert into PAY_TABLE values(PAY_TABLE_SEQ.nextval, 3, 200000, '카드', '농협', '2023-06-26');
+insert into PAY_TABLE values(PAY_TABLE_SEQ.nextval, 4, 200000, '카드', '농협', '2023-06-26');
+insert into PAY_TABLE values(PAY_TABLE_SEQ.nextval, 5, 200000, '카드', '농협', '2023-06-26');
+insert into PAY_TABLE values(PAY_TABLE_SEQ.nextval, 6, 200000, '카드', '농협', '2023-06-26');
 
 --일단 다 insert 해서 테스트해보고 필요한부분만 고르자
 --컬럼 크기들 다시 수정하자
