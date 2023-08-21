@@ -15,7 +15,7 @@ public class File {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "FILE_CODE_GENERATOR")
     @Column(name = "file_code")
-    private String fileCode;
+    private long fileCode;
 
     @Column(name = "file_ogname")
     private String fileOgname;

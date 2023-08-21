@@ -20,7 +20,7 @@ public class Reserve {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "RESERVE_CODE_GENERATOR")
     @Column(name = "reserve_code")
-    private String reserveCode;
+    private long reserveCode;
 
     // @member_id ManyToOne으로 걸어줘야함
     @ManyToOne(fetch = FetchType.EAGER)
@@ -46,7 +46,6 @@ public class Reserve {
     private int reserveCount;
 
     // @OneToMany로 결제 걸어줘야함 (OneToOne 될지도?)
-    @OneToMany(mappedBy = "reserve_table")
-    @JoinColumn(name = "pay_code")
+    @OneToMany(mappedBy = "reserve")
     private List<Pay> pay;
 }

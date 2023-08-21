@@ -17,7 +17,7 @@ public class Room {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ROOM_CODE_GENERATOR")
     @Column(name = "room_code")
-    private String roomCode;
+    private long roomCode;
 
     @Column(name = "room_type")
     private String roomType;
@@ -35,7 +35,6 @@ public class Room {
     private String roomPrice;
 
     // OneToMany로 예약 걸어야함
-    @OneToMany(mappedBy = "room_table")
-    @JoinColumn(name = "reserve_code")
+    @OneToMany(mappedBy = "room")
     private List<Reserve> reserve;
 }

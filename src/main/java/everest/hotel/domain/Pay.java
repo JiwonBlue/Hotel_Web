@@ -19,7 +19,7 @@ public class Pay {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "PAY_CODE_GENERATOR")
     @Column(name = "pay_code")
-    private String payCode;
+    private long payCode;
 
     // @reserve_code ManyToOne으로 걸어줘야함 (OneToOne 될지도?)
     @ManyToOne(fetch = FetchType.EAGER)

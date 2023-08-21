@@ -7,7 +7,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import org.hibernate.annotations.CreationTimestamp;
-import org.springframework.data.jpa.repository.Query;
 
 import java.sql.Date;
 import java.util.List;
@@ -25,7 +24,7 @@ public class Board {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "BOARD_CODE_GENERATOR") // generator은 위에서 만든 name의 값
 
     @Column(name = "board_code")
-    private String boardCode;
+    private long boardCode;
 
     @Column(name = "board_title")
     private String boardTitle; // 이녀석이 데이터베이스의 이름과 다르다면??? @Column(name="username") << 여기서의 name은 데이터베이스 컬럼 이름
@@ -33,17 +32,13 @@ public class Board {
     @Column(name = "board_content")
     private String boardContent;
 
-    @Column(name = "member_id")
-    private String memberId;
+    // @Column(name = "member_id")
+    // private String memberId;
 
-    /*
-     * // @member_id ManyToOne으로 걸어줘야함
-     * 
-     * @ManyToOne(fetch = FetchType.EAGER)
-     * 
-     * @JoinColumn(name = "member_id")
-     * private Member memberId;
-     */
+    // @member_id ManyToOne으로 걸어줘야함
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "member_id")
+    private Member member;
 
     @Column(name = "board_view")
     private int boardView;
@@ -60,13 +55,11 @@ public class Board {
     private Date boardUdate;
 
     // @OneToMany로 파일 걸어줘야함.
-    @OneToMany(mappedBy = "board_table")
-    @JoinColumn(name = "file_code")
+    @OneToMany(mappedBy = "board")
     private List<File> file;
 
     // @OneToMany로 코멘트 걸어줘야함
-    @OneToMany(mappedBy = "board_table")
-    @JoinColumn(name = "comment_code")
+    @OneToMany(mappedBy = "board")
     private List<Comment> comment;
 
     // @member_id ManyToOne으로 걸어줘야함
