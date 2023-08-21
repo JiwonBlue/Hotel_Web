@@ -1,4 +1,4 @@
---°èÁ¤ »ı¼º
+--ê³„ì • ìƒì„±
 conn sys/java1234 as sysdba;
 alter session set "_oracle_script"=true;
 drop user everest cascade;
@@ -21,61 +21,61 @@ drop table admin_table;
 
 purge recyclebin;
 
---table »ı¼º
+--table ìƒì„±
 CREATE TABLE ADMIN_TABLE(
-	ADMIN_ID VARCHAR2(10) NOT NULL constraint ADMIN_ID_PK primary key, --¾îµå¹ÎÄÚµå(¾ÆÀÌµğ)(PK)
-	ADMIN_NAME VARCHAR2(10) NOT NULL, --¾îµå¹ÎÀÌ¸§
-	ADMIN_PWD VARCHAR2(10) NOT NULL --¾îµå¹Îºñ¹Ğ¹øÈ£
+	ADMIN_ID VARCHAR2(10) NOT NULL constraint ADMIN_ID_PK primary key, --ì–´ë“œë¯¼ì½”ë“œ(ì•„ì´ë””)(PK)
+	ADMIN_NAME VARCHAR2(10) NOT NULL, --ì–´ë“œë¯¼ì´ë¦„
+	ADMIN_PWD VARCHAR2(10) NOT NULL --ì–´ë“œë¯¼ë¹„ë°€ë²ˆí˜¸
 );
 create sequence ADMIN_TABLE_SEQ start with 1 increment by 1 nocache;
 
 CREATE TABLE ROOM_TABLE(
-	ROOM_CODE VARCHAR2(10) NOT NULL constraint ROOM_CODE_PK primary key, --°´½ÇÄÚµå(PK)
-	ROOM_TYPE VARCHAR2(10) NOT NULL, --°´½ÇÅ¸ÀÔ
-	ROOM_SIZE VARCHAR2(10) NOT NULL, --°´½Ç¸éÀû
-	ROOM_COUNT NUMBER(10) NOT NULL, --°´½ÇÁ¤¿ø
-	ROOM_INFO VARCHAR(40) NOT NULL, --°´½ÇÁ¤º¸
-	ROOM_PRICE NUMBER(10) NOT NULL --°´½Ç°¡°İ
+	ROOM_CODE VARCHAR2(10) NOT NULL constraint ROOM_CODE_PK primary key, --ê°ì‹¤ì½”ë“œ(PK)
+	ROOM_TYPE VARCHAR2(10) NOT NULL, --ê°ì‹¤íƒ€ì…
+	ROOM_SIZE VARCHAR2(10) NOT NULL, --ê°ì‹¤ë©´ì 
+	ROOM_COUNT NUMBER(10) NOT NULL, --ê°ì‹¤ì •ì›
+	ROOM_INFO VARCHAR(40) NOT NULL, --ê°ì‹¤ì •ë³´
+	ROOM_PRICE NUMBER(10) NOT NULL --ê°ì‹¤ê°€ê²©
 );
 --create sequence ROOM_TABLE_SEQ start with 101 increment by 1 nocache;
 
 CREATE TABLE MEMBER_TABLE(
-	MEMBER_ID VARCHAR(30) NOT NULL constraint MEMBER_ID_PK primary key, --È¸¿øÁ¤º¸code(PK)
-	MEMBER_PWD VARCHAR(30) NOT NULL, --ºñ¹Ğ¹øÈ£
-	MEMBER_NAME VARCHAR(10) NOT NULL, --ÀÌ¸§
-	MEMBER_PHONE VARCHAR(20) NOT NULL, --¿¬¶ôÃ³
-	MEMBER_BIRTHDAY DATE NOT NULL, --»ı³â¿ùÀÏ
-	MEMBER_IN_OUT VARCHAR(10) NOT NULL --³»/¿Ü±¹ÀÎ
+	MEMBER_ID VARCHAR(30) NOT NULL constraint MEMBER_ID_PK primary key, --íšŒì›ì •ë³´code(PK)
+	MEMBER_PWD VARCHAR(30) NOT NULL, --ë¹„ë°€ë²ˆí˜¸
+	MEMBER_NAME VARCHAR(10) NOT NULL, --ì´ë¦„
+	MEMBER_PHONE VARCHAR(20) NOT NULL, --ì—°ë½ì²˜
+	MEMBER_BIRTHDAY DATE NOT NULL, --ìƒë…„ì›”ì¼
+	MEMBER_IN_OUT VARCHAR(10) NOT NULL --ë‚´/ì™¸êµ­ì¸
 );
 
 CREATE TABLE RESERVE_TABLE(
-	RESERVE_CODE VARCHAR2(10) NOT NULL constraint RESERVE_CODE_pk primary key, --¿¹¾àcode(PK)
-	MEMBER_ID VARCHAR2(30) NOT NULL constraint RESERVE_MEMBER_ID_FK references MEMBER_TABLE(MEMBER_ID), --È¸¿øÁ¤º¸code(FK)
-	ROOM_CODE VARCHAR2(10) NOT NULL constraint RESERVE_ROOM_CODE_FK references ROOM_TABLE(ROOM_CODE), --°´½Çcode(FK)
-	RESERVE_START_DAY DATE NOT NULL, --ÀÌ¿ë½ÃÀÛÀÏ
-	RESERVE_END_DAY DATE NOT NULL, --ÀÌ¿ëÁ¾·áÀÏ
-	RESERVE_COUNT NUMBER(10) NOT NULL --¼÷¹ÚÀÎ¿ø
+	RESERVE_CODE VARCHAR2(10) NOT NULL constraint RESERVE_CODE_pk primary key, --ì˜ˆì•½code(PK)
+	MEMBER_ID VARCHAR2(30) NOT NULL constraint RESERVE_MEMBER_ID_FK references MEMBER_TABLE(MEMBER_ID), --íšŒì›ì •ë³´code(FK)
+	ROOM_CODE VARCHAR2(10) NOT NULL constraint RESERVE_ROOM_CODE_FK references ROOM_TABLE(ROOM_CODE), --ê°ì‹¤code(FK)
+	RESERVE_START_DAY DATE NOT NULL, --ì´ìš©ì‹œì‘ì¼
+	RESERVE_END_DAY DATE NOT NULL, --ì´ìš©ì¢…ë£Œì¼
+	RESERVE_COUNT NUMBER(10) NOT NULL --ìˆ™ë°•ì¸ì›
 );
 create sequence RESERVE_TABLE_SEQ start with 1 increment by 1 nocache;
 
 CREATE TABLE BOARD_TABLE(
-	BOARD_CODE VARCHAR2(10) NOT NULL constraint BOARD_CODE_PK primary key, --°Ô½ÃÆÇÄÚµå(PK)
-	BOARD_TITLE VARCHAR2(50) NOT NULL, --°Ô½ÃÆÇÁ¦¸ñ
-	BOARD_CONTENT VARCHAR2(1000) NOT NULL, --°Ô½ÃÆÇ³»¿ë
-	MEMBER_ID VARCHAR2(30) NOT NULL constraint BOARD_MEMBER_ID_FK references MEMBER_TABLE(MEMBER_ID), --È¸¿øÁ¤º¸code(FK)
-	BOARD_VIEW NUMBER(20), --°Ô½ÃÆÇÁ¶È¸¼ö
-	BOARD_RDATE DATE NOT NULL, --°Ô½ÃÆÇÀÛ¼ºÀÏ
-	BOARD_UDATE DATE NOT NULL --°Ô½ÃÆÇ¼öÁ¤ÀÏ
+	BOARD_CODE VARCHAR2(10) NOT NULL constraint BOARD_CODE_PK primary key, --ê²Œì‹œíŒì½”ë“œ(PK)
+	BOARD_TITLE VARCHAR2(50) NOT NULL, --ê²Œì‹œíŒì œëª©
+	BOARD_CONTENT VARCHAR2(1000) NOT NULL, --ê²Œì‹œíŒë‚´ìš©
+	MEMBER_ID VARCHAR2(30) NOT NULL constraint BOARD_MEMBER_ID_FK references MEMBER_TABLE(MEMBER_ID), --íšŒì›ì •ë³´code(FK)
+	BOARD_VIEW NUMBER(20), --ê²Œì‹œíŒì¡°íšŒìˆ˜
+	BOARD_RDATE DATE NOT NULL, --ê²Œì‹œíŒì‘ì„±ì¼
+	BOARD_UDATE DATE NOT NULL --ê²Œì‹œíŒìˆ˜ì •ì¼
 );
 create sequence BOARD_TABLE_SEQ start with 1 increment by 1 nocache;
 
 CREATE TABLE COMMENT_TABLE(
-	COMMENT_CODE VARCHAR2(10) NOT NULL constraint COMMENT_CODE_PK primary key, --´ñ±ÛÄÚµå(PK)
-	RECOMMENT_CODE VARCHAR2(10) NOT NULL constraint RECOMMENT_COMMENT_CODE_FK references COMMENT_TABLE(COMMENT_CODE), --´ë´ñ±ÛÄÚµå(FK)
-	COMMENT_CONTENT VARCHAR2(500) NOT NULL, --´ñ±Û³»¿ë
-	COMMENT_RDATE DATE NOT NULL, --´ñ±ÛÀÛ¼º³¯Â¥
-	MEMBER_ID VARCHAR2(30) NOT NULL constraint COMMENT_MEMBER_ID_FK references MEMBER_TABLE(MEMBER_ID), --È¸¿ø(FK)
-	BOARD_CODE VARCHAR2(10) NOT NULL constraint COMMENT_BOARD_CODE_FK references BOARD_TABLE(BOARD_CODE) --°Ô½ÃÆÇ(FK)
+	COMMENT_CODE VARCHAR2(10) NOT NULL constraint COMMENT_CODE_PK primary key, --ëŒ“ê¸€ì½”ë“œ(PK)
+	RECOMMENT_CODE VARCHAR2(10) NOT NULL constraint RECOMMENT_COMMENT_CODE_FK references COMMENT_TABLE(COMMENT_CODE), --ëŒ€ëŒ“ê¸€ì½”ë“œ(FK)
+	COMMENT_CONTENT VARCHAR2(500) NOT NULL, --ëŒ“ê¸€ë‚´ìš©
+	COMMENT_RDATE DATE NOT NULL, --ëŒ“ê¸€ì‘ì„±ë‚ ì§œ
+	MEMBER_ID VARCHAR2(30) NOT NULL constraint COMMENT_MEMBER_ID_FK references MEMBER_TABLE(MEMBER_ID), --íšŒì›(FK)
+	BOARD_CODE VARCHAR2(10) NOT NULL constraint COMMENT_BOARD_CODE_FK references BOARD_TABLE(BOARD_CODE) --ê²Œì‹œíŒ(FK)
 );
 create sequence COMMENT_TABLE_SEQ start with 1 increment by 1 nocache;
 
@@ -85,41 +85,41 @@ CREATE TABLE FILE_table(
 	FILE_SAVENAME VARCHAR(100) NOT NULL, 
 	FILE_SAVEPATH VARCHAR(50) NOT NULL, 
 	FILE_SIZE VARCHAR(50) NOT NULL,
-	BOARD_code VARCHAR2(10) NOT NULL constraint FILE_BOARD_CODE_FK references BOARD_TABLE(BOARD_CODE) --°Ô½ÃÆÇ(FK)
+	BOARD_code VARCHAR2(10) NOT NULL constraint FILE_BOARD_CODE_FK references BOARD_TABLE(BOARD_CODE) --ê²Œì‹œíŒ(FK)
 );
 create sequence FILE_TABLE_SEQ start with 1 increment by 1 nocache;
 
 
 CREATE TABLE PAY_TABLE(
-	PAY_CODE VARCHAR2(10) NOT NULL constraint PAY_CODE primary key, --°áÁ¦code(PK)
-	RESERVE_CODE VARCHAR(10) NOT NULL constraint PAY_RESERVE_CODE_FK references RESERVE_TABLE(RESERVE_CODE), --¿¹¾àcode(FK)
-	PAY_MONEY NUMBER(20) NOT NULL, --°áÁ¦±İ¾×
-	PAY_WHAT VARCHAR(10) NOT NULL, --°áÁ¦¼ö´Ü
-	PAY_BANK VARCHAR(10) NOT NULL, --°áÁ¦ÀºÇà
-	PAY_DAY DATE NOT NULL --°áÁ¦ÀÏ½Ã
+	PAY_CODE VARCHAR2(10) NOT NULL constraint PAY_CODE primary key, --ê²°ì œcode(PK)
+	RESERVE_CODE VARCHAR(10) NOT NULL constraint PAY_RESERVE_CODE_FK references RESERVE_TABLE(RESERVE_CODE), --ì˜ˆì•½code(FK)
+	PAY_MONEY NUMBER(20) NOT NULL, --ê²°ì œê¸ˆì•¡
+	PAY_WHAT VARCHAR(10) NOT NULL, --ê²°ì œìˆ˜ë‹¨
+	PAY_BANK VARCHAR(10) NOT NULL, --ê²°ì œì€í–‰
+	PAY_DAY DATE NOT NULL --ê²°ì œì¼ì‹œ
 );
 create sequence PAY_TABLE_SEQ start with 1 increment by 1 nocache;
 
 
 --insert
-insert into ADMIN_TABLE values('admin'||ADMIN_TABLE_SEQ.nextval, '±èÁö¿ø', 'kim123');
-insert into ADMIN_TABLE values('admin'||ADMIN_TABLE_SEQ.nextval, 'Á¶¿µÅÂ', 'jo123');
-insert into ADMIN_TABLE values('admin'||ADMIN_TABLE_SEQ.nextval, '¾çÇöÁÖ', 'y123');
-insert into ADMIN_TABLE values('admin'||ADMIN_TABLE_SEQ.nextval, '½Å¿ëºó', 'sin123');
+insert into ADMIN_TABLE values('admin'||ADMIN_TABLE_SEQ.nextval, 'ê¹€ì§€ì›', 'kim123');
+insert into ADMIN_TABLE values('admin'||ADMIN_TABLE_SEQ.nextval, 'ì¡°ì˜íƒœ', 'jo123');
+insert into ADMIN_TABLE values('admin'||ADMIN_TABLE_SEQ.nextval, 'ì–‘í˜„ì£¼', 'y123');
+insert into ADMIN_TABLE values('admin'||ADMIN_TABLE_SEQ.nextval, 'ì‹ ìš©ë¹ˆ', 'sin123');
 
-insert into ROOM_TABLE values('room101', 'standard', '20Æò', 4, '55ÀÎÄ¡TV', 200000);
-insert into ROOM_TABLE values('room102', 'standard', '20Æò', 4, '55ÀÎÄ¡TV', 200000);
-insert into ROOM_TABLE values('room103', 'standard', '20Æò', 4, '55ÀÎÄ¡TV', 200000);
-insert into ROOM_TABLE values('room201', 'deluxe', '30Æò', 6, '70ÀÎÄ¡TV, ¿åÁ¶', 300000);
-insert into ROOM_TABLE values('room202', 'deluxe', '30Æò', 6, '70ÀÎÄ¡TV, ¿åÁ¶', 300000);
-insert into ROOM_TABLE values('room203', 'deluxe', '30Æò', 6, '70ÀÎÄ¡TV, ¿åÁ¶', 300000);
-insert into ROOM_TABLE values('room301', 'suite', '40Æò', 8, '79ÀÎÄ¡TV, ¿åÁ¶', 400000);
-insert into ROOM_TABLE values('room302', 'suite', '40Æò', 8, '79ÀÎÄ¡TV, ¿åÁ¶', 400000);
-insert into ROOM_TABLE values('room303', 'suite', '40Æò', 8, '79ÀÎÄ¡TV, ¿åÁ¶', 400000);
+insert into ROOM_TABLE values('room101', 'standard', '20í‰', 4, '55ì¸ì¹˜TV', 200000);
+insert into ROOM_TABLE values('room102', 'standard', '20í‰', 4, '55ì¸ì¹˜TV', 200000);
+insert into ROOM_TABLE values('room103', 'standard', '20í‰', 4, '55ì¸ì¹˜TV', 200000);
+insert into ROOM_TABLE values('room201', 'deluxe', '30í‰', 6, '70ì¸ì¹˜TV, ìš•ì¡°', 300000);
+insert into ROOM_TABLE values('room202', 'deluxe', '30í‰', 6, '70ì¸ì¹˜TV, ìš•ì¡°', 300000);
+insert into ROOM_TABLE values('room203', 'deluxe', '30í‰', 6, '70ì¸ì¹˜TV, ìš•ì¡°', 300000);
+insert into ROOM_TABLE values('room301', 'suite', '40í‰', 8, '79ì¸ì¹˜TV, ìš•ì¡°', 400000);
+insert into ROOM_TABLE values('room302', 'suite', '40í‰', 8, '79ì¸ì¹˜TV, ìš•ì¡°', 400000);
+insert into ROOM_TABLE values('room303', 'suite', '40í‰', 8, '79ì¸ì¹˜TV, ìš•ì¡°', 400000);
 
-insert into MEMBER_TABLE values('p123@naver.com', 'u12345', '¾ö¿ë¹Î', '010-9999-9888', '1999-06-28', '³»±¹ÀÎ');
-insert into MEMBER_TABLE values('t123@naver.com', 'j12345', 'Á¶¿µÅÂ', '010-7799-8787', '1966-09-28', '³»±¹ÀÎ');
-insert into MEMBER_TABLE values('y123@naver.com', 's12345', '°­Âù¼º', '010-6663-8558', '1970-05-22', '³»±¹ÀÎ');
+insert into MEMBER_TABLE values('p123@naver.com', 'u12345', 'ì—„ìš©ë¯¼', '010-9999-9888', '1999-06-28', 'ë‚´êµ­ì¸');
+insert into MEMBER_TABLE values('t123@naver.com', 'j12345', 'ì¡°ì˜íƒœ', '010-7799-8787', '1966-09-28', 'ë‚´êµ­ì¸');
+insert into MEMBER_TABLE values('y123@naver.com', 's12345', 'ê°•ì°¬ì„±', '010-6663-8558', '1970-05-22', 'ë‚´êµ­ì¸');
 
 insert into RESERVE_TABLE values('reserve'||RESERVE_TABLE_SEQ.nextval, 'p123@naver.com', 'room101', '2023-07-15', '2023-07-17', 3);
 insert into RESERVE_TABLE values('reserve'||RESERVE_TABLE_SEQ.nextval, 'p123@naver.com', 'room102', '2023-07-15', '2023-07-17', 3);
@@ -128,30 +128,30 @@ insert into RESERVE_TABLE values('reserve'||RESERVE_TABLE_SEQ.nextval, 't123@nav
 insert into RESERVE_TABLE values('reserve'||RESERVE_TABLE_SEQ.nextval, 'y123@naver.com', 'room302', '2023-07-15', '2023-07-17', 3);
 insert into RESERVE_TABLE values('reserve'||RESERVE_TABLE_SEQ.nextval, 'y123@naver.com', 'room303', '2023-07-15', '2023-07-17', 3);
 
-insert into BOARD_TABLE values(BOARD_TABLE_SEQ.nextval, 'Á¦¸ñÀÌ´Ù', '³»¿ëÀÌ´Ù', 'p123@naver.com', 0, SYSDATE, SYSDATE);
-insert into BOARD_TABLE values(BOARD_TABLE_SEQ.nextval, 'ÀÌ·±Á¦¸ñ', 'ÀÌ·±³»¿ë', 't123@naver.com', 0, SYSDATE, SYSDATE);
-insert into BOARD_TABLE values(BOARD_TABLE_SEQ.nextval, 'Àú·±Á¦¸ñ', 'Àú·±³»¿ë', 'y123@naver.com', 0, SYSDATE, SYSDATE);
+insert into BOARD_TABLE values(BOARD_TABLE_SEQ.nextval, 'ì œëª©ì´ë‹¤', 'ë‚´ìš©ì´ë‹¤', 'p123@naver.com', 0, SYSDATE, SYSDATE);
+insert into BOARD_TABLE values(BOARD_TABLE_SEQ.nextval, 'ì´ëŸ°ì œëª©', 'ì´ëŸ°ë‚´ìš©', 't123@naver.com', 0, SYSDATE, SYSDATE);
+insert into BOARD_TABLE values(BOARD_TABLE_SEQ.nextval, 'ì €ëŸ°ì œëª©', 'ì €ëŸ°ë‚´ìš©', 'y123@naver.com', 0, SYSDATE, SYSDATE);
 
-insert into COMMENT_TABLE values(COMMENT_TABLE_SEQ.nextval, COMMENT_TABLE_SEQ.currval, '´ñ±ÛÀÌ´Ù', SYSDATE, 'p123@naver.com', 1);
-insert into COMMENT_TABLE values(COMMENT_TABLE_SEQ.nextval, COMMENT_TABLE_SEQ.currval, '³ªµµ´ñ±Û', SYSDATE, 't123@naver.com', 2);
-insert into COMMENT_TABLE values(COMMENT_TABLE_SEQ.nextval, 1, '´ë´ñ±Û!', SYSDATE, 'y123@naver.com', 1);
-insert into COMMENT_TABLE values(COMMENT_TABLE_SEQ.nextval, 2, 'ÀÌ°Íµµ´ë´ñ±Û!', SYSDATE, 'y123@naver.com', 2);
+insert into COMMENT_TABLE values(COMMENT_TABLE_SEQ.nextval, COMMENT_TABLE_SEQ.currval, 'ëŒ“ê¸€ì´ë‹¤', SYSDATE, 'p123@naver.com', 1);
+insert into COMMENT_TABLE values(COMMENT_TABLE_SEQ.nextval, COMMENT_TABLE_SEQ.currval, 'ë‚˜ë„ëŒ“ê¸€', SYSDATE, 't123@naver.com', 2);
+insert into COMMENT_TABLE values(COMMENT_TABLE_SEQ.nextval, 1, 'ëŒ€ëŒ“ê¸€!', SYSDATE, 'y123@naver.com', 1);
+insert into COMMENT_TABLE values(COMMENT_TABLE_SEQ.nextval, 2, 'ì´ê²ƒë„ëŒ€ëŒ“ê¸€!', SYSDATE, 'y123@naver.com', 2);
 
---ÆÄÀÏ»ı·«(ÆÄÀÏ ÇÊ¿ä)
+--íŒŒì¼ìƒëµ(íŒŒì¼ í•„ìš”)
 
-insert into PAY_TABLE values('pay'||PAY_TABLE_SEQ.nextval, 'reserve1', 200000, 'Ä«µå', '³óÇù', '2023-07-11');
-insert into PAY_TABLE values('pay'||PAY_TABLE_SEQ.nextval, 'reserve2', 200000, 'Ä«µå', '³óÇù', '2023-07-12');
-insert into PAY_TABLE values('pay'||PAY_TABLE_SEQ.nextval, 'reserve3', 200000, 'Ä«µå', '³óÇù', '2023-06-26');
-insert into PAY_TABLE values('pay'||PAY_TABLE_SEQ.nextval, 'reserve4', 200000, 'Ä«µå', '³óÇù', '2023-06-26');
-insert into PAY_TABLE values('pay'||PAY_TABLE_SEQ.nextval, 'reserve5', 200000, 'Ä«µå', '³óÇù', '2023-06-26');
-insert into PAY_TABLE values('pay'||PAY_TABLE_SEQ.nextval, 'reserve6', 200000, 'Ä«µå', '³óÇù', '2023-06-26');
+insert into PAY_TABLE values('pay'||PAY_TABLE_SEQ.nextval, 'reserve1', 200000, 'ì¹´ë“œ', 'ë†í˜‘', '2023-07-11');
+insert into PAY_TABLE values('pay'||PAY_TABLE_SEQ.nextval, 'reserve2', 200000, 'ì¹´ë“œ', 'ë†í˜‘', '2023-07-12');
+insert into PAY_TABLE values('pay'||PAY_TABLE_SEQ.nextval, 'reserve3', 200000, 'ì¹´ë“œ', 'ë†í˜‘', '2023-06-26');
+insert into PAY_TABLE values('pay'||PAY_TABLE_SEQ.nextval, 'reserve4', 200000, 'ì¹´ë“œ', 'ë†í˜‘', '2023-06-26');
+insert into PAY_TABLE values('pay'||PAY_TABLE_SEQ.nextval, 'reserve5', 200000, 'ì¹´ë“œ', 'ë†í˜‘', '2023-06-26');
+insert into PAY_TABLE values('pay'||PAY_TABLE_SEQ.nextval, 'reserve6', 200000, 'ì¹´ë“œ', 'ë†í˜‘', '2023-06-26');
 
---ÀÏ´Ü ´Ù insert ÇØ¼­ Å×½ºÆ®ÇØº¸°í ÇÊ¿äÇÑºÎºĞ¸¸ °í¸£ÀÚ
---ÄÃ·³ Å©±âµé ´Ù½Ã ¼öÁ¤ÇÏÀÚ
---½ÃÄı½º ´Ù½Ã ³Ö°í fk°ªµé references·Î ¹Ş¾Æ¿Ã ¼ö ÀÖ´Ù. ¼±¹è±â¼öµµ member Æù³Ñ¹ö¸¦ mymenu fkÆù³Ñ¹ö·Î ¹Ş¾Ò´Ù.
+--ì¼ë‹¨ ë‹¤ insert í•´ì„œ í…ŒìŠ¤íŠ¸í•´ë³´ê³  í•„ìš”í•œë¶€ë¶„ë§Œ ê³ ë¥´ì
+--ì»¬ëŸ¼ í¬ê¸°ë“¤ ë‹¤ì‹œ ìˆ˜ì •í•˜ì
+--ì‹œí€¸ìŠ¤ ë‹¤ì‹œ ë„£ê³  fkê°’ë“¤ referencesë¡œ ë°›ì•„ì˜¬ ìˆ˜ ìˆë‹¤. ì„ ë°°ê¸°ìˆ˜ë„ member í°ë„˜ë²„ë¥¼ mymenu fkí°ë„˜ë²„ë¡œ ë°›ì•˜ë‹¤.
 --MEMBER_NUM NUMBER(7) constraint MEMBER_PK primary key,
 --PHONE_NUM VARCHAR2(11) constraint MYMENU_MEMBER_NUM_FK references MEMBER(PHONE_NUM), -- FK
---À¯Àú¸¦ »èÁ¦Çß´Ù°¡ ´Ù½Ã »ı¼ºÇÏ´Ï±î drop ¹®ÀÌ ¾µ¸ğ°¡ ¾ø´Â °Í °°±âµµ..
+--ìœ ì €ë¥¼ ì‚­ì œí–ˆë‹¤ê°€ ë‹¤ì‹œ ìƒì„±í•˜ë‹ˆê¹Œ drop ë¬¸ì´ ì“¸ëª¨ê°€ ì—†ëŠ” ê²ƒ ê°™ê¸°ë„..
 
 commit;
 
