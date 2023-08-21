@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 
@@ -7,7 +7,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>호텔 오버튼 - 고객의 소리 상세 내역</title>
-	<link rel="stylesheet" href="../css/inquiryCSS.css?ver=1">
+	<link rel="stylesheet" href="../css/inquiryCSS.css">
 	<script type="text/javascript" src="../script/script.js"></script>
 	<style>
 		#btn{
@@ -24,9 +24,22 @@
 </head>
 
 <body>
-	<%@ include file="header.jsp" %>
+	<header class="header"><%@ include file="header.jsp" %></header>
+
+
+
 	<br/><br />
-	&nbsp;&nbsp;&nbsp; <font size="20">고객의 소리<br /></font>
+	<style>
+		.centered-text {
+		  text-align: center;
+		}
+	  </style>
+	  </head>
+	  <body>
+	  
+	  <div class="centered-text">
+		<p><font size="6">고객의 소리</font></p>
+	  </div>
 	
 	<div id="detailcomment">
 		호텔 오버톤은 언제나 고객님의 목소리에 귀기울이고 있습니다.<br />
@@ -72,7 +85,7 @@
 				<input type="submit" id="btn" value="수정" />
 				<input type="button" id="btn" value="삭제"  onclick="location.href='inquiryremove?b_number=${dto.getB_number()}'" />
 			</c:if>
-				<input type="button" id="btn" value="목록" onclick="location.href='inquirylist'" />
+				<input type="button" id="btn" value="목록" onclick="location.href='inquiryList.do'" />
 				</td>
 			</tr>
 			</form>

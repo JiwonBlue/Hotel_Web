@@ -42,7 +42,7 @@ public class mainController {
         return "room/Sweet";
     }
 
-    // reservation
+    // 예약, 예약내역
     @GetMapping("reservation1.do")
     public String reservation1() {
         return "reservation/reservation1";
@@ -58,28 +58,53 @@ public class mainController {
         return "reservation/reservation3";
     }
 
-    // 회원정보
+    @GetMapping("reservationProc.do")
+    public String reservationProc() {
+        return "reservation/reservationProc";
+    }
+
+    // 게시판
     @GetMapping("inquiryList.do")
     public String inquiryList() {
         return "inquiry/inquiryList";
     }
 
-    // 카카오지도
-    @GetMapping("kakaoMap.do")
-    public String kakaoMap() {
-        return "kakao/kakaoMap";
+    @GetMapping("inquiryList2.do")
+    public String inquiryList2() {
+        return "inquiry/inquiryList2";
     }
 
-    // 카카오 오시는길
-    @GetMapping("kakaoCome.do")
-    public String kakaoCome() {
-        return "kakao/come";
+    // 현주 추가함
+    @GetMapping("inquiryDetail.do")
+    public String inquiryDetail() {
+        return "inquiry/inquiryDetail";
     }
 
-    // 카카오 오시는길 로드뷰
-    @GetMapping("kakaoMapRoad.do")
-    public String kakaoMapRoad() {
-        return "kakao/kakaoMapRoad";
+    @GetMapping("inquiryUpdate.do")
+    public String inquiryUpdate() {
+        return "inquiry/inquiryUpdate";
+    }
+
+    @GetMapping("inquiryWrite.do")
+    public String inquiryWrite() {
+        return "inquiry/inquiryWrite";
+    }
+
+    @GetMapping("inquiryWrite2.do")
+    public String inquiryWrite2() {
+        return "inquiry/inquiryWrite2";
+    }
+
+    // 호텔 소개
+    @GetMapping("introduction1.do")
+    public String introduction1() {
+        return "introduction/introduction1";
+    }
+
+    // 오시는길
+    @GetMapping("introduction2.do")
+    public String introduction2() {
+        return "introduction/introduction2";
     }
 
     @GetMapping("footer.do")

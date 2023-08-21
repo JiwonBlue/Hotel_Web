@@ -5,6 +5,14 @@ body {
   height: 100%;
   font-family: 'Noto Sans KR', sans-serif;
 }
+.header {
+  /* 헤더 스타일 */
+  width: 100%;
+
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
 
 .wrapper {
   width: 100%; /* 너비 */
@@ -107,7 +115,7 @@ body {
 
 /*login.jsp*/
 .log {
-  background: #f10e06;
+  background: #dbdadb;
   margin: 5% auto;
   width: 470px;
   height: 400px;

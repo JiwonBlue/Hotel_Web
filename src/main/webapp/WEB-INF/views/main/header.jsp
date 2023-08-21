@@ -79,6 +79,10 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
       <div class="cell">
         <a href="room/Standard.do" class="hfont">호텔 정보</a>
       </div>
+      <div class="cell">
+        <a href="kakaoCome.do" class="hfont">오시는길</a>
+      </div>
     </div>
   </div>
 </div>
+            

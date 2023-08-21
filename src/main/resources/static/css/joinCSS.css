@@ -54,20 +54,20 @@ footer{
 #btn {
     margin-top: 30px;
     margin-bottom: 30px;
-    background-color: #382f24;
+    background-color: #5a5b5e;
     width: 120px; /* 버튼 너비 조정 */
     height: 50px; /* 버튼 높이 조정 */
     border: none;
     border-radius: 1em;
     font-size: medium;
-    color: #f1ebd5;
+    color: white;
     cursor: pointer; /* 마우스 커서 모양 변경 */
     transition: background-color 0.3s, color 0.3s; /* 부드러운 효과 추가 */
 }
 
 #btn:hover {
     background-color: #f1ebd5;
-    color: #382f24;
+    color: #5a5b5e;
 }
 
 /* joinForm.jsp에만 적용 */
@@ -76,7 +76,7 @@ footer{
 	margin-bottom:90px;
 	height:700px;
 	width:40%;
-	background:#f1ebd5;
+	background:#dbdadb;
 	text-align:center;
 	border-radius: 1em;
 }
@@ -111,7 +111,7 @@ input{
 
 #list1{
 	border:  1px solid #e3e3e3;
-	background-color:#382f24;
+	background-color:#5a5b5e;
 	color:#ffffff;
 	font-weight:900;
 }

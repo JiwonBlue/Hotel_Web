@@ -8,6 +8,7 @@ body {
   height: 100%;
   font-family: 'Noto Sans KR', sans-serif;
 }
+
 .header {
   /* 헤더 스타일 */
   width: 100%;
@@ -17,7 +18,7 @@ body {
   z-index: 100;
 }
 
-/*roomInfo.jsp*/
+/*introduction.jsp*/
 .roomList {
   width: 230px;
   height: 300px;

@@ -13,7 +13,9 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
 </head>  
 
 <body>
-	<%@ include file="header.jsp" %>
+	<header class="header"><%@ include file="header.jsp" %></header>
+
+
 	<div class="roomList" >
 		<table class="table">
 			<tr>

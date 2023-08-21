@@ -1,5 +1,5 @@
-<%@ page contentType="text/html;charset=utf-8"%> <%@ taglib
-uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page contentType="text/html;charset=utf-8"%> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!DOCTYPE html>
 <html>
@@ -24,8 +24,16 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
     <a href="project/testfooter.do">EVEREST HOTEL 테스트푸터</a><br />
 
     <a href="project/main.do">프로젝트</a><br /><br />
-    <a href="project/kakaoMap.do">카카오지도</a><br />
-    <a href="project/kakaoCome.do">카카오오시는길</a><br />
-    <a href="project/kakaoMapRoad.do">카카오오시는길로드뷰</a><br />
+
+    <a href="project/introduction1.do">호텔소개, 오시는길</a><br />
+
+    <a href="project/reservation1.do">예약 1</a><br />
+    <a href="project/reservation2.do">예약 2</a><br />
+    <a href="project/reservation3.do">예약 3</a><br />
+    <a href="project/reservationProc.do">예약 4</a><br />
+    <a href="project/reserveInfo.do">예약 확인</a><br />
+    <a href="project/inquiryUpdate.do">현주게시판테스트-업데이트</a><br />
+    
+
   </body>
 </html>
