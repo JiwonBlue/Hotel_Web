@@ -14,6 +14,7 @@ import java.util.List;
 @RequestMapping("board")
 @Controller
 public class BoardController {
+
     @Autowired
     private BoardService service;
 
@@ -24,6 +25,7 @@ public class BoardController {
         model.addAttribute("list", list);
         return "/inquiry/inquiryList";
     }
+
     /*
      * @GetMapping("write.do")
      * public String write() {
