@@ -11,9 +11,9 @@ import java.sql.Date;
 
 @Entity
 @AllArgsConstructor
-@NoArgsConstructor 
-@Data 
-@SequenceGenerator(name = "COMMENT_CODE_GENERATOR", sequenceName = "COMMENT_CODE", initialValue = 1, allocationSize = 1) 
+@NoArgsConstructor
+@Data
+@SequenceGenerator(name = "COMMENT_CODE_GENERATOR", sequenceName = "COMMENT_CODE", initialValue = 1, allocationSize = 1)
 @Table(name = "comment_table")
 public class Comment {
     @Id
@@ -27,6 +27,13 @@ public class Comment {
     @CreationTimestamp
     private Date comment_rdate;
 
-    //ManyToOne으로 member_id 걸어줘야함
-    //ManyToOne으로 board_code 걸어줘야함
+    // ManyToOne으로 member_id 걸어줘야함
+    @ManyToOne
+    @JoinColumn
+    private Member member;
+
+    // ManyToOne으로 board_code 걸어줘야함
+    @ManyToOne
+    @JoinColumn
+    private Board board;
 }

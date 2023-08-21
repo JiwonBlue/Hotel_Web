@@ -1,5 +1,7 @@
 package everest.hotel.domain;
 
+import java.util.List;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,4 +25,7 @@ public class Room {
     private String room_price;
 
     // OneToMany로 예약 걸어야함
+    @OneToMany
+    @JoinColumn(name = "reserve_code")
+    private List<Reserve> reserve;
 }

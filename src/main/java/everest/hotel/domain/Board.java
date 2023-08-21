@@ -5,9 +5,11 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.sql.Date;
+import java.util.List;
 
 @Entity // jpa 사용할때!
 @AllArgsConstructor // 파라미터있는생성자
@@ -26,6 +28,9 @@ public class Board {
     private String board_content;
 
     // @member_id ManyToOne으로 걸어줘야함
+    @ManyToOne
+    @JoinColumn
+    private Member member;
 
     private int board_view;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm:ss", timezone = "Asia/Seoul")
@@ -38,7 +43,14 @@ public class Board {
     private Date board_udate;
 
     // @OneToMany로 파일 걸어줘야함.
+    @OneToMany
+    @JoinColumn(name = "file_code")
+    private List<File> file;
+
     // @OneToMany로 코멘트 걸어줘야함
+    @OneToMany
+    @JoinColumn(name = "comment_code")
+    private List<Comment> comment;
 
     // ex)
     // @JoinColumn(name = "comment_code")

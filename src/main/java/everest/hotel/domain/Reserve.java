@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.sql.Date;
+import java.util.List;
 
 @Entity
 @AllArgsConstructor
@@ -21,7 +22,14 @@ public class Reserve {
     private String reserve_code;
 
     // @member_id ManyToOne으로 걸어줘야함
+    @ManyToOne
+    @JoinColumn
+    private Member member;
+
     // @room_code ManyToOne으로 걸어줘야함
+    @ManyToOne
+    @JoinColumn
+    private Room room;
 
     private int board_view;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm:ss", timezone = "Asia/Seoul")
@@ -33,4 +41,7 @@ public class Reserve {
     private int reserve_count;
 
     // @OneToMany로 결제 걸어줘야함 (OneToOne 될지도?)
+    @OneToMany
+    @JoinColumn(name = "pay_code")
+    private List<Pay> pay;
 }
