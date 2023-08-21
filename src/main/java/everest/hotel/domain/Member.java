@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.sql.Date;
+import java.util.List;
 
 @Entity
 @AllArgsConstructor
@@ -31,4 +32,15 @@ public class Member {
     private String member_in_out;
 
     // OneToMany로 예약, 게시판, 코멘트 걸어야함
+    @OneToMany
+    @JoinColumn(name = "reserve_code")
+    private List<Reserve> reserve;
+
+    @OneToMany
+    @JoinColumn(name = "board_code")
+    private List<Board> board;
+
+    @OneToMany
+    @JoinColumn(name = "comment_code")
+    private List<Comment> comment;
 }

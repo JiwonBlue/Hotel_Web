@@ -22,4 +22,7 @@ public class File {
     private String file_size;
 
     // ManyToOne으로 게시판 걸어야함
+    @ManyToOne
+    @JoinColumn
+    private Board board;
 }

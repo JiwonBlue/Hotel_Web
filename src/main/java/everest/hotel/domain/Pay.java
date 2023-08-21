@@ -21,6 +21,9 @@ public class Pay {
     private String pay_code;
 
     // @reserve_code ManyToOne으로 걸어줘야함 (OneToOne 될지도?)
+    @ManyToOne
+    @JoinColumn
+    private Reserve reserve;
 
     private int pay_money;
     private String pay_what;
