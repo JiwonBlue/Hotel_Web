@@ -18,14 +18,19 @@ import java.sql.Date;
 public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "COMMENT_CODE_GENERATOR")
-    private String comment_code;
+    @Column(name = "comment_code")
+    private String commentCode;
 
-    private String recomment_code;
-    private String comment_content;
+    @Column(name = "recomment_code")
+    private String recommentCode;
+
+    @Column(name = "comment_content")
+    private String commentContent;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm:ss", timezone = "Asia/Seoul")
     @CreationTimestamp
-    private Date comment_rdate;
+    @Column(name = "comment_rdate")
+    private Date commentRdate;
 
     // ManyToOne으로 member_id 걸어줘야함
     @ManyToOne

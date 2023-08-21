@@ -16,13 +16,23 @@ import lombok.NoArgsConstructor;
 public class Room {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ROOM_CODE_GENERATOR")
-    private String room_code;
+    @Column(name = "room_code")
+    private String roomCode;
 
-    private String room_type;
-    private String room_size;
-    private int room_count;
-    private String room_info;
-    private String room_price;
+    @Column(name = "room_type")
+    private String roomType;
+
+    @Column(name = "room_size")
+    private String roomSize;
+
+    @Column(name = "room_count")
+    private int roomCount;
+
+    @Column(name = "room_info")
+    private String roomInfo;
+
+    @Column(name = "room_price")
+    private String roomPrice;
 
     // OneToMany로 예약 걸어야함
     @OneToMany
