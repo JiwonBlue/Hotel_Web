@@ -1,6 +1,5 @@
 package everest.hotel.service;
 
-import java.sql.Date;
 import java.util.List;
 
 import everest.hotel.domain.Pay;
