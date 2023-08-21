@@ -95,15 +95,15 @@ public class mainController {
         return "inquiry/inquiryWrite2";
     }
 
-    // 카카오지도
-    @GetMapping("kakaoMap.do")
-    public String kakaoMap() {
-        return "kakao/kakaoMap";
+    // 호텔 소개
+    @GetMapping("introduction1.do")
+    public String introduction1() {
+        return "introduction/introduction1";
     }
 
     // 오시는길
     @GetMapping("introduction2.do")
-    public String kakaoCome() {
+    public String introduction2() {
         return "introduction/introduction2";
     }
 
