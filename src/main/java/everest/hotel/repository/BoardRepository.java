@@ -1,20 +1,21 @@
-package everest.hotel.repository;
+// package everest.hotel.repository;
 
-import java.util.List;
+// import java.util.List;
 
-import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties.Pageable;
-import org.springframework.data.domain.Page;
-import org.springframework.data.jpa.repository.JpaRepository;
+// import
+// org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties.Pageable;
+// import org.springframework.data.domain.Page;
+// import org.springframework.data.jpa.repository.JpaRepository;
 
-import everest.hotel.domain.Board;
+// import everest.hotel.domain.Board;
 
-public interface BoardRepository extends JpaRepository<Board, String> {
+// public interface BoardRepository extends JpaRepository<Board, String> {
 
-    Board findBySeq(String seq);
+// Board findBySeq(String seq);
 
-    Page<Board> findByOrderBySeqDesc(Pageable pageable);
+// Page<Board> findByOrderBySeqDesc(Pageable pageable);
 
-}
+// }
 
 // BOARD_CODE VARCHAR2(10) NOT NULL CONSTRAINT BOARD_CODE_PK PRIMARY KEY,
 // --게시판코드(PK)
