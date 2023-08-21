@@ -3,6 +3,7 @@ package everest.hotel.domain;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -54,6 +55,18 @@ public class Board {
                        // 데이터베이스에 맞는 것을 찾아준다.
     @Column(name = "board_udate")
     private Date boardUdate;
+
+    @Builder
+    public Board(Long boardCode, String boardTitle, String boardContent, Member member, int boardView, Date boardRdate,
+            Date boardUdate) {
+        this.boardCode = boardCode;
+        this.boardTitle = boardTitle;
+        this.boardContent = boardContent;
+        this.member = member;
+        this.boardView = boardView;
+        this.boardRdate = boardRdate;
+        this.boardUdate = boardUdate;
+    }
 
     // @OneToMany로 파일 걸어줘야함.
     // @OneToMany(mappedBy = "board")
