@@ -40,15 +40,15 @@ public class Member {
     private String memberInOut;
 
     // OneToMany로 예약, 게시판, 코멘트 걸어야함
-    @OneToMany
+    @OneToMany(mappedBy = "member_table")
     @JoinColumn(name = "reserve_code")
     private List<Reserve> reserve;
 
-    @OneToMany
+    @OneToMany(mappedBy = "member_table")
     @JoinColumn(name = "board_code")
     private List<Board> board;
 
-    @OneToMany
+    @OneToMany(mappedBy = "member_table")
     @JoinColumn(name = "comment_code")
     private List<Comment> comment;
 }

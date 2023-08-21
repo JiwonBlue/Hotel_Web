@@ -33,8 +33,8 @@ public class Board {
     private String boardContent;
 
     // @member_id ManyToOne으로 걸어줘야함
-    @ManyToOne
-    @JoinColumn
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "member_id")
     private Member member;
 
     @Column(name = "board_view")
@@ -51,12 +51,12 @@ public class Board {
     private Date boardUdate;
 
     // @OneToMany로 파일 걸어줘야함.
-    @OneToMany
+    @OneToMany(mappedBy = "board_table")
     @JoinColumn(name = "file_code")
     private List<File> file;
 
     // @OneToMany로 코멘트 걸어줘야함
-    @OneToMany
+    @OneToMany(mappedBy = "board_table")
     @JoinColumn(name = "comment_code")
     private List<Comment> comment;
 

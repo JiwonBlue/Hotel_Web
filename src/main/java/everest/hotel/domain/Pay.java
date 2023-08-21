@@ -22,8 +22,8 @@ public class Pay {
     private String payCode;
 
     // @reserve_code ManyToOne으로 걸어줘야함 (OneToOne 될지도?)
-    @ManyToOne
-    @JoinColumn
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "reserve_code")
     private Reserve reserve;
 
     @Column(name = "pay_money")

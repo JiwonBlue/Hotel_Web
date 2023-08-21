@@ -30,7 +30,7 @@ public class File {
     private String fileSize;
 
     // ManyToOne으로 게시판 걸어야함
-    @ManyToOne
-    @JoinColumn
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "board_code")
     private Board board;
 }
