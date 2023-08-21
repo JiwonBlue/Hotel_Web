@@ -11,7 +11,9 @@
 </head>
 
 <body>
-	<%@ include file="header.jsp" %>
+	<header class="header"><%@ include file="header.jsp" %></header>
+
+
 	<br/><br />
 	&nbsp;&nbsp;&nbsp;
 

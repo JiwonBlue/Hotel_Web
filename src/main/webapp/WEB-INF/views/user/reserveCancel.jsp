@@ -31,7 +31,10 @@
 </head>
 
 <body>
-	<%@ include file="header.jsp" %>
+	<header class="header"><%@ include file="header.jsp" %></header>
+
+
+
 	<br/><br />
 	&nbsp;&nbsp;&nbsp; <font size="20">예약 취소<br /></font>
 	<form action="reservecancel">

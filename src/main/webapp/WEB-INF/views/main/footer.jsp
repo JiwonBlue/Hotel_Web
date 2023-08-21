@@ -56,7 +56,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 		<td>
              <a>
                  <img
-                    src="/data/EVlogo2.png"
+                    src="/data/EVfoot.png"
                     width="150"
                     height="150"
                     alt="HOME"

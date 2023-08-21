@@ -16,8 +16,7 @@ body {
 
 .wrapper {
   width: 100%; /* 너비 */
-  height: 100%;
-  margin: 0 auto; /* 화면 중앙에 배치 */
+  height: 70%;
   position: relative; /* 슬라이드 위치를 잡기 위해 */
   text-align: center; /* 슬라이드를 화면 중앙에 배치 */
 }
@@ -39,46 +38,89 @@ body {
   border: none; /* 테두리 없음 */
   padding: 20px; /* 패딩 20px */
   background-color: transparent; /* 투명 배경 */
-  color: #c42929; /* 화살표 색 */
+  color: #1c51e6; /* 화살표 색 */
   font-weight: 1000; /* 진하기 */
-  font-size: 80px; /* 화살표 크기 */
+  font-size: 40px; /* 화살표 크기 */
   opacity: 1; /* 불투명도 */
 }
 
 #prev {
-  left: 50%; /* 왼쪽으로 바짝 붙여서 배치 */
+  left: 10%; /* 왼쪽으로 바짝 붙여서 배치 */
 }
 #next {
-  right: 50%; /* 오른쪽 바짝 붙여서 배치 */
+  right: 10%; /* 오른쪽 바짝 붙여서 배치 */
 }
 
 .roominfo {
-  width: 83%; /* 너비 */
+  width: 60%;
   height: 30%;
-  margin: 1% 9%; /* 화면 중앙에 배치 */
+  margin: 0 auto; /* 화면 중앙에 배치 */
   font-size: xx-large;
   text-align: center;
+  margin-top: 5%;
+  margin-bottom: -5%;
+}
+.font15 {
+  color: #253c6b;
+  font-size: 30px;
+}
+.font9 {
+  color: #253c6b;
+  font-size: 20px;
+}
+
+#img {
+  position: absolute;
+  bottom: 0;
+  right: 100%;
+}
+.horizontal-line {
+  border-top: 1.5px solid #253c6b; /* 가로 줄의 스타일을 지정 */
+  width: 50%; /* 가로 줄의 가로 길이를 50%로 조정 */
+  margin: 10px auto; /* 가로 줄을 가운데로 정렬 */
 }
 
 .main {
-  width: 83%; /* 너비 */
-  height: 30%;
-  margin: 1% 9%; /* 화면 중앙에 배치 */
-  position: relative; /* 슬라이드 위치를 잡기 위해 */
+  width: 60%;
+  height: 68%;
+  margin: 0 auto; /* 화면 중앙에 배치 */
   text-align: center; /* 슬라이드를 화면 중앙에 배치 */
+  position: relative;
 }
 
 #room {
-  width: 100%; /* 너비 */
-  height: 100%;
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-#room > img {
-  width: 29%; /* 너비 */
-  height: 100%; /* 각 이미지의 스타일 */
-  float: left; /* 왼쪽부터 배치 */
-  margin: 14px 2%;
+#room img:nth-child(1) {
+  width: 68%;
+  height: 50%;
+}
+#room img:nth-child(2) {
+  width: 30%;
+  height: 50%;
+}
+#room img:nth-child(3) {
+  width: 33%;
+  height: 50%;
+  margin-top: 2%;
+}
+#room img:nth-child(4) {
+  width: 33%;
+  height: 50%;
+  margin-top: 2%;
+}
+#room img:nth-child(5) {
+  width: 30%;
+  height: 50%;
+  margin-top: 2%;
 }
 
 .facilityinfo {
@@ -112,10 +154,30 @@ body {
   float: left; /* 왼쪽부터 배치 */
   margin: 14px 2%;
 }
+#scrollToTopButton {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+#scrollToTopButton.show {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+}
 
 /*login.jsp*/
 .log {
-  background: #dbdadb;
+  background: #f10e06;
   margin: 5% auto;
   width: 470px;
   height: 400px;

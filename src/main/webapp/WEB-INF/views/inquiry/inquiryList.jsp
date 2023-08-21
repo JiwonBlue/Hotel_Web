@@ -25,7 +25,11 @@
 
 <body>
 	<center>
-	<%@ include file="header.jsp"%>
+		<header class="header"><%@ include file="header.jsp" %></header>
+
+
+
+
 
 	<br/><br />
 	&nbsp;&nbsp;&nbsp;<font id="title" font size="10" >Review</font><br /><br />

@@ -1,280 +1,260 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
 
-html,body{
-	margin:0;
-	width:100%;
-	height:100%;
-	font-family: 'Noto Sans KR', sans-serif;
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
-/*모든 폴더의 header에 적용*/
-.header{
-	height:8%;
-	text-align:center; 
-	font-size: 22px;
-}
-.header tr th{
-	width:13%;
-}
-.header a:link {					/* a 태그 클릭 안한 상태 */
-	text-align:center; 
-	color: black;
-	text-decoration : none;	/*밑줄 제거*/
-}
+.header {
+  /* 헤더 스타일 */
+  width: 100%;
 
-.header a:visited { 				/* a 태그 1회 이상 클릭 했을 때 상태 */
- 	color: black; 
- 	text-decoration: none;
-}
-
-.header a:hover { 					/* a 태그에 마우스 올렸을 때 상태 */
- 	color: black; 
- 	text-decoration: none;	
-}
-
-
-
-footer{
-	bottom: 0;
-	width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 
 /* inquiryList.jsp */
-.inquiryInfo{
-	width: 75%;
-	margin-top:50px;
-	margin-bottom:220px;
-	margin-right: 100px;
-	border-top: 3px solid #623f30;
-	border-top: 3px solid #b1afaf;
-	border-collapse: collapse;
-	float: right; 
+.inquiryInfo {
+  width: 75%;
+  margin-top: 50px;
+  margin-bottom: 220px;
+  margin-right: 100px;
+  border-top: 3px solid #623f30;
+  border-top: 3px solid #b1afaf;
+  border-collapse: collapse;
+  float: right;
 }
 
-.inquiryInfo tr{
-	border-bottom:2px solid #e6e6e6;
-	padding:10px;
+.inquiryInfo tr {
+  border-bottom: 2px solid #e6e6e6;
+  padding: 10px;
 }
 
-.inquiryInfo tr td{
-	border-bottom:2px solid #e6e6e6;
-	padding:10px;
-	height:35px;
-
+.inquiryInfo tr td {
+  border-bottom: 2px solid #e6e6e6;
+  padding: 10px;
+  height: 35px;
 }
 
-#list > td{
-	height:40px;
-	color:#555555;
-    font-weight:900;
-    background-color:#dbdadb;
-
+#list > td {
+  height: 40px;
+  color: #555555;
+  font-weight: 900;
+  background-color: #dbdadb;
 }
 
-listcomment.inquiryInfo a:link {					/* a 태그 클릭 안한 상태 */
-	text-align:center; 
-	color: black;
-	text-decoration : none;	/*밑줄 제거*/
+listcomment.inquiryInfo a:link {
+  /* a 태그 클릭 안한 상태 */
+  text-align: center;
+  color: black;
+  text-decoration: none; /*밑줄 제거*/
 }
 
-.inquiryInfo a:visited { 				/* a 태그 1회 이상 클릭 했을 때 상태 */
- 	color: black; 
- 	text-decoration: none;
+.inquiryInfo a:visited {
+  /* a 태그 1회 이상 클릭 했을 때 상태 */
+  color: black;
+  text-decoration: none;
 }
 
-.inquiryInfo a:hover { 					/* a 태그에 마우스 올렸을 때 상태 */
- 	color: black; 
- 	text-decoration: none;	
+.inquiryInfo a:hover {
+  /* a 태그에 마우스 올렸을 때 상태 */
+  color: black;
+  text-decoration: none;
 }
 
-#listcomment{
-	width:50%;
-	height:100px;
-	text-align:center;
-	margin: 10px auto;
-	font-size:large;
+#listcomment {
+  width: 50%;
+  height: 100px;
+  text-align: center;
+  margin: 10px auto;
+  font-size: large;
 }
 
 /*inquiryDetail.jsp*/
-#detailcomment{
-	width:50%;
-	height:100px;
-	text-align:center;
-	margin:40px auto;
-	font-size:large;
+#detailcomment {
+  width: 50%;
+  height: 100px;
+  text-align: center;
+  margin: 40px auto;
+  font-size: large;
 }
 
-.inquiryDetail{
-	width:70%;
-	margin-top:30px;
-	margin-bottom:80px;
-	border-top: 3px solid #b1afaf;
-	border-collapse: collapse;
+.inquiryDetail {
+  width: 70%;
+  margin-top: 30px;
+  margin-bottom: 80px;
+  border-top: 3px solid #b1afaf;
+  border-collapse: collapse;
 }
 
-.inquiryDetail tr{
-	border-bottom:2px solid #e6e6e6;
-	padding:10px;
+.inquiryDetail tr {
+  border-bottom: 2px solid #e6e6e6;
+  padding: 10px;
 }
 
-.inquiryDetail tr td{
-	border-bottom:2px solid #e6e6e6;
-	padding:10px;
-	height:30px;
+.inquiryDetail tr td {
+  border-bottom: 2px solid #e6e6e6;
+  padding: 10px;
+  height: 30px;
 }
 
-#detail{
-	text-align:center;
-	width:130px;
-	height:40px;
-	color:#555555;
-    font-weight:900;
-    background-color:#dbdadb;
+#detail {
+  text-align: center;
+  width: 130px;
+  height: 40px;
+  color: #555555;
+  font-weight: 900;
+  background-color: #dbdadb;
 }
 
-#detailcontent{
-	text-align:center;
-	width:130px;
-	height:440px;
-	color:#555555;
-    font-weight:900;
-    background-color:#dbdadb;
+#detailcontent {
+  text-align: center;
+  width: 130px;
+  height: 440px;
+  color: #555555;
+  font-weight: 900;
+  background-color: #dbdadb;
 }
 
-#detailtextarea{
-	width:100%;
-	height:440px;
-	font-size:18px;
-	border:none
+#detailtextarea {
+  width: 100%;
+  height: 440px;
+  font-size: 18px;
+  border: none;
 }
 
-#detailtextarea:focus{
-	outline:none;
+#detailtextarea:focus {
+  outline: none;
 }
 
-#comment{
-	padding-left: 150px;
+#comment {
+  padding-left: 150px;
 }
 
-#commentWrite{
-	width:300px;
-	height:120px;
-	padding-left: 150px;
+#commentWrite {
+  width: 300px;
+  height: 120px;
+  padding-left: 150px;
 }
 
-#commentBtn{
-	width:70px;
-	height:25px;
-	border: none;
-	background-color: #060481;
-	color:#f1ebd5;
+#commentBtn {
+  width: 70px;
+  height: 25px;
+  border: none;
+  background-color: #060481;
+  color: #f1ebd5;
 }
 
-#commentWriteBtn{
-	position:absolute;
-	width:120px; 
-	height:50px; 
-	background-color: #060481;
-	color:#f1ebd5;
-	border: none;
-	margin-top:20px;
-	margin-left:25px;
+#commentWriteBtn {
+  position: absolute;
+  width: 120px;
+  height: 50px;
+  background-color: #060481;
+  color: #f1ebd5;
+  border: none;
+  margin-top: 20px;
+  margin-left: 25px;
 }
 /*inquiryWrite.jsp*/
-#writeTitle{
-	width:100%;
-	height:35px;
-	font-size:20px;
-	border:none;
-	
+#writeTitle {
+  width: 100%;
+  height: 35px;
+  font-size: 20px;
+  border: none;
 }
 
-#writeTitle:focus{
-	outline:none;
+#writeTitle:focus {
+  outline: none;
 }
 
-#writeContent{
-	width:100%;
-	height:300px;
-	font-size:20px;
-	border:none
+#writeContent {
+  width: 100%;
+  height: 300px;
+  font-size: 20px;
+  border: none;
 }
 
-#writeContent:focus{
-	outline:none;
+#writeContent:focus {
+  outline: none;
 }
-
 
 /* inquiry 사이드바 */
 .roomList {
-	width: 210px;
-	height: 200px;
-	position: relative;
-	top: 5%; /* 수정된 부분: 위쪽으로 올림 */
-	float: left;
-	margin-left: 5%;
-	background: #dbdadb;
-  }
-
-.table{
-	margin:1% auto;
-	width:90%;
-	height:100%;
-	text-align: left;
-	padding-left: 1%;
-	border-collapse: separate;
-    border-spacing: 0 20px;
-}
-.table th{
-	height:10%;
-	font-size:xx-large;
-	border-bottom: 4px solid #ffffff;
-	border-width:60%;
-	font-weight:bolder;
+  width: 210px;
+  height: 200px;
+  position: relative;
+  top: 5%; /* 수정된 부분: 위쪽으로 올림 */
+  float: left;
+  margin-left: 5%;
+  background: #dbdadb;
 }
 
-.table td{
-	margin:2% auto;
-	height:2%;
-	font-size:large;
-	font-weight:900;
-	color:#876234;
+.table {
+  margin: 1% auto;
+  width: 90%;
+  height: 100%;
+  text-align: left;
+  padding-left: 1%;
+  border-collapse: separate;
+  border-spacing: 0 20px;
+}
+.table th {
+  height: 10%;
+  font-size: xx-large;
+  border-bottom: 4px solid #ffffff;
+  border-width: 60%;
+  font-weight: bolder;
 }
 
-.table a:link {					/* a 태그 클릭 안한 상태 */
-	color:#000000;
-	text-decoration : none;	/*밑줄 제거*/
+.table td {
+  margin: 2% auto;
+  height: 2%;
+  font-size: large;
+  font-weight: 900;
+  color: #876234;
 }
 
-.table a:visited { 				/* a 태그 1회 이상 클릭 했을 때 상태 */
- 	color:#060481;
- 	text-decoration: none;
+.table a:link {
+  /* a 태그 클릭 안한 상태 */
+  color: #000000;
+  text-decoration: none; /*밑줄 제거*/
 }
 
-.table a:hover { 					/* a 태그에 마우스 올렸을 때 상태 */
- 	color:#fff; 
- 	text-decoration: none;	
+.table a:visited {
+  /* a 태그 1회 이상 클릭 했을 때 상태 */
+  color: #060481;
+  text-decoration: none;
 }
 
-/* 글꼴 및 폰트 */ 
-  #title {
-    font-size: 32px; /* 폰트 크기 설정 */
-    font-family: 'Noto Sans KR', sans-serif; /* 폰트 설정 */
-    /* 원하는 추가 스타일 설정 */
-  }
-
-  
-  #select{
-	background-color:#8db3e4;
+.table a:hover {
+  /* a 태그에 마우스 올렸을 때 상태 */
+  color: #fff;
+  text-decoration: none;
 }
 
-#next{
-	right:30px; position:absolute;
-	border:none;
-	background-color:#8db3e4;
-	color:#060481;
-	font-weight:900;
-	font-size:14px;
-	right:30;
+/* 글꼴 및 폰트 */
+#title {
+  font-size: 32px; /* 폰트 크기 설정 */
+  font-family: 'Noto Sans KR', sans-serif; /* 폰트 설정 */
+  /* 원하는 추가 스타일 설정 */
+}
+
+#select {
+  background-color: #8db3e4;
+}
+
+#next {
+  right: 30px;
+  position: absolute;
+  border: none;
+  background-color: #8db3e4;
+  color: #060481;
+  font-weight: 900;
+  font-size: 14px;
+  right: 30;
 }
