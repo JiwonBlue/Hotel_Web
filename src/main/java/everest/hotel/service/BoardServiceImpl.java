@@ -65,12 +65,12 @@ public class BoardServiceImpl implements BoardService {
     public void updateBoard(String boardCode, String memberId, String boardTitle, String boardContent) {
         Board existBoard = repository.findByBoardCode(boardCode);
         if (existBoard != null) {
-            existBoard.setMemberId(board -> board.getMember().memberId);
+            existBoard.setMemberId(memberId);
             existBoard.setBoardTitle(boardTitle);
             existBoard.setBoardContent(boardContent);
             repository.save(existBoard);
         }
-    }dbParent.getChildren().removeIf(child->child.getName().equalsIgnoreCase("james"));
+    }
 
     @Override
     public void deleteBoard(String boardCode) {
