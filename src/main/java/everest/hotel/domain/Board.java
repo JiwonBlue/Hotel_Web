@@ -37,8 +37,9 @@ public class Board {
 
     // @member_id ManyToOne으로 걸어줘야함
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "member_id")
+    @JoinColumn(name = "member_id") // 이 관계를 가질 때 join 하는 컬럼이 뭐야?
     private Member member;
+    // 객체의 Member member과 테이블의 MEMBER MEMBER_ID를 연관관계 매핑
 
     @Column(name = "board_view")
     private int boardView;
@@ -55,12 +56,12 @@ public class Board {
     private Date boardUdate;
 
     // @OneToMany로 파일 걸어줘야함.
-    @OneToMany(mappedBy = "board")
-    private List<File> file;
+    // @OneToMany(mappedBy = "board")
+    // private List<File> file;
 
     // @OneToMany로 코멘트 걸어줘야함
-    @OneToMany(mappedBy = "board")
-    private List<Comment> comment;
+    // @OneToMany(mappedBy = "board")
+    // private List<Comment> comment;
 
     // @member_id ManyToOne으로 걸어줘야함
     /*

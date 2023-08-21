@@ -46,6 +46,6 @@ public class Reserve {
     private int reserveCount;
 
     // @OneToMany로 결제 걸어줘야함 (OneToOne 될지도?)
-    @OneToMany(mappedBy = "reserve")
-    private List<Pay> pay;
+    // @OneToMany(mappedBy = "reserve")
+    // private List<Pay> pay;
 }

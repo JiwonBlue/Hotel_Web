@@ -40,12 +40,12 @@ public class Member {
     private String memberInOut;
 
     // OneToMany로 예약, 게시판, 코멘트 걸어야함
-    @OneToMany(mappedBy = "member")
-    private List<Reserve> reserve;
+    // @OneToMany(mappedBy = "member")
+    // private List<Reserve> reserve;
 
-    @OneToMany(mappedBy = "member")
-    private List<Board> board;
+    // @OneToMany(mappedBy = "member")
+    // private List<Board> board;
 
-    @OneToMany(mappedBy = "member")
-    private List<Comment> comment;
+    // @OneToMany(mappedBy = "member")
+    // private List<Comment> comment;
 }

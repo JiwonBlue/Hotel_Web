@@ -34,7 +34,7 @@ public class Room {
     @Column(name = "room_price")
     private String roomPrice;
 
-    // OneToMany로 예약 걸어야함
-    @OneToMany(mappedBy = "room")
-    private List<Reserve> reserve;
+    // // OneToMany로 예약 걸어야함
+    // @OneToMany(mappedBy = "room")
+    // private List<Reserve> reserve;
 }
