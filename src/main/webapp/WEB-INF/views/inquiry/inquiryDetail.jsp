@@ -51,24 +51,24 @@
 			<tr>
 				<td id="detail">제목</td>
 				<td>
-					${boardTitle}
+					${dto.getB_title()}
 					<input type="hidden" name="b_title" value="${dto.getB_title()}" />
 				</td>
 				<td id="detail">번호</td>
 				<td>
-					${boardCode}
+					${dto.getB_number()}
 					<input type="hidden" name="b_number" value="${dto.getB_number()}" />
 				</td>
 			</tr>
 			<tr>
 				<td id="detail">작성자</td>
 				<td>
-					${memberId}
+					${dto.getB_writer()}
 					<input type="hidden" name="b_writer" value="${dto.getB_writer()}" />
 				</td>
 				<td id="detail">작성일</td>
 				<td>
-					${boardRdate}
+					${dto.getB_time()}
 					<input type="hidden" name="b_time" value="${dto.getB_time()}"  />
 				</td>
 	
@@ -76,7 +76,7 @@
 			<tr>
 				<td id="detailcontent">내용</td>
 				<td colspan="3">
-					<textarea rows="5" cols="40" id="detailtextarea" readonly="readonly" name="b_content">${boardContent}</textarea>
+					<textarea rows="5" cols="40" id="detailtextarea" readonly="readonly" name="b_content">${dto.getB_content()}</textarea>
 				</td>
 			</tr>
 			<tr align="center">

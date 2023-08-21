@@ -18,7 +18,8 @@ public interface BoardRepository extends JpaRepository<Board, String> {
     // // And, Or,...
 
     // member_id에 특정 문자열을 포함하는 모든 게시물을 조회하여 리스트로 반환
-    @Query(value = "SELECT * FROM board_table natural join Member_table WHERE member_id LIKE '%3%'", nativeQuery = true)
+    // @Query(value = "SELECT * FROM board_table natural join Member_table WHERE
+    // member_id LIKE '%3%'", nativeQuery = true)
     List<Board> findByMemberIdContaining(String memberId); // XXXContaining()은 like연산자 역할
 
     /*

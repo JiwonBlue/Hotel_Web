@@ -33,12 +33,12 @@ public class Comment {
     private Date commentRdate;
 
     // ManyToOne으로 member_id 걸어줘야함
-    @ManyToOne
-    @JoinColumn
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "member_id")
     private Member member;
 
     // ManyToOne으로 board_code 걸어줘야함
-    @ManyToOne
-    @JoinColumn
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "board_code")
     private Board board;
 }
