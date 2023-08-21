@@ -27,6 +27,16 @@ public class BoardController {
     }
 
     /*
+     * @GetMapping("inquiryDetail.do")
+     * public String inquiryDetail(long seq, Model model) {
+     * Board board = service.contentS(seq);
+     * model.addAttribute("board", board);
+     * return "/inquiry/inquiryDetail"; // inquiryDetail.jsp 경로
+     * }
+     */
+
+    /*
+     * 
      * @GetMapping("write.do")
      * public String write() {
      * return "/board/write";

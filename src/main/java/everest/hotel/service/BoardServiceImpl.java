@@ -37,13 +37,6 @@ public class BoardServiceImpl implements BoardService {
     }
 
     // 제목으로 게시물 정보 조회
-    @Override
-    public Board findInfoByTitle(String boardCode) {
-        pln("findInfoByTitle() by SpringDataJpa");
-        Board board = repository.getById(boardCode);
-        pln("contentB() by board: " + board);
-        return board;
-    }
 
     @Override
     public List<Board> findByBoardCodeAndMemberId(String boardCode, String memberId) {
@@ -72,12 +65,12 @@ public class BoardServiceImpl implements BoardService {
     public void updateBoard(String boardCode, String memberId, String boardTitle, String boardContent) {
         Board existBoard = repository.findByBoardCode(boardCode);
         if (existBoard != null) {
-            existBoard.setMemberId(memberId);
+            existBoard.setMemberId(board -> board.getMember().memberId);
             existBoard.setBoardTitle(boardTitle);
             existBoard.setBoardContent(boardContent);
             repository.save(existBoard);
         }
-    }
+    }dbParent.getChildren().removeIf(child->child.getName().equalsIgnoreCase("james"));
 
     @Override
     public void deleteBoard(String boardCode) {

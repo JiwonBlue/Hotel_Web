@@ -12,9 +12,6 @@ public interface BoardService {
     // 게시물 조회
     Board getBoardInfo(String boardCode);
 
-    // 제목으로 게시물 정보 조회
-    Board findInfoByTitle(String boardCode, String boardTitle);
-
     // 특정 회원의 게시물 목록 조회
     List<Board> findByBoardCodeAndMemberId(String boardCode, String memberId);
 
