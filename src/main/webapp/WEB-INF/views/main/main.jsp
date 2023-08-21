@@ -4,7 +4,7 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <!DOCTYPE >
 <html>
-  <link rel="stylesheet" href="../css/loginCSS.css" />
+  <link rel="stylesheet" href="/css/mainCSS.css" />
 
   <head>
     <meta charset="UTF-8" />
@@ -12,7 +12,7 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
   </head>
 
   <body>
-    <%@ include file="header.jsp" %>
+    <header class="header"><%@ include file="header.jsp" %></header>
 
     <div class="wrapper">
       <div id="container">
@@ -25,18 +25,27 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
     </div>
 
     <div class="roominfo">
-      <font size="10">호텔 오버튼만의 모던한 객실</font><br />
-      <font size="5"
-        >호텔 오버튼의 객실은 모던하면서도 품격 있는 라이프 스타일 공간으로<br />
-        고객님들께 집과 같이 보다 쾌적한 환경에서 지내실 수 있는 객실을
-        제공합니다.
-      </font>
+      <font class="font15">스페셜 오퍼</font><br />
+      <div class="horizontal-line"></div>
+      <font class="font9">SPECIAL OFFERS<br /> </font>
+      <div class="more-button">
+        <a href="standardroom.do">
+          <img
+            src="/data/더보기.png"
+            width="100"
+            height="100"
+            alt="더보기 로고"
+          />
+        </a>
+      </div>
     </div>
 
     <div class="main">
       <div id="room">
         <img src="../data/deluxe.jpg" />
         <img src="../data/royal.jpg" />
+        <img src="../data/sweet.jpg" />
+        <img src="../data/sweet.jpg" />
         <img src="../data/sweet.jpg" />
       </div>
     </div>
@@ -57,6 +66,8 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
         <img src="../data/gym.jpg" />
       </div>
     </div>
+
+    <button id="scrollToTopButton">맨 위로</button>
 
     <%@ include file="footer.jsp" %>
     <script src="../script/loginJS.js"></script>

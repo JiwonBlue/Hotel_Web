@@ -17,9 +17,11 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
     <a href="project/standardroom.do">Project-Standard Room</a><br />
 
-    <a href="everest/main.do">EVEREST HOTEL 메인</a><br />
-    <a href="everest/footer.do">EVEREST HOTEL 푸터</a><br />
-    <a href="everest/header.do">EVEREST HOTEL 헤더</a><br /><br />
+    <a href="project/testmain.do">EVEREST HOTEL 테스트메인</a><br />
+    <a href="project/header.do">EVEREST HOTEL 테스트헤더</a><br />
+    <a href="project/testheader2.do">EVEREST HOTEL 테스트헤더</a><br />
+
+    <a href="project/testfooter.do">EVEREST HOTEL 테스트푸터</a><br />
 
     <a href="project/main.do">프로젝트</a><br /><br />
     <a href="project/kakaoMap.do">카카오지도</a><br />

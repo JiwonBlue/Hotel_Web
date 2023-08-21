@@ -82,15 +82,6 @@ public class mainController {
         return "kakao/kakaoMapRoad";
     }
 
-    // header, footer
-
-    /*
-     * @GetMapping("main.do")
-     * public String main() {
-     * return "main/main";
-     * }
-     */
-
     @GetMapping("footer.do")
     public String footer() {
         return "main/footer";
@@ -101,9 +92,24 @@ public class mainController {
         return "main/header";
     }
 
-    @GetMapping("testfooter.do")
+    @GetMapping("testheader.do")
     public String header1() {
+        return "main/testheader";
+    }
+
+    @GetMapping("testheader2.do")
+    public String header12() {
+        return "main/testheader2";
+    }
+
+    @GetMapping("testfooter.do")
+    public String footer1() {
         return "main/testfooter";
+    }
+
+    @GetMapping("testmain.do")
+    public String tsetmain() {
+        return "main/testmain";
     }
 
 }
