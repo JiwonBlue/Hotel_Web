@@ -99,7 +99,7 @@
 					<tr>
 						<td align="center">${b.boardCode}</td>
 						<td align="center">${b.memberId}</td>
-						<td align="center"><a href="inquiryDetail?b_number=${b.boardTitle}"><b>${b.boardTitle}</b></a></td>
+						<td align="center"><a href="inquiryDetail?b_number=${b.boardCode}"><b>${b.boardTitle}</b></a></td>
 						<td align="center">${b.boardUdate}</td>
 					</tr>
 				</c:forEach>

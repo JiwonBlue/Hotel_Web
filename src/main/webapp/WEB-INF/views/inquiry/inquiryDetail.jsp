@@ -46,29 +46,29 @@
 		고객님들의 소중한 충고와 격려, 또는 제안의 말씀을 주시면 더 나은 서비스로 보답하겠습니다.
 	</div>
 	
-	<form action="../inquiry/inquiryUpdate.jsp">
+	<form action="inquiryUpdate.do">
 		<table align="center" class="inquiryDetail">
 			<tr>
 				<td id="detail">제목</td>
 				<td>
-					${dto.getB_title()}
+					${boardTitle}
 					<input type="hidden" name="b_title" value="${dto.getB_title()}" />
 				</td>
 				<td id="detail">번호</td>
 				<td>
-					${dto.getB_number()}
+					${boardCode}
 					<input type="hidden" name="b_number" value="${dto.getB_number()}" />
 				</td>
 			</tr>
 			<tr>
 				<td id="detail">작성자</td>
 				<td>
-					${dto.getB_writer()}
+					${memberId}
 					<input type="hidden" name="b_writer" value="${dto.getB_writer()}" />
 				</td>
 				<td id="detail">작성일</td>
 				<td>
-					${dto.getB_time()}
+					${boardRdate}
 					<input type="hidden" name="b_time" value="${dto.getB_time()}"  />
 				</td>
 	
@@ -76,7 +76,7 @@
 			<tr>
 				<td id="detailcontent">내용</td>
 				<td colspan="3">
-					<textarea rows="5" cols="40" id="detailtextarea" readonly="readonly" name="b_content">${dto.getB_content()}</textarea>
+					<textarea rows="5" cols="40" id="detailtextarea" readonly="readonly" name="b_content">${boardContent}</textarea>
 				</td>
 			</tr>
 			<tr align="center">

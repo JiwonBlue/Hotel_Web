@@ -1,24 +1,26 @@
 package everest.hotel.service;
 
 import java.sql.Date;
+import java.util.List;
 
 import everest.hotel.domain.Member;
 
 public interface MemberService {
 
-    Member registerMember(String member_id, String member_pwd, String member_name, String member_phone,
-            Date member_birthday, String member_in_out);
+    // 회원 등록(회원가입)
+    List<Member> joinMember(String memberId, String memberPwd, String memberName, String memberPhone,
+            Date memberBirthday, String memberInOut);
 
-    // 특정 회원 정보 조회
-    Member getMemberInfo(String member_id);
+    // 특정 회원정보 조회
+    Member getMemberInfo(String memberId);
 
-    // 회원 정보 수정
-    Member updateMemberInfo(String member_id, String member_name, String member_phone, Date member_birthday);
+    // 회원정보 수정
+    Member updateMemberInfo(String memberId, String memberName, String memberPhone, Date memberBirthday);
 
-    // 회원 정보 삭제
-    boolean deleteMember(String member_id);
+    // 회원정보 삭제
+    void deleteMember(String memberId);
 
-    // 회원 로그인 처리
-    boolean loginMember(String member_id, String member_pwd);
+    // 회원 로그인
+    Member loginMember(String memberId, String memberPwd);
 
 }

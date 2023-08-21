@@ -36,6 +36,15 @@ public class BoardServiceImpl implements BoardService {
         return list;
     }
 
+    // 제목으로 게시물 정보 조회
+    @Override
+    public Board findInfoByTitle(String boardCode) {
+        pln("findInfoByTitle() by SpringDataJpa");
+        Board board = repository.getById(boardCode);
+        pln("contentB() by board: " + board);
+        return board;
+    }
+
     @Override
     public List<Board> findByBoardCodeAndMemberId(String boardCode, String memberId) {
         List<Board> list = repository.findByBoardCodeAndMemberId(boardCode, memberId);

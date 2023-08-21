@@ -43,11 +43,12 @@ public class Member {
     @OneToMany
     @JoinColumn(name = "reserve_code")
     private List<Reserve> reserve;
-
-    @OneToMany
-    @JoinColumn(name = "board_code")
-    private List<Board> board;
-
+    /*
+     * @OneToMany
+     * 
+     * @JoinColumn(name = "board_code")
+     * private List<Board> board;
+     */
     @OneToMany
     @JoinColumn(name = "comment_code")
     private List<Comment> comment;
