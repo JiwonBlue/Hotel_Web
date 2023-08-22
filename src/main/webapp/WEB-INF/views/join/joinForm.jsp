@@ -3,11 +3,12 @@
 
 <!DOCTYPE html>
 <html>
+	<link rel="stylesheet" href="../css/joinCSS.css">
+
 <head>
 	<meta charset="UTF-8">
 	<title>호텔 에베레스트 - 회원가입</title>
 	<script type="text/javascript" src="../script/script.js?ver=3"></script>
-	<link rel="stylesheet" href="../css/joinCSS.css">
 </head>
 
 <body>
@@ -17,7 +18,7 @@
 	<br/><br />
 	&nbsp;&nbsp;&nbsp;
 
-    <center><font size="20" >회원가입</font></center><br />
+    <center class="center"><font size="20" >회원가입</font></center><br />
 	
 	<table align="center" class="joinlist">
 		<tr id="list">

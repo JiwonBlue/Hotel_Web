@@ -3,6 +3,7 @@ package everest.hotel.domain;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
@@ -38,6 +39,17 @@ public class Member {
 
     @Column(name = "member_in_out")
     private String memberInOut;
+
+    @Builder
+    public Member(Long memberId, String memberPwd, String memberName, String memberPhone, Date memberBirthday,
+            String memberInOut) {
+        this.memberId = memberId;
+        this.memberPwd = memberPwd;
+        this.memberName = memberName;
+        this.memberPhone = memberPhone;
+        this.memberBirthday = memberBirthday;
+        this.memberInOut = memberInOut;
+    }
 
     // OneToMany로 예약, 게시판, 코멘트 걸어야함
     // @OneToMany(mappedBy = "member")

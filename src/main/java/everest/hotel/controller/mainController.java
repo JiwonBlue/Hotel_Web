@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import ch.qos.logback.core.model.Model;
 import everest.hotel.domain.Board;
+//import everest.hotel.service.BoardService;
 import lombok.AllArgsConstructor;
 
 @RequestMapping("project")
@@ -70,15 +71,14 @@ public class mainController {
     }
 
     // 게시판
-    /*
-     * @GetMapping("inquiryList.do")
-     * public String list(Model model) {
-     * System.out.println("출력");
-     * List<Board> list = service.getAllBoards();
-     * model.addAttribute("list", list);
-     * return "/inquiry/inquiryList";
-     * }
-     */
+
+    @GetMapping("inquiryList.do")
+    public String list() {
+        System.out.println("출력");
+        // List<Board> list = service.getAllBoards();
+        // model.addAttribute("list", list);
+        return "/inquiry/inquiryList";
+    }
 
     @GetMapping("inquiryList2.do")
     public String inquiryList2() {

@@ -13,6 +13,15 @@ body {
   width: 100%;
   top: 0;
   left: 0;
+  margin-bottom: 15%;
+}
+.footer {
+  width: 100%;
+  height: 40%; /* 조금 더 큰 높이로 조정 */
+
+  bottom: 0;
+  left: 0;
+  margin-top: 15%;
 }
 
 /* joinForm.jsp . joinProc.jsp*/
