@@ -13,7 +13,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
     <header class="header"><%@ include file="../main/header.jsp" %></header>
 
     <!--LoginServlet으로 이동-->
-    <form action="main.do" method="get" name="regForm">
+    <form action="login.do" method="post" name="regForm">
       <table align="center" class="log">
         <tr align="center">
           <th align="center" colspan="2">HOTEL EVEREST LOGIN</th>
@@ -26,7 +26,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
         </tr>
         <tr align="center">
           <td id="text"><b>아이디</b></td>
-          <td><input type="text" name="u_id" size="24" id="input" /></td>
+          <td><input type="text" name="u_email" size="24" id="input" /></td>
         </tr>
         <tr align="center">
           <td id="text"><b>비밀번호</b></td>
@@ -45,6 +45,14 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
         </tr>
       </table>
     </form>
+
+     <!-- 메시지 출력을 위한 JSTL 구문 -->
+     <c:if test="${not empty message}">
+        <script>
+          alert('${message}');
+        </script>
+     </c:if>
+
     <br />
     <footer class="footer"><%@ include file="../main/footer.jsp" %></footer>
 

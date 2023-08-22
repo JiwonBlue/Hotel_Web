@@ -2,13 +2,20 @@ package everest.hotel.controller;
 
 import java.util.List;
 
+import org.springframework.ui.Model;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
-import ch.qos.logback.core.model.Model;
+import everest.hotel.domain.Member;
 import everest.hotel.domain.Board;
+import everest.hotel.service.MemberService;
+import everest.hotel.service.BoardService;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 //import everest.hotel.service.BoardService;
 import lombok.AllArgsConstructor;
 
@@ -16,6 +23,8 @@ import lombok.AllArgsConstructor;
 @Controller
 @AllArgsConstructor
 public class mainController {
+    private MemberService MemberService;
+    private BoardService BoardService;
 
     // main, 로그인창, 회원가입창
     @GetMapping("main.do")
@@ -26,6 +35,24 @@ public class mainController {
     @GetMapping("login.do")
     public String login() {
         return "login/login";
+    }
+
+    @PostMapping("login.do")
+    public String login(@RequestParam("u_email") String memberId,
+            @RequestParam("u_pwd") String memberPwd,
+            HttpSession session, Model model, HttpServletRequest request) {
+        Member member = MemberService.loginMember(memberId, memberPwd);
+
+        if (member != null) {
+            // 로그인 성공한 경우
+            session.setAttribute("member", member); // 로그인한 회원 정보 세션에 저장
+            model.addAttribute("message", "로그인 성공");
+            return "redirect:main.do";
+        } else {
+            // 로그인 실패한 경우
+            model.addAttribute("message", "로그인 실패");
+            return "login/login";
+        }
     }
 
     @GetMapping("join.do")
@@ -73,10 +100,11 @@ public class mainController {
     // 게시판
 
     @GetMapping("inquiryList.do")
-    public String list() {
+    public String list(Model model) {
+
         System.out.println("출력");
-        // List<Board> list = service.getAllBoards();
-        // model.addAttribute("list", list);
+        List<Board> list = BoardService.listS();
+        model.addAttribute("list", list);
         return "/inquiry/inquiryList";
     }
 
