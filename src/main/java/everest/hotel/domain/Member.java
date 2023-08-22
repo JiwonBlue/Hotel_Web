@@ -20,7 +20,7 @@ public class Member {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "MEMBER_ID_GENERATOR")
     @Column(name = "member_id")
-    private String memberId;
+    private long memberId;
 
     @Column(name = "member_pwd")
     private String memberPwd;
@@ -40,15 +40,12 @@ public class Member {
     private String memberInOut;
 
     // OneToMany로 예약, 게시판, 코멘트 걸어야함
-    @OneToMany
-    @JoinColumn(name = "reserve_code")
-    private List<Reserve> reserve;
+    // @OneToMany(mappedBy = "member")
+    // private List<Reserve> reserve;
 
-    @OneToMany
-    @JoinColumn(name = "board_code")
-    private List<Board> board;
+    // @OneToMany(mappedBy = "member")
+    // private List<Board> board;
 
-    @OneToMany
-    @JoinColumn(name = "comment_code")
-    private List<Comment> comment;
+    // @OneToMany(mappedBy = "member")
+    // private List<Comment> comment;
 }

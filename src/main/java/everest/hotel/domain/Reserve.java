@@ -20,16 +20,16 @@ public class Reserve {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "RESERVE_CODE_GENERATOR")
     @Column(name = "reserve_code")
-    private String reserveCode;
+    private long reserveCode;
 
     // @member_id ManyToOne으로 걸어줘야함
-    @ManyToOne
-    @JoinColumn
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "member_id")
     private Member member;
 
     // @room_code ManyToOne으로 걸어줘야함
-    @ManyToOne
-    @JoinColumn
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "room_code")
     private Room room;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm:ss", timezone = "Asia/Seoul")
@@ -46,7 +46,6 @@ public class Reserve {
     private int reserveCount;
 
     // @OneToMany로 결제 걸어줘야함 (OneToOne 될지도?)
-    @OneToMany
-    @JoinColumn(name = "pay_code")
-    private List<Pay> pay;
+    // @OneToMany(mappedBy = "reserve")
+    // private List<Pay> pay;
 }

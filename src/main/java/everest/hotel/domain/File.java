@@ -15,7 +15,7 @@ public class File {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "FILE_CODE_GENERATOR")
     @Column(name = "file_code")
-    private String fileCode;
+    private long fileCode;
 
     @Column(name = "file_ogname")
     private String fileOgname;
@@ -30,7 +30,7 @@ public class File {
     private String fileSize;
 
     // ManyToOne으로 게시판 걸어야함
-    @ManyToOne
-    @JoinColumn
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "board_code")
     private Board board;
 }

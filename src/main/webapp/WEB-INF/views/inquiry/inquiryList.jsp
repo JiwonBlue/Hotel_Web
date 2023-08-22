@@ -94,13 +94,13 @@
 			<td align="center">작성일 </td>
 		</tr>
 		<c:choose>
-			<c:when test="${balist.size() >0 }">
-				<c:forEach var="b" items="${balist }">
+			<c:when test="${list.size()>0}">
+				<c:forEach var="b" items="${list}">
 					<tr>
-						<td align="center">${b.getB_number() }</td>
-						<td align="center">${b.getB_writer() }</td>
-						<td align="center"><a href="inquirydetail?b_number=${ b.getB_number()}"><b>${ b.getB_title()}</b></a></td>
-						<td align="center">${b.getB_time()}</td>
+						<td align="center">${b.boardCode}</td>
+						<td align="center">${b.memberId}</td>
+						<td align="center"><a href="inquiryDetail?b_number=${b.boardCode}"><b>${b.boardTitle}</b></a></td>
+						<td align="center">${b.boardUdate}</td>
 					</tr>
 				</c:forEach>
 			</c:when>

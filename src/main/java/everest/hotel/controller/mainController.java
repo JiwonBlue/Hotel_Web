@@ -1,15 +1,22 @@
 package everest.hotel.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import ch.qos.logback.core.model.Model;
+import everest.hotel.domain.Board;
+import everest.hotel.service.BoardService;
 import lombok.AllArgsConstructor;
 
 @RequestMapping("project")
 @Controller
 @AllArgsConstructor
 public class mainController {
+
     // main, 로그인창, 회원가입창
     @GetMapping("main.do")
     public String main() {
@@ -64,10 +71,15 @@ public class mainController {
     }
 
     // 게시판
-    @GetMapping("inquiryList.do")
-    public String inquiryList() {
-        return "inquiry/inquiryList";
-    }
+    /*
+     * @GetMapping("inquiryList.do")
+     * public String list(Model model) {
+     * System.out.println("출력");
+     * List<Board> list = service.getAllBoards();
+     * model.addAttribute("list", list);
+     * return "/inquiry/inquiryList";
+     * }
+     */
 
     @GetMapping("inquiryList2.do")
     public String inquiryList2() {
