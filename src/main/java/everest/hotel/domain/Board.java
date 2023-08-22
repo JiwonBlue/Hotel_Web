@@ -6,7 +6,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.sql.Date;
@@ -28,7 +27,6 @@ public class Board {
 
     @Column(name = "board_title")
     private String boardTitle; // 이녀석이 데이터베이스의 이름과 다르다면??? @Column(name="username") << 여기서의 name은 데이터베이스 컬럼 이름
-
     @Column(name = "board_content")
     private String boardContent;
 
@@ -65,6 +63,9 @@ public class Board {
         this.boardView = boardView;
         this.boardRdate = boardRdate;
         this.boardUdate = boardUdate;
+    }
+
+    public void setMemberId(String memberId) {
     }
 
     // @OneToMany로 파일 걸어줘야함.

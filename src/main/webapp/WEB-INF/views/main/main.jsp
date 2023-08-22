@@ -61,18 +61,6 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
       </font>
     </div>
 
-    <div class="wrapper1">
-      <div id="container1">
-        <img src="../data/EV1.jpg" />
-        <img src="../data/EV2.jpg" />
-        <img src="../data/EV3.jpg" />
-        <img src="../data/EV4.jpg" />
-
-        <button id="prev1">&lang;</button>
-        <button id="next1">&rang;</button>
-      </div>
-    </div>
-
     <div class="main2">
       <div id="facility">
         <img src="../data/lobby.jpg" />

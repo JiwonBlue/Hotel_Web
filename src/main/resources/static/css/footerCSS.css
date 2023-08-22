@@ -1,12 +1,12 @@
-.fcontainer1 {
+.footcontainer1 {
   bottom: 0;
   width: 100%;
-  height: 40%;
+  height: 372;
   text-align: center;
   flex-direction: column; /* 컨테이너를 세로 방향으로 배치 */
   text-decoration: none;
 }
-.ftable-0 {
+.foottable-0 {
   flex: 1;
   background-color: rgba(49, 80, 116, 0.6);
 
@@ -16,15 +16,15 @@
   justify-content: center;
   align-items: center;
 }
-.ftable-1 {
+.foottable-1 {
   width: 100%;
   height: 70%;
   display: flex;
   justify-content: space-between;
   align-items: center; /* 세로 중앙 정렬 */
 }
-.ftable-2,
-.ftable-3 {
+.foottable-2,
+.foottable-3 {
   flex: 1;
   width: 100%;
   height: 100%;
@@ -32,15 +32,15 @@
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.ftable-4 {
+.foottable-4 {
   width: 100%;
   height: 20%;
   display: flex;
   justify-content: space-between;
   align-items: center; /* 세로 중앙 정렬 */
 }
-.ftable-5,
-.ftable-6 {
+.foottable-5,
+.foottable-6 {
   flex: 1;
   width: 100%;
   height: 100%;
@@ -68,7 +68,7 @@
   opacity: 1;
   transform: scale(1);
 }
-.fsfont {
+.footsfont {
   font-size: 9px;
   color: #0f5cb4;
   font-weight: 600;
@@ -78,14 +78,14 @@
   padding-right: 30px; /* 원하는 간격 값으로 수정하세요 */
 }
 
-.fmfont {
+.footmfont {
   font-size: 15px;
   color: #0f5cb4;
   font-weight: 600;
 
   padding-right: 20px; /* 원하는 간격 값으로 수정하세요 */
 }
-.fhfont {
+.foothfont {
   font-size: 15px;
   text-align: center;
   color: #0f5cb4;
@@ -94,7 +94,7 @@
   text-decoration: none;
 }
 
-.fhfont1 {
+.foothfont1 {
   font-size: 17px;
   text-align: right;
   color: #ffffff;
@@ -104,46 +104,46 @@
   padding-right: 30px; /* 원하는 간격 값으로 수정하세요 */
 }
 
-.frow-center {
+.footrow-center {
   display: flex;
   justify-content: center; /* 가로 중앙 정렬 */
   align-items: center; /* 세로 중앙 정렬 */
   height: 100%; /* 내부 요소를 수직으로 가운데 정렬 */
 }
-.frow-left {
+.footrow-left {
   display: flex;
   justify-content: left; /* 가로 중앙 정렬 */
 }
-.frow-right {
+.footrow-right {
   display: flex;
   justify-content: right; /* 가로 중앙 정렬 */
 }
 
-.fcell {
+.footcell {
   padding: 15px;
 }
-.fcell1 {
+.footcell1 {
   text-align: left;
   margin: 0; /* 여백 추가 */
   margin-bottom: -10; /* 여백 추가 */
 
   padding: 15px;
 }
-.fcell2 {
+.footcell2 {
   padding: 10px;
   font-size: 13px;
   text-align: left;
   color: #0f5cb4;
   margin: 5px; /* 여백 추가 */
 }
-.fcell3 {
+.footcell3 {
   padding: 10px;
   margin: 0; /* 여백 추가 */
   font-size: 13px;
   text-align: left;
   color: #ffffff;
 }
-.fcell4 {
+.footcell4 {
   padding: 2px;
   margin: 2px;
   font-size: 9px;
@@ -151,7 +151,7 @@
   color: #ffffff;
   text-align: right;
 }
-.fcell5 {
+.footcell5 {
   padding: 2px;
   margin: 2px;
   font-size: 7px;
@@ -159,7 +159,7 @@
   color: #0f5cb4;
   text-align: left;
 }
-.fcell6 {
+.footcell6 {
   padding: 2px;
   margin: 2px;
   font-size: 15px;
@@ -168,41 +168,41 @@
   color: #0f5cb4;
   text-align: right;
 }
-.fvertical-line {
+.footvertical-line {
   border-left: 1px solid #ccc;
   height: 120px;
   margin: 0 20px;
 }
-.fvertical-line1 {
+.footvertical-line1 {
   border-left: 1px solid #ccc;
   height: 20px;
   margin: 0 20px;
 }
-.fvertical-line2 {
+.footvertical-line2 {
   border-left: 1px solid #ccc;
   height: 20px;
   margin: 0 20px;
 }
-.fleft-column,
-.fcenter-column,
-.fright-column {
+.footleft-column,
+.footcenter-column,
+.footright-column {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-.frow1 {
+.footrow1 {
   margin-left: 30%;
 
   display: flex;
   align-items: left;
 }
-.frow2 {
+.footrow2 {
   display: flex;
   align-items: right;
   margin-top: 8%;
   margin-left: 30%;
 }
-.frow3 {
+.footrow3 {
   margin-left: 30%;
   text-align: center;
   align-items: center; /* 세로 중앙 정렬 */
@@ -210,15 +210,15 @@
 
   display: flex;
 }
-.ftr10 {
+.foottr10 {
   height: 10px;
 }
-.ftr20 {
+.foottr20 {
   height: 20px;
 }
-.ftr30 {
+.foottr30 {
   height: 30px;
 }
-.ftr40 {
+.foottr40 {
   height: 40px;
 }
