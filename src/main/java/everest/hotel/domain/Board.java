@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.sql.Date;
-import java.util.List;
 
 @Entity // jpa 사용할때!
 @AllArgsConstructor // 파라미터있는생성자
