@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -55,9 +56,16 @@ public class mainController {
         }
     }
 
+    // 회원가입
     @GetMapping("join.do")
     public String join() {
         return "join/joinForm";
+    }
+
+    @PostMapping("joinForm.do")
+    public String joinMember(@ModelAttribute Member member) {
+        MemberService.joinMember(member);
+        return "redirect:main.do";
     }
 
     // room
@@ -106,6 +114,13 @@ public class mainController {
         List<Board> list = BoardService.listS();
         model.addAttribute("list", list);
         return "/inquiry/inquiryList";
+    }
+
+    @PostMapping("inquiryList.do")
+    public String write(Board board) {
+        BoardService.insertS(board);
+        // response.sendRedirect(); 이거 말고
+        return "/inquiry/inquiryList"; // 이렇게 하면 편함 //갱신됨
     }
 
     @GetMapping("inquiryList2.do")

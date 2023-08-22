@@ -15,11 +15,9 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@SequenceGenerator(name = "MEMBER_ID_GENERATOR", sequenceName = "MEMBER_ID", initialValue = 1, allocationSize = 1)
 @Table(name = "member_table")
 public class Member {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "MEMBER_ID_GENERATOR")
     @Column(name = "member_id")
     private String memberId;
 
@@ -36,9 +34,6 @@ public class Member {
     @CreationTimestamp
     @Column(name = "member_birthday")
     private Date memberBirthday;
-
-    @Column(name = "member_in_out")
-    private String memberInOut;
 
     // @Builder
     // public Member(String memberId, String memberPwd, String memberName, String
