@@ -1,26 +1,25 @@
-<%@ page contentType="text/html;charset=utf-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page contentType="text/html;charset=utf-8"%> <%@ taglib
+uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!DOCTYPE html>
 <html>
-	<link rel="stylesheet" href="../css/joinCSS.css">
+  <link rel="stylesheet" href="../css/joinCSS.css" />
 
-<head>
-	<meta charset="UTF-8">
-	<title>호텔 에베레스트 - 회원가입</title>
-	<script type="text/javascript" src="../script/script.js?ver=3"></script>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>호텔 에베레스트 - 회원가입</title>
+    <script type="text/javascript" src="../script/script.js?ver=3"></script>
+  </head>
 
-<body>
-	<header class="header"><%@ include file="header.jsp" %></header>
+  <body>
+    <header class="header"><%@ include file="../main/header.jsp" %></header>
 
-
-	<br/><br />
-	&nbsp;&nbsp;&nbsp;
+    <br /><br />
+    &nbsp;&nbsp;&nbsp; 
 
     <center class="center"><font size="20" >회원가입</font></center><br />
-	
-	<table align="center" class="joinlist">
+
+    <table align="center" class="joinlist">
 		<tr id="list">
 			<td id="list1">가입정보</td>
 		    <td id="list2">가입완료</td>
@@ -88,6 +87,6 @@
 
 		</table>
 	</form>
-	<footer class="footer"><%@ include file="footer.jsp" %></footer>
-</body>
+    <footer class="footer"><%@ include file="../main/footer.jsp" %></footer>
+  </body>
 </html>

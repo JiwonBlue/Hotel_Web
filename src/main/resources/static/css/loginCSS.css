@@ -13,8 +13,17 @@ body {
   width: 100%;
   top: 0;
   left: 0;
+  margin-bottom: 10%;
 }
-
+.footer {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  margin-top: 5%;
+}
+.table {
+  margin-top: 5%;
+}
 .wrapper {
   width: 100%; /* 너비 */
   height: 100%;

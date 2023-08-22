@@ -2,14 +2,15 @@
 uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE >
 <html>
+  <link rel="stylesheet" href="../css/loginCSS.css" />
+
   <head>
     <meta charset="UTF-8" />
     <title>Hotel Overton : 로그인</title>
-    <link rel="stylesheet" href="../css/loginCSS.css" />
   </head>
 
   <body>
-    <header class="header"><%@ include file="header.jsp" %></header>
+    <header class="header"><%@ include file="../main/header.jsp" %></header>
 
     <!--LoginServlet으로 이동-->
     <form action="main.do" method="get" name="regForm">
@@ -45,7 +46,8 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
       </table>
     </form>
     <br />
-    <footer class="footer"><%@ include file="footer.jsp" %></footer>
+    <footer class="footer"><%@ include file="../main/footer.jsp" %></footer>
+
     <c:choose>
       <c:when test="${mode==0 }">
         <script>
