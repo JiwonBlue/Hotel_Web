@@ -84,6 +84,6 @@ SimpleDateFormat("yyyy-MM-dd"); String now = simpleDateFormat.format(today); */
 
     <br /><br /><br /><br /><br /><br /><br />
 
-    <%@ include file="footer.jsp" %>
+    <footer class="footer"><%@ include file="footer.jsp" %></footer>
   </body>
 </html>

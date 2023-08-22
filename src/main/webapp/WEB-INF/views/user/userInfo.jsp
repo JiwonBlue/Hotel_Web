@@ -107,7 +107,7 @@ prefix="c" %>
       </form>
     </table>
 
-    <%@ include file="footer.jsp" %>
+    <footer class="footer"><%@ include file="footer.jsp" %></footer>
     <c:if test="${result != null }">
       <c:if test="${result==1 }">
         <script>

@@ -8,14 +8,11 @@ body {
   height: 100%;
   font-family: 'Noto Sans KR', sans-serif;
 }
-
 .header {
   /* 헤더 스타일 */
   width: 100%;
-
   top: 0;
   left: 0;
-  z-index: 100;
 }
 
 /* inquiryList.jsp */

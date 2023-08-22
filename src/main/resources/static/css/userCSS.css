@@ -11,10 +11,8 @@ body {
 .header {
   /* 헤더 스타일 */
   width: 100%;
-
   top: 0;
   left: 0;
-  z-index: 100;
 }
 
 /*userinfo.jsp, userUpdate.jsp 에 적용*/

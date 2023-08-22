@@ -82,7 +82,7 @@
 
 	</table>
 
-	<%@ include file="footer.jsp" %>
+	<footer class="footer"><%@ include file="footer.jsp" %></footer>
 	</center>
 	</body>
 </html>

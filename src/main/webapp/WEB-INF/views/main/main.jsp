@@ -16,9 +16,11 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
 
     <div class="wrapper">
       <div id="container">
-        <img src="../data/hotel1.jpg" />
-        <img src="../data/hotel2.jpg" />
-        <img src="../data/hotel3.jpg" />
+        <img src="../data/EV1.jpg" />
+        <img src="../data/EV2.jpg" />
+        <img src="../data/EV3.jpg" />
+        <img src="../data/EV4.jpg" />
+
         <button id="prev">&lang;</button>
         <button id="next">&rang;</button>
       </div>
@@ -59,6 +61,18 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
       </font>
     </div>
 
+    <div class="wrapper1">
+      <div id="container1">
+        <img src="../data/EV1.jpg" />
+        <img src="../data/EV2.jpg" />
+        <img src="../data/EV3.jpg" />
+        <img src="../data/EV4.jpg" />
+
+        <button id="prev1">&lang;</button>
+        <button id="next1">&rang;</button>
+      </div>
+    </div>
+
     <div class="main2">
       <div id="facility">
         <img src="../data/lobby.jpg" />
@@ -67,9 +81,9 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
       </div>
     </div>
 
-    <button id="scrollToTopButton">맨 위로</button>
+    <!-- <button id="scrollToTopButton">맨 위로</button> -->
 
-    <%@ include file="footer.jsp" %>
+    <footer class="footer"><%@ include file="footer.jsp" %></footer>
     <script src="../script/loginJS.js"></script>
   </body>
 </html>

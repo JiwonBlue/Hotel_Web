@@ -118,7 +118,7 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
 		</div >
 	
 	
-	<%@ include file="footer.jsp" %>
+		<footer class="footer"><%@ include file="footer.jsp" %></footer>
 	<script type="text/javascript" src="../script/script.js"></script>
 </body>
 </html>

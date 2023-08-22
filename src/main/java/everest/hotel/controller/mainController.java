@@ -139,9 +139,9 @@ public class mainController {
         return "main/testheader2";
     }
 
-    @GetMapping("testfooter.do")
+    @GetMapping("footer1.do")
     public String footer1() {
-        return "main/testfooter";
+        return "main/footer1";
     }
 
     @GetMapping("testmain.do")

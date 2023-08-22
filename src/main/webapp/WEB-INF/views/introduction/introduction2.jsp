@@ -116,7 +116,7 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
 		</div >
 	
 	
-	<%@ include file="footer.jsp" %>
+		<footer class="footer"><%@ include file="footer.jsp" %></footer>
 	<script type="text/javascript" src="../script/script.js"></script>
   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=34c862789cfca57e5f48d73a205c9ac2"></script>
 <script>

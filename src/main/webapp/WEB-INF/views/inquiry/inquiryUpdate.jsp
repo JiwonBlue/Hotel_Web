@@ -78,6 +78,6 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
         </tr>
       </table>
     </form>
-    <%@ include file="footer.jsp" %>
+    <footer class="footer"><%@ include file="footer.jsp" %></footer>
   </body>
 </html>
