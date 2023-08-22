@@ -11,23 +11,14 @@ set line 200;
 set pagesize 20;
 
 drop table pay_table;
-drop table file_table;
-drop table comment_table;
 drop table board_table;
 drop table reserve_table;
 drop table member_table;
 drop table room_table;
-drop table admin_table;
 
 purge recyclebin;
 
 --table 생성
-CREATE TABLE ADMIN_TABLE(
-	ADMIN_ID VARCHAR2(10) NOT NULL constraint ADMIN_ID_PK primary key, --어드민코드(아이디)(PK)
-	ADMIN_NAME VARCHAR2(10) NOT NULL, --어드민이름
-	ADMIN_PWD VARCHAR2(10) NOT NULL --어드민비밀번호
-);
-create sequence ADMIN_TABLE_SEQ start with 1 increment by 1 nocache;
 
 CREATE TABLE ROOM_TABLE(
 	ROOM_CODE VARCHAR2(10) NOT NULL constraint ROOM_CODE_PK primary key, --객실코드(PK)
@@ -69,27 +60,6 @@ CREATE TABLE BOARD_TABLE(
 );
 create sequence BOARD_TABLE_SEQ start with 1 increment by 1 nocache;
 
-CREATE TABLE COMMENT_TABLE(
-	COMMENT_CODE VARCHAR2(10) NOT NULL constraint COMMENT_CODE_PK primary key, --댓글코드(PK)
-	RECOMMENT_CODE VARCHAR2(10) NOT NULL constraint RECOMMENT_COMMENT_CODE_FK references COMMENT_TABLE(COMMENT_CODE), --대댓글코드(FK)
-	COMMENT_CONTENT VARCHAR2(500) NOT NULL, --댓글내용
-	COMMENT_RDATE DATE NOT NULL, --댓글작성날짜
-	MEMBER_ID VARCHAR2(30) NOT NULL constraint COMMENT_MEMBER_ID_FK references MEMBER_TABLE(MEMBER_ID), --회원(FK)
-	BOARD_CODE VARCHAR2(10) NOT NULL constraint COMMENT_BOARD_CODE_FK references BOARD_TABLE(BOARD_CODE) --게시판(FK)
-);
-create sequence COMMENT_TABLE_SEQ start with 1 increment by 1 nocache;
-
-CREATE TABLE FILE_table(
-	FILE_CODE VARCHAR2(10) NOT NULL constraint FILE_CODE primary key, 
-	FILE_OGNAME VARCHAR(50) NOT NULL,
-	FILE_SAVENAME VARCHAR(100) NOT NULL, 
-	FILE_SAVEPATH VARCHAR(50) NOT NULL, 
-	FILE_SIZE VARCHAR(50) NOT NULL,
-	BOARD_code VARCHAR2(10) NOT NULL constraint FILE_BOARD_CODE_FK references BOARD_TABLE(BOARD_CODE) --게시판(FK)
-);
-create sequence FILE_TABLE_SEQ start with 1 increment by 1 nocache;
-
-
 CREATE TABLE PAY_TABLE(
 	PAY_CODE VARCHAR2(10) NOT NULL constraint PAY_CODE primary key, --결제code(PK)
 	RESERVE_CODE VARCHAR(10) NOT NULL constraint PAY_RESERVE_CODE_FK references RESERVE_TABLE(RESERVE_CODE), --예약code(FK)
@@ -100,12 +70,7 @@ CREATE TABLE PAY_TABLE(
 );
 create sequence PAY_TABLE_SEQ start with 1 increment by 1 nocache;
 
-
 --insert
-insert into ADMIN_TABLE values(ADMIN_TABLE_SEQ.nextval, '김지원', 'kim123');
-insert into ADMIN_TABLE values(ADMIN_TABLE_SEQ.nextval, '조영태', 'jo123');
-insert into ADMIN_TABLE values(ADMIN_TABLE_SEQ.nextval, '양현주', 'y123');
-insert into ADMIN_TABLE values(ADMIN_TABLE_SEQ.nextval, '신용빈', 'sin123');
 
 insert into ROOM_TABLE values(101, 'standard', '20평', 4, '55인치TV', 200000);
 insert into ROOM_TABLE values(102, 'standard', '20평', 4, '55인치TV', 200000);
@@ -132,13 +97,6 @@ insert into BOARD_TABLE values(BOARD_TABLE_SEQ.nextval, '제목이다', '내용�
 insert into BOARD_TABLE values(BOARD_TABLE_SEQ.nextval, '이런제목', '이런내용', 't123@naver.com', 0, SYSDATE, SYSDATE);
 insert into BOARD_TABLE values(BOARD_TABLE_SEQ.nextval, '저런제목', '저런내용', 'y123@naver.com', 0, SYSDATE, SYSDATE);
 
-insert into COMMENT_TABLE values(COMMENT_TABLE_SEQ.nextval, COMMENT_TABLE_SEQ.currval, '댓글이다', SYSDATE, 'p123@naver.com', 1);
-insert into COMMENT_TABLE values(COMMENT_TABLE_SEQ.nextval, COMMENT_TABLE_SEQ.currval, '나도댓글', SYSDATE, 't123@naver.com', 2);
-insert into COMMENT_TABLE values(COMMENT_TABLE_SEQ.nextval, 1, '대댓글!', SYSDATE, 'y123@naver.com', 1);
-insert into COMMENT_TABLE values(COMMENT_TABLE_SEQ.nextval, 2, '이것도대댓글!', SYSDATE, 'y123@naver.com', 2);
-
---파일생략(파일 필요)
-
 insert into PAY_TABLE values(PAY_TABLE_SEQ.nextval, 1, 200000, '카드', '농협', '2023-07-11');
 insert into PAY_TABLE values(PAY_TABLE_SEQ.nextval, 2, 200000, '카드', '농협', '2023-07-12');
 insert into PAY_TABLE values(PAY_TABLE_SEQ.nextval, 3, 200000, '카드', '농협', '2023-06-26');
@@ -159,11 +117,8 @@ commit;
 --desc ROOM_TABLE;
 --desc ....
 
-select * from ADMIN_TABLE;
 select * from ROOM_TABLE;
 select * from MEMBER_TABLE;
 select * from RESERVE_TABLE;
 select * from BOARD_TABLE;
-select * from COMMENT_TABLE;
-select * from FILE_TABLE;
 select * from PAY_TABLE;

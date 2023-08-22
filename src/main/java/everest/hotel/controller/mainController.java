@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import ch.qos.logback.core.model.Model;
 import everest.hotel.domain.Board;
-import everest.hotel.service.BoardService;
+//import everest.hotel.service.BoardService;
 import lombok.AllArgsConstructor;
 
 @RequestMapping("project")
