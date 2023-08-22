@@ -11,10 +11,8 @@ body {
 .header {
   /* 헤더 스타일 */
   width: 100%;
-
   top: 0;
   left: 0;
-  z-index: 100;
 }
 
 /*날짜/객실/옵션 선택 안내 table */

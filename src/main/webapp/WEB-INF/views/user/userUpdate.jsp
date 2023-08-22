@@ -109,6 +109,6 @@ pageEncoding="UTF-8"%> <% request.setCharacterEncoding("UTF-8"); %>
       </table>
     </form>
 
-    <%@ include file="footer.jsp" %>
+    <footer class="footer"><%@ include file="footer.jsp" %></footer>
   </body>
 </html>

@@ -1,81 +1,224 @@
-/* .cl-white {
-  text-align: center;
-  color: #f9f5f0;
-  text-decoration: none;
-} */
-
-.table-top1 {
+.fcontainer1 {
+  bottom: 0;
   width: 100%;
-  height: 5%;
+  height: 40%;
   text-align: center;
-  background-color: #112d4e;
+  flex-direction: column; /* 컨테이너를 세로 방향으로 배치 */
   text-decoration: none;
 }
-.tdtr-top1 td.tr {
-  padding: 0 10px;
+.ftable-0 {
+  flex: 1;
+  background-color: rgba(49, 80, 116, 0.6);
+
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.table-top2 {
-  background-color: #112d4e;
-  /* text-decoration: none; */
+.ftable-1 {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* 세로 중앙 정렬 */
 }
-.table-mid1 {
+.ftable-2,
+.ftable-3 {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.ftable-4 {
   width: 100%;
   height: 20%;
-  text-align: center;
-  color: #f9f5f0;
-  background: #112d4e;
-  /* text-decoration: none; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* 세로 중앙 정렬 */
 }
-.table-mid2 {
-  text-align: center;
-  background: #112d4e;
-  /* text-decoration: none; */
-}
-.table-bottom1 {
+.ftable-5,
+.ftable-6 {
+  flex: 1;
   width: 100%;
-  height: 5%;
-  text-align: center;
-  color: #f9f5f0;
-  background-color: #7d9cc0;
-  /* text-decoration: none; */
+  height: 100%;
+  align-items: center; /* 세로 중앙 정렬 */
+
+  background-color: rgba(0, 0, 0, 0.9);
+}
+#scrollToTopButton {
+  display: none;
+  position: fixed;
+  bottom: 290px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.3s, transform 0.3s;
 }
 
-.cl-white {
-  color: #f9f5f0;
+#scrollToTopButton.show {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+}
+.fsfont {
+  font-size: 9px;
+  color: #0f5cb4;
+  font-weight: 600;
+
+  text-align: right;
   text-decoration: none;
-  text-align: center;
+  padding-right: 30px; /* 원하는 간격 값으로 수정하세요 */
 }
-.sfont {
-  font-size: 8px;
-  color: #f9f5f0;
-  margin-right: 5%;
-}
-.mfont {
+
+.fmfont {
   font-size: 15px;
-  color: #f9f5f0;
-  margin-right: 5%;
+  color: #0f5cb4;
+  font-weight: 600;
+
+  padding-right: 20px; /* 원하는 간격 값으로 수정하세요 */
 }
-.pd {
+.fhfont {
+  font-size: 15px;
+  text-align: center;
+  color: #0f5cb4;
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.fhfont1 {
+  font-size: 17px;
+  text-align: right;
+  color: #ffffff;
+  font-weight: 600;
+
+  text-decoration: none;
+  padding-right: 30px; /* 원하는 간격 값으로 수정하세요 */
+}
+
+.frow-center {
+  display: flex;
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  height: 100%; /* 내부 요소를 수직으로 가운데 정렬 */
+}
+.frow-left {
+  display: flex;
+  justify-content: left; /* 가로 중앙 정렬 */
+}
+.frow-right {
+  display: flex;
+  justify-content: right; /* 가로 중앙 정렬 */
+}
+
+.fcell {
   padding: 15px;
 }
-.td {
-  width: 32%;
+.fcell1 {
+  text-align: left;
+  margin: 0; /* 여백 추가 */
+  margin-bottom: -10; /* 여백 추가 */
+
+  padding: 15px;
 }
-.td1 {
-  width: 30%;
+.fcell2 {
+  padding: 10px;
+  font-size: 13px;
+  text-align: left;
+  color: #0f5cb4;
+  margin: 5px; /* 여백 추가 */
 }
-.td2 {
-  width: 10%;
+.fcell3 {
+  padding: 10px;
+  margin: 0; /* 여백 추가 */
+  font-size: 13px;
+  text-align: left;
+  color: #ffffff;
 }
-.td3 {
-  width: 5%;
+.fcell4 {
+  padding: 2px;
+  margin: 2px;
+  font-size: 9px;
+
+  color: #ffffff;
+  text-align: right;
 }
-.td4 {
-  width: 80%;
+.fcell5 {
+  padding: 2px;
+  margin: 2px;
+  font-size: 7px;
+
+  color: #0f5cb4;
+  text-align: left;
 }
-.td5 {
-  width: 20%;
+.fcell6 {
+  padding: 2px;
+  margin: 2px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #0f5cb4;
+  text-align: right;
 }
-.tr {
+.fvertical-line {
+  border-left: 1px solid #ccc;
+  height: 120px;
+  margin: 0 20px;
+}
+.fvertical-line1 {
+  border-left: 1px solid #ccc;
+  height: 20px;
+  margin: 0 20px;
+}
+.fvertical-line2 {
+  border-left: 1px solid #ccc;
+  height: 20px;
+  margin: 0 20px;
+}
+.fleft-column,
+.fcenter-column,
+.fright-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.frow1 {
+  margin-left: 30%;
+
+  display: flex;
+  align-items: left;
+}
+.frow2 {
+  display: flex;
+  align-items: right;
+  margin-top: 8%;
+  margin-left: 30%;
+}
+.frow3 {
+  margin-left: 30%;
+  text-align: center;
+  align-items: center; /* 세로 중앙 정렬 */
+  height: 100%; /* 내부 요소를 수직으로 가운데 정렬 */
+
+  display: flex;
+}
+.ftr10 {
   height: 10px;
+}
+.ftr20 {
+  height: 20px;
+}
+.ftr30 {
+  height: 30px;
+}
+.ftr40 {
+  height: 40px;
 }

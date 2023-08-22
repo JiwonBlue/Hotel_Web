@@ -39,6 +39,6 @@
 			</td>
 		</tr>
 	</table>
-	<%@ include file="footer.jsp" %>
+	<footer class="footer"><%@ include file="footer.jsp" %></footer>
 </body>
 </html>

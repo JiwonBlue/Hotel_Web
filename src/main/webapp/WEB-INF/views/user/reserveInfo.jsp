@@ -93,6 +93,6 @@ uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %> <% int index=1; %>
       </c:if>
     </c:if>
 
-    <%@ include file="footer.jsp" %>
+    <footer class="footer"><%@ include file="footer.jsp" %></footer>
   </body>
 </html>
