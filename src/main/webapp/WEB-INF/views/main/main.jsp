@@ -16,13 +16,16 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
 
     <div class="wrapper">
       <div id="container">
-        <img src="../data/EV1.jpg" />
-        <img src="../data/EV2.jpg" />
-        <img src="../data/EV3.jpg" />
-        <img src="../data/EV4.jpg" />
+        <img src="../data/main04.jpg" />
+        <img src="../data/main05.jpg" />
+        <img src="../data/main02.jpg" />
 
-        <button id="prev">&lang;</button>
-        <button id="next">&rang;</button>
+        <button id="prev">
+          <img src="/data/left1.png" width="50" height="80" />
+        </button>
+        <button id="next">
+          <img src="/data/right1.png" width="50" height="80" />
+        </button>
       </div>
     </div>
 
@@ -44,11 +47,11 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
 
     <div class="main">
       <div id="room">
-        <img src="../data/deluxe.jpg" />
-        <img src="../data/royal.jpg" />
-        <img src="../data/sweet.jpg" />
-        <img src="../data/sweet.jpg" />
-        <img src="../data/sweet.jpg" />
+        <img src="../data/EVroom1.jpg" />
+        <img src="../data/EVroom9.jpg" />
+        <img src="../data/EVroom7.jpg" />
+        <img src="../data/EVroom4.png" />
+        <img src="../data/EVroom8.png" />
       </div>
     </div>
 

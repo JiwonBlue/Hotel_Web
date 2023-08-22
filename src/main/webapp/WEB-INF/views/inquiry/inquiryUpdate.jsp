@@ -24,7 +24,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
   </head>
 
   <body>
-    <header class="header"><%@ include file="header.jsp" %></header>
+    <header class="header"><%@ include file="../main/header.jsp" %></header>
 
     <br /><br />
     &nbsp;&nbsp;&nbsp; <font size="20">Review 수정<br /></font>
@@ -78,6 +78,6 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
         </tr>
       </table>
     </form>
-    <footer class="footer"><%@ include file="footer.jsp" %></footer>
+    <footer class="footer"><%@ include file="../main/footer.jsp" %></footer>
   </body>
 </html>

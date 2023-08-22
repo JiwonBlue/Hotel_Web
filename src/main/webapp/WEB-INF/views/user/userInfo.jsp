@@ -22,7 +22,7 @@ prefix="c" %>
   </head>
 
   <body>
-    <header class="header"><%@ include file="header.jsp" %></header>
+    <header class="header"><%@ include file="../main/header.jsp" %></header>
 
     <br /><br />
     &nbsp;&nbsp;&nbsp; <font size="20">회원정보<br /></font>
@@ -107,7 +107,8 @@ prefix="c" %>
       </form>
     </table>
 
-    <footer class="footer"><%@ include file="footer.jsp" %></footer>
+    <footer class="footer"><%@ include file="../main/footer.jsp" %></footer>
+
     <c:if test="${result != null }">
       <c:if test="${result==1 }">
         <script>

@@ -3,17 +3,19 @@
 
 <!DOCTYPE html>
 <html>
+	<link rel="stylesheet" href="../css/joinCSS.css">
+
 <head>
 	<meta charset="UTF-8">
 	<title>호텔 에베레스트 - 가입완료</title>
-	<link rel="stylesheet" href="../css/joinCSS.css">
 </head>
 
 <body>
-	<header class="header"><%@ include file="header.jsp" %></header>
+	<header class="header"><%@ include file="../main/header.jsp" %></header>
 
 
-	<br/><br />
+
+	 <br/><br />
 	&nbsp;&nbsp;&nbsp; <font size="20">회원가입</font><br />
 	
 	<table align="center" class="joinlist">
@@ -37,8 +39,9 @@
 					<input type="button" value="다시 가입" id="btnProc" onclick="location.href='../join/joinForm.jsp'">
 				</c:if>
 			</td>
-		</tr>
+		</tr> 
 	</table>
-	<footer class="footer"><%@ include file="footer.jsp" %></footer>
+	<footer class="footer"><%@ include file="../main/footer.jsp" %></footer>
+
 </body>
 </html>

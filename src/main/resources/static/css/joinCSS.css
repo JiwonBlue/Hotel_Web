@@ -1,6 +1,3 @@
-@charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
-
 html,
 body {
   margin: 0;
@@ -13,15 +10,13 @@ body {
   width: 100%;
   top: 0;
   left: 0;
-  margin-bottom: 15%;
+  margin-bottom: 8%;
 }
 .footer {
   width: 100%;
-  height: 40%; /* 조금 더 큰 높이로 조정 */
-
   bottom: 0;
   left: 0;
-  margin-top: 15%;
+  margin-top: 8%;
 }
 
 /* joinForm.jsp . joinProc.jsp*/

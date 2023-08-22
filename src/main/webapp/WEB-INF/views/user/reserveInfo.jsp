@@ -30,7 +30,7 @@ uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %> <% int index=1; %>
   </head>
 
   <body>
-    <header class="header"><%@ include file="header.jsp" %></header>
+    <header class="header"><%@ include file="../main/header.jsp" %></header>
 
     <br /><br />
     &nbsp;&nbsp;&nbsp;
@@ -93,6 +93,6 @@ uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %> <% int index=1; %>
       </c:if>
     </c:if>
 
-    <footer class="footer"><%@ include file="footer.jsp" %></footer>
+    <footer class="footer"><%@ include file="../main/footer.jsp" %></footer>
   </body>
 </html>

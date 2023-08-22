@@ -13,6 +13,7 @@ body {
   width: 100%;
   top: 0;
   left: 0;
+  margin-bottom: 5%;
 }
 
 /*introduction.jsp*/
@@ -20,7 +21,7 @@ body {
   width: 230px;
   height: 300px;
   position: relative;
-  top: 10%;
+  top: 15%;
   left: 18%;
   float: left;
   background: #dbdadb;
@@ -96,7 +97,6 @@ body {
   width: 100%;
   height: 100%;
   position: absolute;
-  border-top: 5px solid #432c10;
 }
 
 #Img > img {
