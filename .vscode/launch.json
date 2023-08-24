@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-HotelApplication<hotel>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "everest.hotel.HotelApplication",
+      "projectName": "hotel",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

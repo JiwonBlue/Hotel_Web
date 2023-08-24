@@ -1,0 +1,232 @@
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.header {
+  /* 헤더 스타일 */
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: top 0.3s;
+}
+
+.wrapper {
+  margin-top: 3%;
+  width: 100%; /* 너비 */
+  height: 91%;
+  position: relative; /* 슬라이드 위치를 잡기 위해 */
+  text-align: center; /* 슬라이드를 화면 중앙에 배치 */
+}
+#container {
+  width: 100%; /* 너비 */
+  height: 100%;
+  position: absolute;
+}
+#container > img {
+  width: 100%; /* 너비 */
+  height: 100%; /* 각 이미지의 스타일 */
+  float: left; /* 왼쪽부터 배치 */
+}
+#container > button {
+  position: absolute; /* 배치 방법 : absolute */
+  height: 100%; /* 버튼 높이를 슬라이드 영역에 꽉 채움 */
+  top: 0; /* 위로 바짝 붙여서 배치 */
+  border: none; /* 테두리 없음 */
+  padding: 20px; /* 패딩 20px */
+  background-color: transparent; /* 투명 배경 */
+  color: #1c51e6; /* 화살표 색 */
+  font-weight: 1000; /* 진하기 */
+  font-size: 40px; /* 화살표 크기 */
+  opacity: 1; /* 불투명도 */
+}
+
+#prev {
+  left: 10%; /* 왼쪽으로 바짝 붙여서 배치 */
+}
+
+#next {
+  right: 10%; /* 오른쪽 바짝 붙여서 배치 */
+}
+#prev:hover img {
+  content: url('/data/leftcl.png');
+}
+#next:hover img {
+  content: url('/data/rightcl.png');
+}
+.roominfo {
+  width: 60%;
+  height: 30%;
+  margin: 0 auto; /* 화면 중앙에 배치 */
+  font-size: xx-large;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: -5%;
+}
+.font15 {
+  color: #253c6b;
+  font-size: 30px;
+}
+.font9 {
+  color: #253c6b;
+  font-size: 20px;
+}
+
+#img {
+  position: absolute;
+  bottom: 0;
+  right: 100%;
+}
+.horizontal-line {
+  border-top: 1.5px solid #253c6b; /* 가로 줄의 스타일을 지정 */
+  width: 50%; /* 가로 줄의 가로 길이를 50%로 조정 */
+  margin: 10px auto; /* 가로 줄을 가운데로 정렬 */
+}
+
+.more-button {
+  text-align: right;
+  margin-right: 12%;
+  margin-top: 5%;
+  margin-bottom: -10%;
+}
+.more-button a:hover img {
+  content: url('/data/PLUScl.png');
+}
+
+.main {
+  width: 45%;
+  height: 55%;
+  margin: 0 auto; /* 화면 중앙에 배치 */
+  text-align: center; /* 슬라이드를 화면 중앙에 배치 */
+  position: relative;
+  margin-bottom: 10%;
+}
+
+#room {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#room img:nth-child(1) {
+  width: 68%;
+  height: 50%;
+}
+#room img:nth-child(2) {
+  width: 30%;
+  height: 50%;
+}
+#room img:nth-child(3) {
+  width: 33%;
+  height: 50%;
+  margin-top: 2%;
+}
+#room img:nth-child(4) {
+  width: 33%;
+  height: 50%;
+  margin-top: 2%;
+}
+#room img:nth-child(5) {
+  width: 30%;
+  height: 50%;
+  margin-top: 2%;
+}
+
+.facilityinfo {
+  margin-top: 90px;
+  margin-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 83%;
+  height: 17%;
+  font-size: medium;
+  text-align: center;
+}
+
+.main2 {
+  width: 83%; /* 너비 */
+  height: 50%;
+  margin: 5px auto; /* 화면 중앙에 배치 */
+  position: relative; /* 슬라이드 위치를 잡기 위해 */
+  text-align: center; /* 슬라이드를 화면 중앙에 배치 */
+}
+
+#facility {
+  width: 100%; /* 너비 */
+  height: 60%;
+  position: absolute;
+}
+
+#facility > img {
+  width: 29%; /* 너비 */
+  height: 100%; /* 각 이미지의 스타일 */
+  float: left; /* 왼쪽부터 배치 */
+  margin: 14px 2%;
+}
+#scrollToTopButton {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+#scrollToTopButton.show {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+}
+
+/*login.jsp*/
+.log {
+  background: #f10e06;
+  margin: 5% auto;
+  width: 470px;
+  height: 400px;
+  text-align: center;
+  border-radius: 1em;
+}
+
+.log th {
+  height: 120px;
+  font-size: xx-large;
+}
+
+#input {
+  height: 25px;
+  float: left;
+  border-right: 0px;
+  border-left: 0px;
+  border-top: 0px;
+  border-bottom: white 1px solid;
+  font-size: larger;
+}
+
+#text {
+  text-align: right;
+  width: 23%;
+}
+
+#btn {
+  margin-bottom: 26px;
+  background-color: #382f24;
+  width: 100px;
+  height: 40px;
+  border-radius: 1em;
+  font-size: medium;
+  color: #f1ebd5;
+}
