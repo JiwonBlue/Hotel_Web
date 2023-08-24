@@ -35,8 +35,7 @@ CREATE TABLE MEMBER_TABLE(
 	MEMBER_PWD VARCHAR(30) NOT NULL, --비밀번호
 	MEMBER_NAME VARCHAR(10) NOT NULL, --이름
 	MEMBER_PHONE VARCHAR(20) NOT NULL, --연락처
-	MEMBER_BIRTHDAY DATE NOT NULL, --생년월일
-	MEMBER_IN_OUT VARCHAR(10) NOT NULL --내/외국인
+	MEMBER_BIRTHDAY DATE NOT NULL --생년월일
 );
 
 CREATE TABLE RESERVE_TABLE(
@@ -82,10 +81,9 @@ insert into ROOM_TABLE values(301, 'suite', '40평', 8, '79인치TV, 욕조', 40
 insert into ROOM_TABLE values(302, 'suite', '40평', 8, '79인치TV, 욕조', 400000);
 insert into ROOM_TABLE values(303, 'suite', '40평', 8, '79인치TV, 욕조', 400000);
 
-insert into MEMBER_TABLE values('p123@naver.com', 'u12345', '엄용민', '010-9999-9888', '1999-06-28', '내국인');
-insert into MEMBER_TABLE values('t123@naver.com', 'j12345', '조영태', '010-7799-8787', '1966-09-28', '내국인');
-insert into MEMBER_TABLE values('y123@naver.com', 's12345', '강찬성', '010-6663-8558', '1970-05-22', '내국인');
-
+insert into MEMBER_TABLE values('p123@naver.com', 'u12345', '엄용민', '010-9999-9888', '1999-06-28');
+insert into MEMBER_TABLE values('t123@naver.com', 'j12345', '조영태', '010-7799-8787', '1966-09-28');
+insert into MEMBER_TABLE values('y123@naver.com', 's12345', '강찬성', '010-6663-8558', '1970-05-22');
 insert into RESERVE_TABLE values(RESERVE_TABLE_SEQ.nextval, 'p123@naver.com', 101, '2023-07-15', '2023-07-17', 3);
 insert into RESERVE_TABLE values(RESERVE_TABLE_SEQ.nextval, 'p123@naver.com', 102, '2023-07-15', '2023-07-17', 3);
 insert into RESERVE_TABLE values(RESERVE_TABLE_SEQ.nextval, 't123@naver.com', 103, '2023-07-15', '2023-07-17', 3);
