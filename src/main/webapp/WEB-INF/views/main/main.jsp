@@ -4,10 +4,10 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <!DOCTYPE >
 <html>
-  <link rel="stylesheet" href="/css/mainCSS.css" />
-
   <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/css/mainCSS.css" />
+
     <title>EVEREST HOTEL 메인화면</title>
   </head>
 
@@ -16,15 +16,16 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
 
     <div class="wrapper">
       <div id="container">
+        <img src="../data/main09.jpg" />
+        <img src="../data/main10.jpg" />
+        <img src="../data/main03.jpg" />
         <img src="../data/main04.jpg" />
-        <img src="../data/main05.jpg" />
-        <img src="../data/main02.jpg" />
 
         <button id="prev">
-          <img src="/data/left1.png" width="50" height="80" />
+          <img src="/data/leftnc.png" width="50" height="149" />
         </button>
         <button id="next">
-          <img src="/data/right1.png" width="50" height="80" />
+          <img src="/data/rightnc.png" width="50" height="149" />
         </button>
       </div>
     </div>
@@ -36,9 +37,9 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
       <div class="more-button">
         <a href="standardroom.do">
           <img
-            src="/data/더보기.png"
-            width="100"
-            height="100"
+            src="/data/PLUSnc.png"
+            width="85"
+            height="25"
             alt="더보기 로고"
           />
         </a>
@@ -75,6 +76,6 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
     <!-- <button id="scrollToTopButton">맨 위로</button> -->
 
     <footer class="footer"><%@ include file="footer.jsp" %></footer>
-    <script src="../script/loginJS.js"></script>
+    <script src="/script/loginJS.js"></script>
   </body>
 </html>

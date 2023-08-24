@@ -26,19 +26,10 @@
 <body>
 	<center>
 		<header class="header"><%@ include file="../main/header.jsp" %></header>
-
-
-
-
-
-
 	<br/><br />
-	&nbsp;&nbsp;&nbsp;<font id="title" font size="10" >Q & A</font><br /><br />
+	&nbsp;&nbsp;&nbsp;<font id="title" font size="10" >자주 묻는 질문</font><br /><br />
 	
-	<div id="listcomment">
-		호텔 에베레스트는 언제나 고객님들의 목소리에 귀기울이고 있습니다.<br/>
-		이용에 궁금하신 점이 신속한 답변으로 최선을 다하겠습니다.<br/>
-	</div>
+
 
 	<div class="roomList" >
 		<table class="table">
@@ -59,32 +50,60 @@
 	<table align="center" width="80%" class="inquiryInfo">
 		<tr align="center" id="list">
 			<td align="center">no</td>
-			<td align="center">작성자</td>
 			<td align="center">제목</td>
-			<td align="center">작성일 </td>
 		</tr>
 		<c:choose>
 			<c:when test="${balist.size() >0 }">
-				<c:forEach var="b" items="${balist }">
-					<tr>
-						<td align="center">${b.getB_number() }</td>
-						<td align="center">${b.getB_writer() }</td>
-						<td align="center"><a href="inquirydetail?b_number=${ b.getB_number()}"><b>${ b.getB_title()}</b></a></td>
-						<td align="center">${b.getB_time()}</td>
-					</tr>
-				</c:forEach>
+				
 			</c:when>
 			<c:otherwise>
-				<tr>
-					<td colspan="4" align="center">작성된 글이 없습니다</td>
-				</tr>
+			<tr>	
+				<td align="center">Q1</td>
+				<td align="center"><a href="qna1.do">예약하려면 어떻게 해야되나요?</a></td>
+			</tr>
+			<tr>
+				<td align="center">Q2</td>
+				<td align="center"><a href="qna2.do">호텔 객실 내 투숙 가능한 허용 인원은 몇 명인가요?</a></td>
+			</tr>
+			<tr>
+				<td align="center">Q3</td>
+				<td align="center"><a href="qna3.do">결제는 어떻게 할 수 있나요?</a></td>
+			</tr>
+			<tr>
+				<td align="center">Q4</td>
+				<td align="center"><a href="qna4.do">호텔 객실 요금은 일일 아침식사를 포함하나요?</a></td>
+			</tr>
+			<tr>
+				<td align="center">Q5</td>
+				<td align="center"><a href="qna5.do">객실 내 침대 추가 시 비용은 얼마인가요?</a></td>
+			</tr>
+			<tr>
+				<td align="center">Q6</td>
+				<td align="center"><a href="qna6.do">투숙객의 이름과 등록된 이름이 서로 일치하지 않을 경우, 어떻게 하면 되나요?</a></td>
+			</tr>
+			<tr>
+				<td align="center">Q7</td>
+				<td align="center"><a href="qna7.do">체크인 날짜 이전에 예약 취소를 잊어버릴 경우에도 신용카드 대금이 청구되나요?</a></td>
+			</tr>
+			<tr>
+				<td align="center">Q8</td>
+				<td align="center"><a href="qna8.do">환불은 언제 받을 수 있나요?</a></td>
+			</tr>
+			<tr>
+				<td align="center">Q9</td>
+				<td align="center"><a href="qna9.do">이용 대금은 언제 청구되나요?</a></td>
+			</tr>
+			<tr>
+				<td align="center">Q10</td>
+				<td align="center"><a href="qna10.do">예약은 어떻게 취소하면 되나요?</a></td>
+			</tr>
+
 			</c:otherwise>
 		</c:choose>
 
 	</table>
 
 	<footer class="footer"><%@ include file="../main/footer.jsp" %></footer>
-
 	</center>
 	</body>
 </html>

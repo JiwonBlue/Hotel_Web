@@ -14,4 +14,6 @@ public interface BoardService {
     Board updateS(Board board);
 
     Board contentS(long seq);
+
+    Board selectS(long boardCode);
 }

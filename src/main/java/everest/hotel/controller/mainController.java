@@ -1,11 +1,12 @@
 package everest.hotel.controller;
 
 import java.util.List;
-
+import java.sql.Date;
 import org.springframework.ui.Model;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -55,10 +56,77 @@ public class mainController {
         }
     }
 
+    @GetMapping("logout.do")
+    public String logout(HttpSession session) {
+        session.removeAttribute("member"); // 세션에서 회원 정보 제거
+
+        return "redirect:main.do";
+    }
+
+    // 회원가입
     @GetMapping("join.do")
-    public String join() {
+    public String join(HttpSession session) {
         return "join/joinForm";
     }
+
+    @PostMapping("joinForm.do")
+    public String joinMember(@ModelAttribute Member member) {
+        MemberService.joinMember(member);
+        return "redirect:main.do";
+    }
+
+    // 회원 정보 수정
+
+    @GetMapping("userInfo.do")
+    public String userInfo(HttpSession session, Model model) {
+        Member member = (Member) session.getAttribute("member");
+        // 저장된 member 객체를 세션에서 가져올 때, 세션은 그 객체를 Object 타입으로 반환한다 그래서 (Member)로 형변환을 해줌
+        if (member != null) {
+            model.addAttribute("member", member);
+            return "user/userInfo";
+        } else {
+            return "redirect:login.do";
+        }
+    }
+
+    @GetMapping("userUpdate.do")
+    public String userUpdate() {
+        return "user/userUpdate";
+    }
+
+    // @PostMapping("userinfo.do")
+    // public String userRealUpdate() {
+    // MemberService.updateMemberInfo(, null, null, null, null)
+    // return "user/userinfo";
+    // }
+    @PostMapping("userInfo.do")
+    public String userRealUpdate(
+            @RequestParam String memberId,
+            @RequestParam String memberPwd,
+            @RequestParam String memberName,
+            @RequestParam String memberPhone,
+            @RequestParam Date memberBirthday,
+            HttpSession session,
+            Model model) {
+        // 사용자로부터 입력 받은 정보를 사용하여 회원 정보 업데이트
+        Member updatedMember = MemberService.updateMemberInfo(
+                memberId,
+                memberPwd,
+                memberName,
+                memberPhone,
+                memberBirthday);
+
+        session.setAttribute("member", updatedMember);// 업데이트된 회원 정보를 세션에 저장하여 화면에 반영
+        model.addAttribute("member", updatedMember);// 업데이트된 회원 정보를 모델에 추가하여 화면에 반영
+
+        return "user/userInfo";
+    }
+
+    // @DeleteMapping("delete.do")
+    // public String deleteUser(String memberId) {
+    // MemberService.deleteMember(memberId);
+    // return "user/userinfo";
+    // }
 
     // room
     @GetMapping("standardroom.do")
@@ -108,15 +176,31 @@ public class mainController {
         return "/inquiry/inquiryList";
     }
 
-    @GetMapping("inquiryList2.do")
-    public String inquiryList2() {
-        return "inquiry/inquiryList2";
+    @PostMapping("inquiryList.do")
+    public String write(Board board) {
+        BoardService.insertS(board);
+        // response.sendRedirect(); 이거 말고
+        return "/inquiry/inquiryList"; // 이렇게 하면 편함 //갱신됨
     }
 
-    // 현주 추가함
+    @GetMapping("inquiryList2.do")
+    public String inquiryList2() {
+        return "/inquiry/inquiryList2";
+    }
+
     @GetMapping("inquiryDetail.do")
-    public String inquiryDetail() {
-        return "inquiry/inquiryDetail";
+    public String inquiryDetail(long boardCode, Model model) {
+        Board select = BoardService.selectS(boardCode);
+        model.addAttribute("update", select);
+        return "/inquiry/inquiryDetail";
+    }
+
+    @GetMapping("content.do")
+    public String content(long boardCode, Model model) {
+        Board content = BoardService.selectS(boardCode);
+        model.addAttribute("content", content); // 여기의 "list"는 뷰(list.jsp)의 <c:forEach items="${list}" var="dto"> 과
+                                                // 일치해야함
+        return "/inquiry/inquiryDetail"; // 템플릿방식
     }
 
     @GetMapping("inquiryUpdate.do")
@@ -156,24 +240,60 @@ public class mainController {
         return "main/header";
     }
 
-    @GetMapping("testheader.do")
-    public String header1() {
-        return "main/testheader";
-    }
-
-    @GetMapping("testheader2.do")
-    public String header12() {
-        return "main/testheader2";
-    }
-
-    @GetMapping("footer1.do")
-    public String footer1() {
-        return "main/footer1";
-    }
-
-    @GetMapping("testmain.do")
+    @GetMapping("test.do")
     public String tsetmain() {
-        return "main/testmain";
+        return "main/test";
+    }
+
+    // Q&A 링크(1~10까지)
+    @GetMapping("qna1.do")
+    public String qna1() {
+        return "inquiry/qnA1";
+    }
+
+    @GetMapping("qna2.do")
+    public String qna2() {
+        return "inquiry/qnA2";
+    }
+
+    @GetMapping("qna3.do")
+    public String qna3() {
+        return "inquiry/qnA3";
+    }
+
+    @GetMapping("qna4.do")
+    public String qna4() {
+        return "inquiry/qnA4";
+    }
+
+    @GetMapping("qna5.do")
+    public String qna5() {
+        return "inquiry/qnA5";
+    }
+
+    @GetMapping("qna6.do")
+    public String qna6() {
+        return "inquiry/qnA6";
+    }
+
+    @GetMapping("qna7.do")
+    public String qna7() {
+        return "inquiry/qnA7";
+    }
+
+    @GetMapping("qna8.do")
+    public String qna8() {
+        return "inquiry/qnA8";
+    }
+
+    @GetMapping("qna9.do")
+    public String qna9() {
+        return "inquiry/qnA9";
+    }
+
+    @GetMapping("qna10.do")
+    public String qna10() {
+        return "inquiry/qnA10";
     }
 
 }

@@ -28,7 +28,6 @@
 
 
 
-
 	<br/><br />
 	<style>
 		.centered-text {
@@ -66,6 +65,5 @@
 		</table>
 	</form>
 	<footer class="footer"><%@ include file="../main/footer.jsp" %></footer>
-
 </body>
 </html>

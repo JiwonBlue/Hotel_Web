@@ -1,6 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-pageEncoding="UTF-8"%> <%@ taglib uri="http://java.sun.com/jsp/jstl/core"
-prefix="c" %>
+<%@ page contentType="text/html;charset=utf-8"%> <%@ taglib
+uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE >
 <html>
   <head>
@@ -25,19 +24,19 @@ prefix="c" %>
     <header class="header"><%@ include file="../main/header.jsp" %></header>
 
     <br /><br />
-    &nbsp;&nbsp;&nbsp; <font size="20">회원정보<br /></font>
+    &nbsp;&nbsp;&nbsp; <center><font size="20">회원정보<br /></font></center>
 
     <table width="75%" align="center" class="userInfo">
-      <form action="../user/userUpdate.jsp" method="post">
+      <form action="userUpdate.do" method="get">
         <tr align="center" height="10%">
           <td><b>아이디</b></td>
         </tr>
         <tr align="center">
           <td>
             <input
-              type="text"
-              name="u_id"
-              value="${dto.getU_id() }"
+              type="email"
+              name="memberId"
+              value="${member.memberId}"
               size="30"
               readonly="readonly"
             />
@@ -50,8 +49,8 @@ prefix="c" %>
           <td>
             <input
               type="text"
-              name="u_pwd"
-              value="${dto.getU_pwd() }"
+              name="memberPwd"
+              value="${member.memberPwd}"
               readonly="readonly"
               size="30"
             />
@@ -64,8 +63,8 @@ prefix="c" %>
           <td>
             <input
               type="text"
-              name="u_name"
-              value="${dto.getU_name() }"
+              name="memberName"
+              value="${member.memberName}"
               readonly="readonly"
               size="30"
             />
@@ -78,22 +77,21 @@ prefix="c" %>
           <td>
             <input
               type="tel"
-              name="u_phone"
-              value="${dto.getU_phone() }"
+              name="memberPhone"
+              value="${member.memberPhone}"
               readonly="readonly"
               size="30"
             />
           </td>
         </tr>
         <tr align="center">
-          <td><b>E-mail</b></td>
+          <td><b>Birth</b></td>
         </tr>
         <tr align="center">
           <td>
-            <input
-              type="email"
-              name="u_email"
-              value="${dto.getU_email() }"
+            <input type="date"
+              name="memberBirthday"
+              value="${member.memberBirthday}"
               readonly="readonly"
               size="30"
             />
@@ -110,7 +108,7 @@ prefix="c" %>
     <footer class="footer"><%@ include file="../main/footer.jsp" %></footer>
 
     <c:if test="${result != null }">
-      <c:if test="${result==1 }">
+      <c:if test="${result==1}">
         <script>
           alert('정보수정이 완료되었습니다.');
         </script>

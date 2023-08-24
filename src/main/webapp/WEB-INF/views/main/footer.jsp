@@ -15,7 +15,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
       <div class="footcell">
         <a href="https://www.facebook.com" target="_blank">
           <img
-            src="/data/facebook.png"
+            src="/data/FBnc.png"
             width="20"
             height="20"
             alt="페이스북 로고"
@@ -27,7 +27,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
       <div class="footcell">
         <a href="https://www.instagram.com" target="_blank">
           <img
-            src="/data/instagram.png"
+            src="/data/INnc.png"
             width="20"
             height="20"
             alt="인스타그램 로고"
@@ -39,8 +39,8 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
       <div class="footcell">
         <a href="https://www.youtube.com" target="_blank">
           <img
-            src="/data/youtube.png"
-            width="20"
+            src="/data/YOUnc.png"
+            width="29"
             height="20"
             alt="유튜브 로고"
             style="margin-right: 5%"
@@ -51,7 +51,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
       <div class="footcell">
         <a href="https://twitter.com" target="_blank">
           <img
-            src="/data/twitter.png"
+            src="/data/TWnc.png"
             width="20"
             height="20"
             alt="트위터 로고"
@@ -67,12 +67,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
         <div class="footleft-column">
           <div class="footcell2">
             <a href="main.do">
-              <img
-                src="/data/EVfoot1.png"
-                width="150"
-                height="100"
-                alt="HOME"
-              />
+              <img src="/data/MLFnc.png" width="150" height="100" alt="HOME" />
             </a>
           </div>
           <div class="footcell3">(주)에베레스트호텔 02-0000-0000</div>
@@ -155,27 +150,17 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
           </c:choose>
         </div>
         <div class="footvertical-line2"></div>
+
         <div class="footcenter-column">
-          <c:choose>
-            <c:when test="${empty u_idKey}">
-              <a href="login.do" class="foothfont">예약내역</a>
-            </c:when>
-            <c:otherwise>
-              <a href="reserveinfo.do" class="foothfont">예약내역</a>
-            </c:otherwise>
-          </c:choose>
-        </div>
-        <div class="footvertical-line2"></div>
-        <div class="footcenter-column">
-          <a href="https://apps.apple.com/kr/app/" target="_blank">
-            <img src="/data/APP2.png" width="80" height="25" alt="애플 로고" />
+          <a href="https://www.apple.com/kr/app-store/" target="_blank">
+            <img src="/data/APPnc.png" width="80" height="25" alt="애플 로고" />
           </a>
         </div>
         <div class="footvertical-line2"></div>
-        <div class="footcenter-column">
+        <div class="footcenter-column1">
           <a href="https://play.google.com/store/apps" target="_blank">
             <img
-              src="/data/GOOGLE2.png"
+              src="/data/GOOGLEnc.png"
               width="84"
               height="25"
               alt="구글스토어 로고"

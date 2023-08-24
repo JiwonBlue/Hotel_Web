@@ -25,7 +25,6 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 
 
-
 	<div class="roomList" >
 		<table class="table">
 			<tr>
@@ -113,7 +112,6 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
 	
 	
 		<footer class="footer"><%@ include file="../main/footer.jsp" %></footer>
-
 	<script type="text/javascript" src="../script/script.js"></script>
 </body>
 </html>

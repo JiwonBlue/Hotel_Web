@@ -13,9 +13,7 @@ import java.sql.Date;
 @AllArgsConstructor // 파라미터있는생성자
 @NoArgsConstructor // 기본생성자
 @Data // setter, getter 자동생성
-@SequenceGenerator(name = "BOARD_CODE_GENERATOR", sequenceName = "BOARD_CODE", initialValue = 1, allocationSize = 1) // jpa사용할때
-                                                                                                                     // initialValue->
-                                                                                                                     // 초기값
+@SequenceGenerator(name = "BOARD_CODE_GENERATOR", sequenceName = "BOARD_TABLE_SEQ", initialValue = 1, allocationSize = 1) // 초기값
 @Table(name = "board_table")
 public class Board {
     @Id

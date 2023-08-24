@@ -33,10 +33,16 @@ public class BoardServiceImpl implements BoardService { // service랑 autowired 
     }
 
     @Override
-    public boolean deleteS(long seq) {
+    public boolean deleteS(long boardCode) {
         pln("@deleteS() by SpringDataJpa");
-        repository.deleteById(seq);
+        repository.deleteById(boardCode);
         return true;
+    }
+
+    @Override
+    public Board selectS(long boardCode) {
+        pln("@selectS() by SpringDataJpa");
+        return repository.findById(boardCode).get();
     }
 
     @Override

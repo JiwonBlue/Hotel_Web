@@ -2,11 +2,10 @@
 uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE >
 <html>
-  <link rel="stylesheet" href="../css/loginCSS.css" />
-
   <head>
     <meta charset="UTF-8" />
     <title>Hotel Overton : 로그인</title>
+    <link rel="stylesheet" href="../css/loginCSS.css" />
   </head>
 
   <body>
@@ -55,7 +54,6 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
     <br />
     <footer class="footer"><%@ include file="../main/footer.jsp" %></footer>
-
     <c:choose>
       <c:when test="${mode==0 }">
         <script>

@@ -35,7 +35,6 @@
 
 
 
-
 	<br/><br />
 	&nbsp;&nbsp;&nbsp; <font size="20">예약 취소<br /></font>
 	<form action="reservecancel">
@@ -89,6 +88,5 @@
 						</table>
 	</form>
 	<footer class="footer"><%@ include file="../main/footer.jsp" %></footer>
-
 </body>
 </html>

@@ -107,6 +107,17 @@
 .headcell {
   padding: 15px;
 }
+.headcell a.headhfont1:hover {
+  color: black;
+  text-decoration: underline; /* 밑줄 추가 */
+}
+.headcell a.headhfont:hover {
+  color: black;
+  text-decoration: underline; /* 밑줄 추가 */
+}
+.headcell:nth-child(1) a:hover img {
+  content: url('/data/MLcl.png');
+}
 .headtr10 {
   height: 10px;
 }

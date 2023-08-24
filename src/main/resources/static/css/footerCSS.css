@@ -88,7 +88,7 @@
 .foothfont {
   font-size: 15px;
   text-align: center;
-  color: #0f5cb4;
+  color: #a6b5c5;
   font-weight: 700;
 
   text-decoration: none;
@@ -109,6 +109,21 @@
   justify-content: center; /* 가로 중앙 정렬 */
   align-items: center; /* 세로 중앙 정렬 */
   height: 100%; /* 내부 요소를 수직으로 가운데 정렬 */
+}
+.footcell:nth-child(1) a:hover img {
+  content: url('/data/FBcl.png');
+}
+.footcell:nth-child(2) a:hover img {
+  content: url('/data/INcl.png');
+}
+.footcell:nth-child(3) a:hover img {
+  content: url('/data/YOUcl.png');
+}
+.footcell:nth-child(4) a:hover img {
+  content: url('/data/TWcl.png');
+}
+.footcell2:nth-child(1) a:hover img {
+  content: url('/data/MLFcl.png');
 }
 .footrow-left {
   display: flex;
@@ -165,7 +180,8 @@
   font-size: 15px;
   font-weight: 700;
   text-decoration: none;
-  color: #0f5cb4;
+  color: #a6b5c5;
+
   text-align: right;
 }
 .footvertical-line {
@@ -185,11 +201,30 @@
 }
 .footleft-column,
 .footcenter-column,
+.footcenter-column1,
 .footright-column {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
+.footcenter-column a:hover img {
+  content: url('/data/APPcl.png');
+}
+.footcenter-column1 a:hover img {
+  content: url('/data/GOOGLEcl.png');
+}
+
+.footleft-column .foothfont:hover {
+  color: #0f5cb4;
+  /* 원하는 호버 색상으로 변경 */
+  text-decoration: underline; /* 밑줄 추가 */
+}
+.footcenter-column .foothfont:hover {
+  color: #0f5cb4;
+  /* 원하는 호버 색상으로 변경 */
+  text-decoration: underline; /* 밑줄 추가 */
+}
+
 .footrow1 {
   margin-left: 30%;
 
