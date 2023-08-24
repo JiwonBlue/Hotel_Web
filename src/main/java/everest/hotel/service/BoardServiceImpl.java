@@ -1,11 +1,14 @@
 package everest.hotel.service;
 
 import everest.hotel.domain.Board;
+import everest.hotel.dto.BoardListResult;
 import everest.hotel.repository.BoardRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
@@ -33,27 +36,44 @@ public class BoardServiceImpl implements BoardService { // service랑 autowired 
     }
 
     @Override
-    public boolean deleteS(long seq) {
+    public boolean deleteS(long boardCode) {
         pln("@deleteS() by SpringDataJpa");
-        repository.deleteById(seq);
+        repository.deleteById(boardCode);
         return true;
     }
 
     @Override
-    public Board updateS(Board board) {
-
-        // pln("@updateS() by SpringDataJpa");
-        // board = repository.findByBoardCode(board.getBoardCode()).get(0);
-        // // board.setBoard_rdate(); // board는 domain안에 있는 board의 rdate
-        // board = repository.save(board); // save로 값 저장
-        // pln("insertS() board: " + board);
-        return null;
+    public Board selectS(long boardCode) {
+        pln("@selectS() by SpringDataJpa");
+        return repository.findById(boardCode).get();
     }
 
     @Override
-    public Board contentS(long boardCode) {
+    public Board updateS(Board board) {
+        pln("@updateS() by SpringDataJpa");
 
-        Board board = repository.findById(boardCode).get();
+        // Long boardCode = board.getBoardCode();
+        // Board board1 = repository.findById(boardCode).orElse(null); --> 이 두줄로 해도 되고
+
+        Board board1 = repository.getById(board.getBoardCode()); // --> 이 한줄로 해도 되는데 이렇게하는 방법밖에 없나..?
+
+        board1.setBoardTitle(board.getBoardTitle());
+        board1.setBoardContent(board.getBoardContent());
+        board1.setBoardUdate(board.getBoardUdate());
+
+        // board = repository.findByBoardCode(board.getBoardCode());
+        // board.setBoard_rdate(); // board는 domain안에 있는 board의 rdate
+
+        board = repository.save(board1); // save로 값 저장
+
+        pln("updateS() board: " + board);
+        return board;
+    }
+
+    @Override
+    public Board contentS(long boardCode, String memberId) {
+        Board board = repository.findByMemberId(memberId);
+        // Board board = repository.findById(boardCode).get();
         return board;
     }
 
@@ -73,6 +93,22 @@ public class BoardServiceImpl implements BoardService { // service랑 autowired 
         List<Board> list = repository.findByMemberIdContaining(memberId);
         pln("@findByMemberIdContaining() by SpringDataJpa list: " + list);
         return list;
+    }
+
+    @Override
+    public Page<Board> findAll(Pageable pageable) {
+        pln("@findAll() pageable: " + pageable);
+        return repository.findByOrderByBoardCodeDesc(pageable);
+    }
+
+    @Override
+    public BoardListResult getBoardListResult(Pageable pageable) {
+        Page<Board> list = findAll(pageable);
+        int page = pageable.getPageNumber();
+        long totalCount = repository.count();
+        int size = pageable.getPageSize();
+        pln("@getBoardListResult() page: " + page + ", totalCount: " + totalCount + ", size: " + size);
+        return new BoardListResult(page, totalCount, size, list);
     }
 
     void pln(String str) {

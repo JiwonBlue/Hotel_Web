@@ -21,10 +21,32 @@
 		    color:#f1ebd5;
 			}
 	</style>
+	  <script>
+		function deleteBoard(boardCode) {
+		   if (confirm('정말로 삭제하시겠습니까?')) { //confirm 함수는 사용자에게 확인 메시지를 표시, 확인하면 true
+			  fetch(`inquiryDelete.do?boardCode=${content.boardCode}`, { // fetch 함수를 사용하여 서버로 HTTP 요청을 보내는 코드
+				 method: 'DELETE'
+			  })
+			  .then(response => {
+				 // location.href = 'inquiryList.do';
+				 if (response) {
+					location.href = 'inquiryList.do';
+				 } else {
+					console.error('삭제 실패');
+				 }
+			  })
+			  .catch(error => {
+				 console.error('네트워크 에러:', error);
+			  });
+		   }
+		}
+	 </script><!-- 이 script 부분은 공부가 필요 js너무 어려움.. 거의 복붙 -->
+  
+  
 </head>
 
 <body>
-	<header class="header"><%@ include file="header.jsp" %></header>
+	<header class="header"><%@ include file="../main/header.jsp" %></header>
 
 
 
@@ -38,54 +60,64 @@
 	  <body>
 	  
 	  <div class="centered-text">
-		<p><font size="6">고객의 소리</font></p>
+		<p><font size="6">Review</font></p>
 	  </div>
 	
 	<div id="detailcomment">
-		호텔 오버톤은 언제나 고객님의 목소리에 귀기울이고 있습니다.<br />
-		고객님들의 소중한 충고와 격려, 또는 제안의 말씀을 주시면 더 나은 서비스로 보답하겠습니다.
+		호텔 에베레스트는 언제나 고객님들의 목소리에 귀기울이고 있습니다.<br/>
+      고객님들의 정성스러운 리뷰를 통해 발전해 나아가겠습니다.
 	</div>
 	
-	<form action="inquiryUpdate.do">
+	<form action="inquiryDetail.do" method="post">
 		<table align="center" class="inquiryDetail">
-			<tr>
-				<td id="detail">제목</td>
-				<td>
-					${dto.getB_title()}
-					<input type="hidden" name="b_title" value="${dto.getB_title()}" />
-				</td>
-				<td id="detail">번호</td>
-				<td>
-					${dto.getB_number()}
-					<input type="hidden" name="b_number" value="${dto.getB_number()}" />
-				</td>
-			</tr>
-			<tr>
-				<td id="detail">작성자</td>
-				<td>
-					${dto.getB_writer()}
-					<input type="hidden" name="b_writer" value="${dto.getB_writer()}" />
-				</td>
-				<td id="detail">작성일</td>
-				<td>
-					${dto.getB_time()}
-					<input type="hidden" name="b_time" value="${dto.getB_time()}"  />
-				</td>
-	
-			</tr>
-			<tr>
-				<td id="detailcontent">내용</td>
-				<td colspan="3">
-					<textarea rows="5" cols="40" id="detailtextarea" readonly="readonly" name="b_content">${dto.getB_content()}</textarea>
-				</td>
-			</tr>
-			<tr align="center">
-				<td colspan="4">
-			<c:if test="${flag }">
-				<input type="submit" id="btn" value="수정" />
-				<input type="button" id="btn" value="삭제"  onclick="location.href='inquiryremove?b_number=${dto.getB_number()}'" />
-			</c:if>
-				<input type="button" id="btn" value="목록" onclick="location.href='inquiryList.do'" />
+		   <tr>
+			  <td id="detail">제목</td>
+			  <td>
+				 <input type="text" style="outline:none; focus{outline:none}" name="boardTitle" value="${content.boardTitle}" />
+			  </td>
+			  <td id="detail">번호</td>
+			  <td>
+				 ${content.boardCode}
+				 <input type="hidden" name="boardCode" value="${content.boardCode}" />
+			  </td>
+		   </tr>
+		   <tr>
+			  <td id="detail">작성자</td>
+			  <td>
+				 ${content.memberId}
+				 <input type="hidden" name="memberId" value="${content.memberId}" />
+			  </td>
+			  <td id="detail">작성일</td>
+			  <td>
+				 ${content.boardUdate}
+				 <input type="hidden" name="boardUdate" value="${content.boardUdate}"  />
+			  </td>
+	 
+		   </tr>
+		   <tr>
+			  <td id="detailcontent">내용</td>
+			  <td colspan="3">
+				 <textarea rows="5" cols="40" id="detailtextarea" name="boardContent">${content.boardContent}</textarea>
+			  </td>
+		   </tr>
+		   <tr align="center">
+			  <td colspan="4">
+  
+					<c:if test="${content != null}">
+						<c:choose>
+						   <c:when test="${content.memberId eq sessionScope.member.memberId}"> <!-- 각각 세션과 모델 사용해서 비교하는 부분 eq=같냐는 의미 -->
+							  <input type="submit" id="btn" value="수정" />
+							  <input type="button" id="btn" value="목록" onclick="location.href='inquiryList.do'" />
+							  <input type="button" id="btn" value="삭제" onclick="deleteBoard('${content.boardCode}')" />
+							  <!-- <input type="button" id="btn" value="삭제" onclick="location.href='inquiryDelete.do?boardCode=${update.boardCode}'" /> -->
+						   </c:when>
+						   <c:otherwise>
+							  <input type="button" id="btn" value="목록" onclick="location.href='inquiryList.do'" />
+						   </c:otherwise>
+						</c:choose>
+							  
+					 </c:if>
+	  
 				</td>
 			</tr>
 			</form>
@@ -134,6 +166,6 @@
 				</c:if>
 		</table>
 	
-		<footer class="footer"><%@ include file="footer.jsp" %></footer>
+		<footer class="footer"><%@ include file="../main/footer.jsp" %></footer>
 </body>
 </html>

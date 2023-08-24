@@ -99,15 +99,15 @@ function breakfastCheck(diffday){
 
 
 function boardCheck(){
-	if(document.regForm.b_title.value==""){
+	if(document.regForm.boardTitle.value==""){
 		alert("제목을 입력해주시기 바랍니다");
-		document.regForm.b_title.focus();
+		document.regForm.boardTitle.focus();
 		return false;
 	}
 	
-	if(document.regForm.b_content.value==""){
+	if(document.regForm.boardContent.value==""){
 		alert("내용을 입력해주시기 바랍니다");
-		document.regForm.b_content.focus();
+		document.regForm.boardContent.focus();
 		return false;
 	}
 	return true;

@@ -14,7 +14,8 @@ public interface MemberService {
     Member getMemberInfo(String memberId);
 
     // 회원정보 수정
-    Member updateMemberInfo(String memberId, String memberName, String memberPhone, Date memberBirthday);
+    Member updateMemberInfo(String memberId, String memberPwd, String memberName, String memberPhone,
+            Date memberBirthday);
 
     // 회원정보 삭제
     void deleteMember(String memberId);

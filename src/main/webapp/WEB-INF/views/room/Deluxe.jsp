@@ -13,7 +13,7 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
 </head>  
 
 <body>
-	<header class="header"><%@ include file="header.jsp" %></header>
+	<header class="header"><%@ include file="../main/header.jsp" %></header>
 
 
 	<div class="roomList" >
@@ -116,7 +116,7 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
 		</div >
 	
 	
-		<footer class="footer"><%@ include file="footer.jsp" %></footer>
+		<footer class="footer"><%@ include file="../main/footer.jsp" %></footer>
 	<script type="text/javascript" src="../script/script.js"></script>
 </body>
 </html>

@@ -10,7 +10,9 @@ body {
   width: 100%;
   top: 0;
   left: 0;
+  transition: top 0.3s;
 }
+
 .wrapper {
   margin-top: 3%;
   width: 100%; /* 너비 */
@@ -44,10 +46,16 @@ body {
 #prev {
   left: 10%; /* 왼쪽으로 바짝 붙여서 배치 */
 }
+
 #next {
   right: 10%; /* 오른쪽 바짝 붙여서 배치 */
 }
-
+#prev:hover img {
+  content: url('/data/leftcl.png');
+}
+#next:hover img {
+  content: url('/data/rightcl.png');
+}
 .roominfo {
   width: 60%;
   height: 30%;
@@ -77,12 +85,23 @@ body {
   margin: 10px auto; /* 가로 줄을 가운데로 정렬 */
 }
 
+.more-button {
+  text-align: right;
+  margin-right: 12%;
+  margin-top: 5%;
+  margin-bottom: -10%;
+}
+.more-button a:hover img {
+  content: url('/data/PLUScl.png');
+}
+
 .main {
   width: 45%;
   height: 55%;
   margin: 0 auto; /* 화면 중앙에 배치 */
   text-align: center; /* 슬라이드를 화면 중앙에 배치 */
   position: relative;
+  margin-bottom: 10%;
 }
 
 #room {

@@ -25,7 +25,7 @@
 
 <body>
    <center>
-      <header class="header"><%@ include file="header.jsp" %></header>
+      <header class="header"><%@ include file="../main/header.jsp" %></header>
 
 
 
@@ -83,23 +83,23 @@
          <td align="center">제목</td>
          <td align="center">작성일 </td>
       </tr>
-      <c:choose>
-         <c:when test="${list.size()>0}">
-            <c:forEach var="b" items="${list}">
+
+         <c:if test="${empty listResult}">
+         <tr>
+            <td colspan="4" align="center">작성된 글이 없습니다</td>
+         </tr>
+         </c:if>
+            <c:forEach var="b" items="${listResult.list.content}">
                <tr>
                   <td align="center">${b.boardCode}</td>
                   <td align="center">${b.memberId}</td>
-                  <td align="center"><a href="inquiryDetail?b_number=${b.boardCode}"><b>${b.boardTitle}</b></a></td>
+                  <td align="center"><a href="inquiryDetail.do?boardCode=${b.boardCode}"><b>${b.boardTitle}</b></a></td>
                   <td align="center">${b.boardUdate}</td>
                </tr>
             </c:forEach>
-         </c:when>
-         <c:otherwise>
-            <tr>
-               <td colspan="4" align="center">작성된 글이 없습니다</td>
-            </tr>
-         </c:otherwise>
-      </c:choose>
+
+            
+
 
 	  <tr>
 		<td colspan="4" align="center">
@@ -113,10 +113,63 @@
 		</c:choose>
 	</td>
 </tr>
-
    </table>
+<!-- 페이징  -->
+<hr width='600' size='2' color='gray' noshade>
+            <font color='gray' size='3' face='휴먼편지체'>
+                (총페이지수 : ${listResult.totalPageCount})
+                &nbsp;&nbsp;&nbsp;
+                <c:forEach begin="0" end="${listResult.totalPageCount-1}" var="i">
+                    <a href="inquiryList.do?page=${i}&size=${listResult.size}">
+               			<c:choose>
+               			    <c:when test="${i==listResult.page}">
+                            	<strong>${i+1}</strong>
+                            </c:when>
+                            <c:otherwise>
+                                ${i+1}
+                            </c:otherwise>
+            			</c:choose>
+                	</a>&nbsp;
+                </c:forEach>
+                ( TOTAL : ${listResult.totalCount} )
 
-   <footer class="footer"><%@ include file="footer.jsp" %></footer>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   페이지 싸이즈 :
+                <select id="psId" name="ps" onchange="f(this)">
+                	<c:choose>
+                		<c:when test="${listResult.size == 3}">
+                		   <option value="3" selected>3</option>
+            		       <option value="5">5</option>
+            		       <option value="10">10</option>
+                		</c:when>
+                		<c:when test="${listResult.size == 5}">
+                		   <option value="3">3</option>
+            		       <option value="5" selected>5</option>
+            		       <option value="10">10</option>
+                		</c:when>
+                		<c:when test="${listResult.size == 10}">
+                		   <option value="3">3</option>
+            		       <option value="5">5</option>
+            		       <option value="10" selected>10</option>
+                		</c:when>
+                	</c:choose>
+                </select>
+
+                <script language="javascript">
+                   function f(select){
+                       //var el = document.getElementById("psId");
+                       var ps = select.value;
+                       //alert("ps : " + ps);
+                       location.href="inquiryList.do?size="+ps;
+                   }
+                </script>
+    
+</font>
+<hr width='600' size='2' color='gray' noshade>
+<!-- 페이징끝-->
+
+
+   <footer class="footer"><%@ include file="../main/footer.jsp" %></footer>
    </center>
    </body>
 </html>

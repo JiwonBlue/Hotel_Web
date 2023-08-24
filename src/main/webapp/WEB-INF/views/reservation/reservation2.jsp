@@ -49,7 +49,7 @@
 </head>
 
 <body>
-	<header class="header"><%@ include file="header.jsp" %></header>
+	<header class="header"><%@ include file="../main/header.jsp" %></header>
 
 
 
@@ -118,6 +118,6 @@
 	</c:choose>
 	
 		
-	<footer class="footer"><%@ include file="footer.jsp" %></footer>
+	<footer class="footer"><%@ include file="../main/footer.jsp" %></footer>
 </body>
 </html>

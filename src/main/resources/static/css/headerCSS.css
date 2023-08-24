@@ -27,6 +27,9 @@
 
 .headtable-3 {
   text-align: right;
+  justify-content: right; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  height: 100%; /* 내부 요소를 수직으로 가운데 정렬 */
 }
 
 .headtable-0 {
@@ -97,10 +100,23 @@
 .headrow-right {
   display: flex;
   justify-content: right; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  height: 100%; /* 내부 요소를 수직으로 가운데 정렬 */
 }
 
 .headcell {
   padding: 15px;
+}
+.headcell a.headhfont1:hover {
+  color: black;
+  text-decoration: underline; /* 밑줄 추가 */
+}
+.headcell a.headhfont:hover {
+  color: black;
+  text-decoration: underline; /* 밑줄 추가 */
+}
+.headcell:nth-child(1) a:hover img {
+  content: url('/data/MLcl.png');
 }
 .headtr10 {
   height: 10px;

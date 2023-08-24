@@ -1,8 +1,8 @@
 <%@ page contentType="text/html;charset=utf-8"%> <%@ taglib
 uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<jsp:useBean id="b" class="com.bjy.dto.BoardDTO"></jsp:useBean>
-<jsp:setProperty property="*" name="b" />
+<!-- <jsp:useBean id="b" class="com.bjy.dto.BoardDTO"></jsp:useBean>
+<jsp:setProperty property="*" name="b" /> -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -24,7 +24,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
   </head>
 
   <body>
-    <header class="header"><%@ include file="header.jsp" %></header>
+    <header class="header"><%@ include file="../main/header.jsp" %></header>
 
     <br /><br />
     &nbsp;&nbsp;&nbsp; <font size="20">Review 수정<br /></font>
@@ -35,16 +35,16 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
       보답하겠습니다.
     </div>
 
-    <form action="inquiryUpdate?b_number=<%=b.getB_number() %>" method="post">
+    <form action="inquiryUpdate.do" method="post">
       <table align="center" class="inquiryDetail">
         <tr>
           <td id="detail">TITLE</td>
           <td>
             <input
               type="text"
-              name="b_title"
+              name="boardTitle"
               maxlength="30"
-              value="<%=b.getB_title() %>"
+              value="${update.boardTitle}"
               required="required"
               id="writeTitle"
             />
@@ -60,7 +60,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
               id="writeContent"
               required="required"
             >
-<%=b.getB_content() %></textarea
+            ${boardContent}</textarea
             >
           </td>
         </tr>
@@ -78,6 +78,6 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
         </tr>
       </table>
     </form>
-    <footer class="footer"><%@ include file="footer.jsp" %></footer>
+    <footer class="footer"><%@ include file="../main/footer.jsp" %></footer>
   </body>
 </html>

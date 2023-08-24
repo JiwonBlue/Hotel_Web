@@ -1,6 +1,8 @@
 
 package everest.hotel.repository;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import everest.hotel.domain.Member;
@@ -12,6 +14,8 @@ public interface MemberRepository extends JpaRepository<Member, String> {
 
     // 회원 로그인 처리
     Member findByMemberIdAndMemberPwd(String memberId, String memberPwd);
+
+    // List<Member> findAllMember();
 
 }
 

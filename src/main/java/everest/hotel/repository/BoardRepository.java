@@ -2,6 +2,8 @@ package everest.hotel.repository;
 
 import everest.hotel.domain.Board;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
@@ -15,6 +17,11 @@ public interface BoardRepository extends JpaRepository<Board, Long> {
 
     // member_id에 특정 문자열을 포함하는 모든 게시물을 조회하여 리스트로 반환
     List<Board> findByMemberIdContaining(String memberId); // XXXContaining()은 like연산자 역할
+
+    Page<Board> findByOrderByBoardCodeDesc(Pageable pageable);
+
+    // 내가 쓴 글만 볼 수 있도록
+    Board findByMemberId(String memberId);
 
     // 게시물 수 조회
     /*

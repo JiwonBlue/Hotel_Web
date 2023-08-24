@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-pageEncoding="UTF-8"%> <% request.setCharacterEncoding("UTF-8"); %>
+<%@ page contentType="text/html;charset=utf-8"%> <%@ taglib
+uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -21,12 +21,12 @@ pageEncoding="UTF-8"%> <% request.setCharacterEncoding("UTF-8"); %>
   </head>
 
   <body>
-    <header class="header"><%@ include file="header.jsp" %></header>
+    <header class="header"><%@ include file="../main/header.jsp" %></header>
 
     <br /><br />
-    &nbsp;&nbsp;&nbsp; <font size="20">정보수정<br /></font>
+    &nbsp;&nbsp;&nbsp; <center><font size="20">정보수정<br /></font></center>
 
-    <form action="userinfo" method="post">
+    <form action="userInfo.do" method="post">
       <table width="75%" align="center" class="userInfo">
         <tr>
           <td>*표시된 부분만 수정이 가능합니다.</td>
@@ -37,9 +37,9 @@ pageEncoding="UTF-8"%> <% request.setCharacterEncoding("UTF-8"); %>
         <tr>
           <td>
             <input
-              type="text"
-              name="u_id"
-              value="${param.u_id }"
+              type="email"
+              name="memberId"
+              value="${member.memberId}"
               size="30"
               readonly="readonly"
             />
@@ -52,8 +52,8 @@ pageEncoding="UTF-8"%> <% request.setCharacterEncoding("UTF-8"); %>
           <td>
             <input
               type="text"
-              name="u_pwd"
-              value="${param.u_pwd }"
+              name="memberPwd"
+              value="${member.memberPwd}"
               required="required"
               size="30"
             />
@@ -66,8 +66,8 @@ pageEncoding="UTF-8"%> <% request.setCharacterEncoding("UTF-8"); %>
           <td>
             <input
               type="text"
-              name="u_name"
-              value="${param.u_name }"
+              name="memberName"
+              value="${member.memberName}"
               required="required"
               size="30"
             />
@@ -80,22 +80,22 @@ pageEncoding="UTF-8"%> <% request.setCharacterEncoding("UTF-8"); %>
           <td>
             <input
               type="tel"
-              name="u_phone"
-              value="${param.u_phone }"
+              name="memberPhone"
+              value="${member.memberPhone}"
               required="required"
               size="30"
             />
           </td>
         </tr>
         <tr>
-          <td><b>*E-mail</b></td>
+          <td><b>*Birth</b></td>
         </tr>
         <tr>
           <td>
             <input
-              type="email"
-              name="u_email"
-              value="${param.u_email }"
+              type="date"
+              name="memberBirthday"
+              value="${member.memberBirthday}"
               required="required"
               size="30"
             />
@@ -103,12 +103,13 @@ pageEncoding="UTF-8"%> <% request.setCharacterEncoding("UTF-8"); %>
         </tr>
         <tr align="center">
           <td>
-            <input type="submit" id="btn" value="정보수정" />
+            <input type="submit" id="btn" value="수정" />
+            <input type="submit" id="btn" value="회원정보" onclick="location.href='userinfo.do'" />
           </td>
         </tr>
       </table>
     </form>
 
-    <footer class="footer"><%@ include file="footer.jsp" %></footer>
+    <footer class="footer"><%@ include file="../main/footer.jsp" %></footer>
   </body>
 </html>

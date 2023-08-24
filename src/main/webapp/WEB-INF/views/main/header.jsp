@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=utf-8"%> <%@ taglib
 uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
+
 <link rel="stylesheet" href="../css/headerCSS.css" />
 
 <div class="headcontainer">
@@ -9,7 +10,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
       <div class="headrow-left">
         <div class="headcell">
           <a href="main.do">
-            <img src="/data/EVheader3.png" width="210" height="30" alt="HOME" />
+            <img src="/data/MLnc.png" width="220" height="30" alt="HOME" />
           </a>
         </div>
       </div>
@@ -19,7 +20,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
       <div class="headrow-right">
         <div class="headcell">
           <c:choose>
-                <c:when test="${empty u_idKey}">
+            <c:when test="${empty member}">
                   <a href="login.do" class="headhfont">로그인</a>
                 </c:when>
                 <c:otherwise>
@@ -30,25 +31,15 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
         <div class="headcell">
           <c:choose>
-                <c:when test="${empty u_idKey}">
+            <c:when test="${empty member}">
                   <a href="join.do" class="headhfont">회원가입</a>
                 </c:when>
                 <c:otherwise>
-                  <a href="userinfo.do" class="headhfont">회원정보</a>
+                  <a href="userInfo.do" class="headhfont">회원정보</a>
                 </c:otherwise>
               </c:choose>
         </div>
-
-        <div class="headcell">
-          <c:choose>
-                <c:when test="${empty u_idKey}">
-                  <a href="login.do" class="headhfont">예약내역</a>
-                </c:when>
-                <c:otherwise>
-                  <a href="reserveinfo.do" class="headhfont">예약내역</a>
-                </c:otherwise>
-              </c:choose>
-        </div>
+       
       </div>
     </div>
   </div>
@@ -61,16 +52,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
         </div>
 
-        <div class="headcell">
-          <c:choose>
-                <c:when test="${empty u_idKey}">
-                  <a href="login.do" class="headhfont1">예약</a>
-                </c:when>
-                <c:otherwise>
-                  <a href="reservation1.do" class="headhfont1">예약</a>
-                </c:otherwise>
-              </c:choose>
-        </div>
+        
 
         <div class="headcell">
           <a href="inquiryList.do" class="headhfont1">게시판</a>
@@ -83,4 +65,6 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
       </div>
     </div>
   </div>
+  
+
 </div>

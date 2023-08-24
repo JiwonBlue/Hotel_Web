@@ -34,7 +34,8 @@ public class MemberServiceImpl implements MemberService {
     }
 
     @Override
-    public Member updateMemberInfo(String memberId, String memberName, String memberPhone, Date memberBirthday) {
+    public Member updateMemberInfo(String memberId, String memberPwd, String memberName, String memberPhone,
+            Date memberBirthday) {
         pln("@updateMemberInfo() by SpringDataJpa");
 
         // 회원 정보 조회
@@ -42,6 +43,7 @@ public class MemberServiceImpl implements MemberService {
 
         if (member != null) {
             // 회원 정보 수정
+            member.setMemberPwd(memberPwd);
             member.setMemberName(memberName);
             member.setMemberPhone(memberPhone);
             member.setMemberBirthday(memberBirthday);
